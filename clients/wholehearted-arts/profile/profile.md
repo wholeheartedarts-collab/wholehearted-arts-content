@@ -35,7 +35,14 @@ both for AI-automation work and for art/book sales.
 
 ## Content pillars
 
-1. **Art** — personal art practice, process, and work.
+1. **Art** — personal art practice, process, and work. Confirmed
+   recurring themes (2026-08-06, direct from Agata): faith, emotion,
+   healing, marriages, family, prayer, praising God, and overcoming
+   struggles by staying faithful to God. When picking an angle for a
+   piece (manually or in the automated pipeline), these are the safe,
+   on-brand thematic lanes to work within — consistent with the
+   client's no-politics avoid-list, since none of these require
+   political framing.
 2. **Books** — Agata's authored books.
 3. **AI venture** — building AI automation solutions for local businesses
    (the newest pillar, most directly tied to the credibility goal).
