@@ -1,0 +1,17 @@
+{
+  "status": "placeholder - awaiting reference images",
+  "palette": "warm, natural tones; avoid cold corporate blue/gray defaults",
+  "mood": "creative, energetic, personal - not stock-photo corporate",
+  "composition": "clear single focal point, generous negative space",
+  "typography": "minimal to none - prefer imagery over text-heavy graphics",
+  "prohibited": [
+    "generic AI-art clichés (extra fingers, warped text)",
+    "stock-photo handshake/boardroom imagery",
+    "overtly religious iconography unless explicitly requested"
+  ],
+  "dimensions": {
+    "linkedin": {"single_image": "1200x627", "square": "1200x1200"},
+    "instagram_feed": "1080x1350",
+    "facebook": "1200x630"
+  }
+}

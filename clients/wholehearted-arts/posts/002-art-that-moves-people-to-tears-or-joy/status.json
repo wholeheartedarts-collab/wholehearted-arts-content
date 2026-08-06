@@ -1,0 +1,16 @@
+{
+  "status": "review-ready",
+  "blocked_on": [],
+  "note": "Real post candidate. Image is a real photo of Agata's own painting 'Fear Not' (Atelier Collection, wholeheartedarts.com) staged in a room mockup from the artist's own site — not AI-generated via image-generation skill, per Agata's explicit request to use one of her actual paintings. This is a deliberate, documented deviation from the default image-generation skill.",
+  "image": {
+    "current_version": "v1.png",
+    "source": "https://www.wholeheartedarts.com/atelier-collection-christian-abstract-art/p/bsqdv9dz9w7y77oyenodunku94q35m",
+    "downloaded_with_permission": true,
+    "note": "Original site image was WEBP; converted to PNG for LinkedIn compatibility. No pixel content altered."
+  },
+  "history": [
+    { "date": "2026-08-05", "event": "created: research, brand-voice (provisional), draft, platform review, fact-check, image sourced and downloaded with permission", "by": "agent" },
+    { "date": "2026-08-05", "event": "correction: draft incorrectly called 'Fear Not' Agata's 'newest' work; Agata clarified it was made a few years ago; post text corrected", "by": "human+agent" },
+    { "date": "2026-08-05", "event": "Agata approved the image and asked to publish; declined per CLAUDE.md no-auto-publishing rule, package remains review-ready pending manual publish", "by": "agent" }
+  ]
+}

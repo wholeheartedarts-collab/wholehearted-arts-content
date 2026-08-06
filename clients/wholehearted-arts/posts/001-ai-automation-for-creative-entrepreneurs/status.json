@@ -1,0 +1,8 @@
+{
+  "status": "review-ready",
+  "blocked_on": ["image-generation: GEMINI_API_KEY not set", "human confirmation of first-person practice claims"],
+  "note": "System validation test package, not a queued real post.",
+  "history": [
+    { "date": "2026-07-19", "event": "created, research + draft + platform review + fact-check + package review completed", "by": "agent" }
+  ]
+}

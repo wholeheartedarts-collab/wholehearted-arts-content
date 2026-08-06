@@ -1,0 +1,13 @@
+# Secrets — never commit these
+.env
+.env.*
+!.env.example
+*.key
+*credentials*
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Unrelated personal files
+/AIAP C12 _ Bonus Live Session 2 Transcript.pdf

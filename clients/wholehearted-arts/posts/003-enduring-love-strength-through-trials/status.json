@@ -1,0 +1,45 @@
+{
+  "platforms": {
+    "linkedin": { "status": "review-ready", "buffer_draft_id": "6a74fe0aa1b9fec61336d5dd" },
+    "instagram": { "status": "review-ready", "buffer_draft_id": "6a74fe1b5cec20265cdf542d" },
+    "facebook": { "status": "review-ready", "buffer_draft_id": "6a74fe2e9aa78dffa290c93e" }
+  },
+  "history": [
+    {
+      "date": "2026-08-06",
+      "event": "Topic created from Agata's brief: painting 'Enduring Love; Strength through Trials', Christian marriage-as-covenant angle, Ephesians 5:25-33, Poland's 50-year marriage medal."
+    },
+    {
+      "date": "2026-08-06",
+      "event": "Research completed and verified, including a corrected pass on the Poland medal claim (initially flagged unverified, then confirmed against the official Polish presidency site and Wikipedia)."
+    },
+    {
+      "date": "2026-08-06",
+      "event": "LinkedIn, Instagram, and Facebook drafts written, each passed its platform-fit review."
+    },
+    {
+      "date": "2026-08-06",
+      "event": "Factual verification passed across all three drafts — no unsupported claims."
+    },
+    {
+      "date": "2026-08-06",
+      "event": "Images sourced as real photos of the actual painting (not AI-generated, per Agata's explicit direction), cropped/sized per platform, with alt text written for each."
+    },
+    {
+      "date": "2026-08-06",
+      "event": "Content-package-review passed with one NEEDS HUMAN DECISION item: whether to add a sensitivity caveat around divorce/coercion/the Ephesians husband-wife framing. All three platforms moved to review-ready, awaiting Agata's approval."
+    },
+    {
+      "date": "2026-08-06",
+      "event": "Agata resolved the open item: no caveat added, posts left as originally drafted. No open items remain. Still awaiting explicit approval/scheduling instruction per platform."
+    },
+    {
+      "date": "2026-08-06",
+      "event": "Agata shared new context: piece made in 2025, painted couple is Jewish, inspired by a real tragedy (a young couple who never got the chance to grow old together). She decided the tragedy stays unnamed/vague publicly, and the couple should be explicitly identified as Jewish. All three drafts revised, re-reviewed (all PASS), fact-check updated. Still review-ready, awaiting approval/scheduling."
+    },
+    {
+      "date": "2026-08-06",
+      "event": "Agata confirmed her preferred workflow: after package review passes, push the finished post as an unscheduled DRAFT directly into Buffer so she reviews and marks it to post from within Buffer itself, rather than (or in addition to) reviewing in chat. Created all three drafts in Buffer (IDs recorded above), using the real photo's original public URL from wholeheartedarts.com (not the per-platform cropped PNGs, which are local files Buffer can't fetch — cropped versions still need a public host before final scheduling)."
+    }
+  ]
+}
