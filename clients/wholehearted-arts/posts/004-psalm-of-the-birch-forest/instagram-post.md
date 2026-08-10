@@ -16,13 +16,13 @@ I layered fabric and acrylic into the canvas so the texture itself carries weigh
 Where do you notice God's voice without words — a tree, the ocean, a sunrise? Tell me below.
 
 ## Hashtags
-#ChristianArt #Psalm19 #MixedMediaArt #FaithAndArt #ChristianArtist #BirchTrees #ScriptureArt #WholeheartedArts #OriginalArt #ContemporaryChristianArt #FaithBasedArt #NatureAndFaith #ArtistOfInstagram
+#ChristianArt #Psalm19 #MixedMediaArt #ChristianArtist #ScriptureArt
 
-Rationale: broad faith/art-community reach (#ChristianArt, #FaithAndArt,
-#ChristianArtist, #ArtistOfInstagram) mixed with piece-specific tags
-(#Psalm19, #BirchTrees, #ScriptureArt) and medium-specific tags
-(#MixedMediaArt, #ContemporaryChristianArt) — 13 tags, within the
-5-15 native range.
+Rationale: 5 tags (Agata's hard cap), mixing broad faith/art-community
+reach (#ChristianArt, #ChristianArtist) with piece-specific
+(#Psalm19, #ScriptureArt) and medium-specific (#MixedMediaArt) —
+narrowed from a wider draft to fit the 5-tag limit while keeping the
+mix, not just truncating the original list.
 
 ## Angle used
 "Creation speaks without words" (angle 1 from research.md) — ties Psalm

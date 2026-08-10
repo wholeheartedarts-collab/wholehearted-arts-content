@@ -17,7 +17,7 @@ three.
 | Hook strength and readability | PASS | IG: 108-char hook. LinkedIn: ~175-char hook. Facebook: short, clear opening line. All stand alone. |
 | Image relevant, original, consistent with style-guide.json, correctly sized | PASS | `images/instagram-v1.jpg` (1080×1350, tight text-legible crop), `images/linkedin-v1.jpg` (1200×627), `images/facebook-v1.jpg` (1200×630) — LinkedIn/Facebook use letterboxing (wall-color sampled from the source photo itself, matching post 003's approach) so no part of the artwork is cropped off. All three are real photos from the painting's own product gallery on wholeheartedarts.com, not AI-generated. Instagram crop was revised once already (see git history) after Agata flagged the first version as not showing the inscribed text clearly enough. |
 | Alt text accurate, matches final image and post | PASS | alt-text/instagram.md, linkedin.md, facebook.md each describe their actual final image. |
-| Tags/mentions appropriate, minimal, no unwanted third-party tagging | PASS | No @mentions anywhere. IG: 13 hashtags (native range). LinkedIn: 2. Facebook: 1. All topic-relevant. |
+| Tags/mentions appropriate, minimal, no unwanted third-party tagging | PASS | No @mentions anywhere. IG: 5 hashtags (Agata's hard cap, revised 2026-08-10 from an earlier 13-tag draft). LinkedIn: 2. Facebook: 1. All topic-relevant. |
 | Compliance constraints respected | PASS | None defined beyond avoid-list; no professional/medical/legal claims present. |
 | No secrets/API keys/private info in output | PASS | Verified across all files for this topic. |
 

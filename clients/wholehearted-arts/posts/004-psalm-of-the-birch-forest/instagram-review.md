@@ -9,7 +9,7 @@
 | Links | PASS | No raw URL or clickable-link expectation anywhere in the caption. |
 | Length | PASS | Proportionate — short caption supporting an image-led post, not padded. |
 | CTA | PASS | Soft, natural — invites a comment ("Tell me below"), matches the profile's default soft-CTA guidance (no approved CTAs defined yet). |
-| Hashtags | PASS | 13 tags, mix of broad (#ChristianArt, #FaithAndArt, #ArtistOfInstagram) and specific (#Psalm19, #BirchTrees, #ScriptureArt) — within the 5-15 range, none generic/unrelated. |
+| Hashtags | PASS | Revised 2026-08-10 to 5 tags (#ChristianArt #Psalm19 #MixedMediaArt #ChristianArtist #ScriptureArt) to match Agata's hard 5-tag cap (updated in instagram-writing/instagram-review skills) — mix of broad (#ChristianArt, #ChristianArtist) and specific (#Psalm19, #ScriptureArt) preserved, none generic/unrelated. |
 | No politics / avoid-list | PASS | Pure faith/art content, no political framing. |
 | No AI-slop / generic IG-hype | PASS | No "swipe up," no stacked exclamation points, no manufactured hype language. |
 

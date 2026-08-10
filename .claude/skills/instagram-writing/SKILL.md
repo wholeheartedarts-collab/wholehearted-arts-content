@@ -36,11 +36,14 @@ description: Write an Instagram caption from a completed research brief and the 
   scan fast.
 - **CTA**: natural, matched to the client's approved CTAs (see profile).
   Default soft CTA if none approved — invite comments, saves, or DMs.
-- **Hashtags**: 5-15 relevant tags is native to Instagram — this is
-  intentionally different from LinkedIn's "small handful" rule; do not
-  copy that number over. Mix broad art/faith-community tags with
-  specific ones (e.g., piece title, medium, "#mixedmediaart"). Never
-  use tags unrelated to the actual post just to chase reach.
+- **Hashtags**: maximum 5 tags (Agata's explicit rule, 2026-08-09 —
+  overrides general Instagram-platform norms). This is intentionally
+  different from LinkedIn's "small handful" rule; do not copy that
+  number over, and do not default to a higher count even though wider
+  ranges are common Instagram practice generally. Mix broad art/faith-
+  community tags with specific ones (e.g., piece title, medium,
+  "#mixedmediaart") within that cap of 5. Never use tags unrelated to
+  the actual post just to chase reach.
 - **Account type**: this client posts from a **Business/Creator account**
   for WholeheartedArts specifically (confirmed by Agata) — this is a
   brand/artist presence, not a strictly personal profile, but the voice

@@ -26,8 +26,10 @@ Run this first, on the caption alone.
 - **Length**: proportionate — Instagram audiences scan fast; not padded.
 - **CTA**: present, natural, matches approved CTAs or the soft-CTA
   default.
-- **Hashtags**: 5-15, relevant, a real mix (not 15 near-duplicates or 15
-  generic art tags unrelated to this specific piece).
+- **Hashtags**: maximum 5 (Agata's explicit rule — see
+  instagram-writing's Hashtags section), relevant, a real mix (not 5
+  near-duplicates or 5 generic art tags unrelated to this specific
+  piece). Flag as NEEDS REVISION if the draft has more than 5.
 - **No politics** and no other avoid-list violations.
 - **No AI-slop / generic IG-hype phrasing**.
 
