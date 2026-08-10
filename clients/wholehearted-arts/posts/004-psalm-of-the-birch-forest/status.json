@@ -1,0 +1,15 @@
+{
+  "platforms": {
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_id": null,
+      "note": "Not pushed to Buffer — Buffer outage in progress as of 2026-08-10 (see package-review.md). Handed to Agata directly for manual posting today; push to Buffer once service is restored, if she still wants it queued there too."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-08-10",
+      "event": "Built manually (not via the scheduled cloud pipeline) as a one-off Instagram-only post, at Agata's request, because Buffer was down and she wanted something ready to post today. Painting: \"Psalm of the Birch Forest\" (based on Psalm 19), Atelier Collection. Full research/write/review/fact-check/image/alt-text steps completed per CLAUDE.md workflow, scoped to Instagram only (LinkedIn/Facebook not requested for this run)."
+    }
+  ]
+}
