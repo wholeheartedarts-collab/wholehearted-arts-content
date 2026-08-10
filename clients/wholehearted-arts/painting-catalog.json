@@ -1,0 +1,183 @@
+{
+  "_purpose": "Fallback painting catalog for the automated content pipeline. Built 2026-08-10 after discovering the cloud routine's sandbox environment blocks network egress to wholeheartedarts.com (EGRESS_BLOCKED/403), which silently killed the 2026-08-07 and 2026-08-10 scheduled runs before they could pick a painting. The routine should read this file instead of live-fetching the site. This is a workaround, not a permanent fix — see 'staleness_warning' below.",
+  "staleness_warning": "This catalog is a point-in-time snapshot (2026-08-10). Prices, availability (sold/in-stock), and the painting list itself can drift from the live site over time. If a routine run using this catalog picks a painting that's since sold or changed price, that's an acceptable known risk versus not running at all — but this file should be refreshed periodically (ask Claude to re-fetch and update it), and ideally retired entirely once wholeheartedarts.com is added to the sandbox environment's egress allowlist (the proper fix — see .claude/skills/publishing-handoff/SKILL.md and CLAUDE.md workflow notes).",
+  "already_used_in_posts": [
+    "Fear Not (002)",
+    "Enduring Love; Strength through Trials (003)",
+    "Psalm of the Birch Forest (004)"
+  ],
+  "atelier_collection_unused_detailed": [
+    {
+      "title": "Whimsical Gdansk",
+      "price": "$175.00",
+      "medium": "Mixed media (fabric, paint, metallic accents, raised texture)",
+      "dimensions": "6\" x 6\"",
+      "description": "A small yet intricately detailed work celebrating memory, place, and imagination. Inspired by Gdansk's colorful architecture and historical charm, the piece evokes 'a little city glowing after dusk — full of crooked rooftops, golden windows, tiny flags, textured walls, and hidden stories.' Invites viewers to 'pause, look closer, and step into a place where history, childhood memory, travel, faith, and imagination meet.'",
+      "product_url": "https://www.wholeheartedarts.com/atelier-collection-christian-abstract-art/p/whimsical-gdansk",
+      "image_url": "http://static1.squarespace.com/static/5b412dba5ffd201a3f9205e4/69da327c2622e42cafbe8437/6a4af3168d2fcd29fa223285/1783296790462/A0E67EF8-3809-413C-9CEC-2AA9F5DE18CC.jpeg?format=1500w"
+    },
+    {
+      "title": "Gathered Light",
+      "price": "$950.00",
+      "medium": "Mixed media (collage, paint, handwritten marks, and line work)",
+      "dimensions": "16\" x 23\"",
+      "description": "Original mixed media portrait featuring layered fragments of pattern, texture, handwritten marks, and luminous color. Explores tension between fragility and resilience, with a face emerging softly through complexity, memory, and movement. Reflects 'the beauty of becoming: how light still finds us in unfinished places.'",
+      "product_url": "https://www.wholeheartedarts.com/atelier-collection-christian-abstract-art/p/iv1d61261ku571lg1a7lqmyawnzio5",
+      "image_url": "http://static1.squarespace.com/static/5b412dba5ffd201a3f9205e4/69da327c2622e42cafbe8437/69faafc32f83637c43a98501/1778036677442/BADAF6A0-0C6D-4016-8AF9-9E4C1AAE7E4C.png?format=1500w"
+    },
+    {
+      "title": "Guided by Grace",
+      "price": "$5,000.00",
+      "medium": "Structural acrylic painting",
+      "dimensions": "48\" x 60\"",
+      "description": "Structural mixed media piece capturing resilience and divine guidance through vibrant colors and textures. Psalm 34 text is integrated into highlighted areas, emphasizing God's goodness guiding our path. An illuminated figure symbolizes hope and strength amid challenges. 'A reminder of the uplifting power of faith and the beauty found in trusting the journey.' Free domestic shipping (mainland US); local pickup available.",
+      "product_url": "https://www.wholeheartedarts.com/atelier-collection-christian-abstract-art/p/6tqp2mp4ucg45vddibscssqbtijrg2",
+      "image_url": "http://static1.squarespace.com/static/5b412dba5ffd201a3f9205e4/69da327c2622e42cafbe8437/68c7345a1e42e41876a02285/1757885540239/828A1C89-CEF6-45EB-9226-DDE4BA0B78A0.jpeg?format=1500w"
+    },
+    {
+      "title": "Cleansing Waters - Divided by Grace",
+      "price": "$750.00",
+      "medium": "Mixed media",
+      "dimensions": "18\" x 24\"",
+      "description": "Abstract painting divided into two realms. Above, a crowd stained with red symbolizes the burdens of sin and emotional turmoil. Below, figures gathered around a well of living water are portrayed in white, radiating purity and renewal. Vibrant blues evoke hope, contrasting the heaviness above. Illustrates 'the journey from darkness to light, inviting reflection on redemption and transformation.'",
+      "availability_note": "Black frame in stock now; white frame option available for shipping/pickup after Jan 4 (per site copy at time of fetch — treat as approximate).",
+      "product_url": "https://www.wholeheartedarts.com/atelier-collection-christian-abstract-art/p/tma307uwsxa7e321b36tqgkvto1rk8",
+      "image_url": "http://static1.squarespace.com/static/5b412dba5ffd201a3f9205e4/69da327c2622e42cafbe8437/6936485f2a3a87116bf6ccea/1765165155676/940528D1-CB8A-4B8A-98EE-1AD6243EF48C.jpeg?format=1500w"
+    },
+    {
+      "title": "Guardian of Innocence",
+      "price": "$1,200.00",
+      "medium": "Original mixed media on canvas",
+      "dimensions": "20\" x 20\"",
+      "description": "Explores maternal protection and sacred love: 'a mother rests with her child, eyes closed, not in weariness, but in trust.' Addresses protection without fear, guardianship aware of its own limits yet committed to love. Layers color and texture to suggest 'a life shaped through both breaking and beauty — nothing wasted, everything held.' Rich layered detail 'reveals itself slowly — inviting stillness, reflection, and reverence.'",
+      "product_url": "https://www.wholeheartedarts.com/atelier-collection-christian-abstract-art/p/ey820w67in7nkarcery9jbfci3grjs",
+      "image_url": "http://static1.squarespace.com/static/5b412dba5ffd201a3f9205e4/69da327c2622e42cafbe8437/6921397bb724687d50c52d3f/1763785087569/EF68E06C-734C-4C29-B86F-07798073AED2.jpeg?format=1500w"
+    },
+    {
+      "title": "Patience",
+      "price": "$1,250.00",
+      "medium": "Textile and acrylic on canvas",
+      "dimensions": "20\" x 20\"",
+      "description": "A quiet yet powerful presence, blending layered texture, soft movement, and luminous circular forms around a contemplative figure. Speaks of 'inner stillness, endurance, and the kind of patience that is formed slowly — through waiting, reflection, and trust.'",
+      "product_url": "https://www.wholeheartedarts.com/atelier-collection-christian-abstract-art/p/patience",
+      "image_url": "http://static1.squarespace.com/static/5b412dba5ffd201a3f9205e4/69da327c2622e42cafbe8437/637cb07efed25d72571b8742/1716639450726/A3ED0AC2-70F9-4D97-B911-C4C1CA38E1C9?format=1500w"
+    },
+    {
+      "title": "Awakened Fields",
+      "price": "$1,250.00",
+      "medium": "Mixed media on canvas (fabric/acrylic)",
+      "dimensions": "16\" x 20\"",
+      "description": "'Not every beautiful thing is gentle. Some beauty asks you to stay and look longer.' Wild, watchful, full of life — for the collector drawn to texture, meaning, and bold presence.",
+      "product_url": "https://www.wholeheartedarts.com/atelier-collection-christian-abstract-art/p/headache",
+      "image_url": "http://static1.squarespace.com/static/5b412dba5ffd201a3f9205e4/69da327c2622e42cafbe8437/63f9803c4a41ca7482dc3d96/1677295698858/6F637985-B34A-499B-B732-D353A278A46A?format=1500w"
+    },
+    {
+      "title": "Heaven Declares",
+      "price": "$2,800.00",
+      "medium": "Mixed media (fabric, paper, and acrylic on canvas)",
+      "dimensions": "40\" x 30\"",
+      "description": "Inspired by Psalm 19, exploring how divine truth brings salvation to the heart. A central figure constructed from Scripture fragments sits amid color and texture suggesting surrender and joy. Intentionally rough paper and fabric edges convey: 'We are created beautifully, yet we move through this life marked by weakness, process, and imperfection. We are, in many ways, perfectly imperfect.' Balances Psalm 19's dual revelation — God's glory in creation and mercy in His Word.",
+      "caution_note": "Also based on Psalm 19, same as topic 004 (Psalm of the Birch Forest). Angle is different (Scripture-fragment figure vs. birch trunks), so still usable, but a writer should differentiate the framing clearly from 004 rather than repeating the same scripture-quote-and-angle.",
+      "product_url": "https://www.wholeheartedarts.com/atelier-collection-christian-abstract-art/p/110serjwdear3vzksh25lftl8um5xc",
+      "image_url": "http://static1.squarespace.com/static/5b412dba5ffd201a3f9205e4/69da327c2622e42cafbe8437/640105f0fade8f7413d70e85/1677788656128/6811319B-78C8-4C40-9D6D-CDAF04A68D66?format=1500w"
+    },
+    {
+      "title": "Love Eternal Rhapsody",
+      "price": "$3,800.00",
+      "medium": "Mixed media — fabric, paper, acrylic, metal, gold and silver flakes",
+      "dimensions": "48.5\" x 38.5\" (with frame)",
+      "description": "Depicts 'a man and woman who exude the elegance of a royal couple on their wedding day,' evoking a fairy-tale feeling. Incorporates scripture from Colossians 3 and marriage blessings. 'It starts with the first kiss.' Reflects 'the richness and complexity of life and love,' with spiritual elements discreetly woven throughout. Delivery/shipping included in price.",
+      "product_url": "https://www.wholeheartedarts.com/atelier-collection-christian-abstract-art/p/mjoo86gfcgpcz1etylqttdn5zulc5b",
+      "image_url": "http://static1.squarespace.com/static/5b412dba5ffd201a3f9205e4/69da327c2622e42cafbe8437/64014ecc347ae15c381827bb/1720729609213/D042A38D-BCF7-44BD-AB34-386D31B78D01?format=1500w"
+    },
+    {
+      "title": "They Will Call Me Blessed",
+      "price": "$1,500.00",
+      "medium": "Mixed media — fabric and acrylic",
+      "dimensions": "12\" x 36\"",
+      "description": "Draws inspiration from Luke 1:46-54 (Mary's Magnificat). Richly layered texture combining fabric and acrylic on a custom-constructed support using salvaged materials. Linen stretched by the artist on a recycled wood frame and heavy linen curtain.",
+      "product_url": "https://www.wholeheartedarts.com/atelier-collection-christian-abstract-art/p/6457n4a8q5vgdaoi1zrd35racoxwly",
+      "image_url": "http://static1.squarespace.com/static/5b412dba5ffd201a3f9205e4/69da327c2622e42cafbe8437/647eb639b790816d9cc2ecb5/1686025789576/07D63B10-71D2-4C19-8514-70EBBF2138C8?format=1500w"
+    },
+    {
+      "title": "Never Stop Wonder",
+      "price": "$3,200.00",
+      "medium": "Mixed media painting on canvas",
+      "dimensions": "36\" x 36\"",
+      "description": "Vibrant abstract piece with 'layers of vivid florals, playful marks, soft scribbles, and unexpected bursts of light' across a dark background with reds, turquoise, yellows, pinks, and greens. Evokes 'a garden of imagination, where flowers, stars, seeds, birds, and hidden symbols all speak in their own quiet language.' Celebrates how 'even in a complicated world, the heart can remain open' to meaning and discovery.",
+      "product_url": "https://www.wholeheartedarts.com/atelier-collection-christian-abstract-art/p/qrbmlhzu9rvwfy82m9xl2qh7lsb6vd",
+      "image_url": "http://static1.squarespace.com/static/5b412dba5ffd201a3f9205e4/69da327c2622e42cafbe8437/6878420f6588572799f758f6/1752711698908/796780BC-47D1-47A8-B803-162DBC092876.jpeg?format=1500w"
+    },
+    {
+      "title": "Messenger",
+      "price": "$725.00",
+      "medium": "Structural acrylic painting on canvas with mixed media",
+      "dimensions": "16\" x 20\" plus frame",
+      "description": "Presents 'a solitary bird set within a richly layered abstract landscape.' Textural, expressive, gently luminous. Engages themes of intuition and reflection through symbolic visual language. 'For the collector who is drawn to symbolism, texture, and quiet emotional depth, Messenger offers a presence that feels both grounding and mysterious.' Restored gold and green wooden frame included.",
+      "product_url": "https://www.wholeheartedarts.com/atelier-collection-christian-abstract-art/p/xqni71zaa5f2je2n44xilea5wp3sk9",
+      "image_url": "http://static1.squarespace.com/static/5b412dba5ffd201a3f9205e4/69da327c2622e42cafbe8437/641473f719378e1ff9e8ec82/1719621750444/7530713D-AF81-4CAF-A90B-B96DCFF65A40?format=1500w"
+    },
+    {
+      "title": "Wisdom of Mothers",
+      "price": "$650.00",
+      "medium": "Mixed media — fabric, paper, and acrylic",
+      "dimensions": "20\" x 20\"",
+      "description": "Inspired by Proverbs 31, honoring 'the quiet strength, sacrifice, protection, and spiritual covering carried by women across generations.' Figures in layered red, rose, gold, and earthy tones, garments incorporating texture, pattern, and Scripture passages. White expressive lines suggest 'shelter, struggle, and divine covering.' 'A tribute to feminine strength rooted in faith, love, and holy endurance.' Black metal frame, wall-ready, included in price.",
+      "product_url": "https://www.wholeheartedarts.com/atelier-collection-christian-abstract-art/p/gnruas90gouxhf31mrz1zfizzxxr6z",
+      "image_url": "http://static1.squarespace.com/static/5b412dba5ffd201a3f9205e4/69da327c2622e42cafbe8437/64025abb16b07c295c606e65/1716639367991/3F36E489-3B49-421E-8347-AAA6614A068D?format=1500w"
+    }
+  ],
+  "atelier_collection_excluded": [
+    {"title": "Let Our Light Continue to Shine", "reason": "Sold out per site at time of fetch (2026-08-10) — verify before use, do not post about unavailable work as if purchasable."},
+    {"title": "The Strength of Three Strands", "reason": "Sold out per site at time of fetch (2026-08-10) — verify before use."}
+  ],
+  "studio_collection_titles_and_prices_only": {
+    "_note": "Title/price/link only — NOT full descriptions, since fetching all 40 was out of scope for this session. If Atelier's 13 unused pieces run out and the egress block still isn't fixed, ask Claude to fetch full details for a batch of these before the routine needs them, following the same pattern used for the Atelier entries above.",
+    "paintings": [
+      {"title": "Carrying Burden, Seeking Light", "price": "$675.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/paujquzyxc4xjn85w58onew330hiat"},
+      {"title": "The Time of Singing Has Come", "price": "$475.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/vxrrfngmvilbpyx58epf9qvlkrzbyx"},
+      {"title": "The Lord is My Light", "price": "$80.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/tmgvk0q2gx9iw158wtlldoatotulw7"},
+      {"title": "After the Rain, the Windows Kept Glowing", "price": "$125.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/4y6meju1y299d0adfa5srmt64rstix"},
+      {"title": "Quiet Abundance", "price": "$165.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/tqz5aizc8bmf9ay4x1ygl3ef1ige5f"},
+      {"title": "The Center Holds", "price": "$150.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/t00wru4aqbrwoqx0haczci96jqsn7x"},
+      {"title": "Held in the Heights", "price": "$850.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/moh4n0n1vcq0t9bi4lldpw01hpyb5j"},
+      {"title": "A Field Full of Yes", "price": "$375.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/v3muf0bu9ekdjwg58tx0lrduvo74sj"},
+      {"title": "The Spiral of Time", "price": "$650.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/crxdqa9eerf6pxcxmqmcqbgcczsd98"},
+      {"title": "The Key Within", "price": "$475.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/w85fgsb208zgy6af7iofaowp86q8nh"},
+      {"title": "Where the Walls Remember", "price": "$625.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/gns5prpvnsx63qyyrc48i477lqtmjb"},
+      {"title": "Her Quiet Knowing of Grace", "price": "$150.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/zwbwzi019hbzjnfi93v0q296dqj138"},
+      {"title": "Where Grace Settles", "price": "$475.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/7c8j7zpfkerqyxkyckohf7bleq6x0i"},
+      {"title": "What Grace Grows", "price": "$1,600.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/sj0pyu3su8qqawt3ubzhz69qwn4u4y"},
+      {"title": "What the Body Remembers", "price": "$1,780.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/odsc255j6pgad998dadetfcq8qz6xl"},
+      {"title": "Unexpected Happiness", "price": "$450.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/qkxv4o20wyivj9m7y9ihpyudkq1e8p"},
+      {"title": "Sunshine Filled Hearts - Set of 2", "price": "$800.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/zr7hg33h1lydkbjbsinuu11cgpuedt"},
+      {"title": "Divine in the Sky", "price": "$400.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/qq6uu2bhw3dh6kfe1johlqfqsrb106"},
+      {"title": "Finding Light in the Darkness #2", "price": "$80.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/8bpz2vqh8v36b9ju3pvj3y40nmna1e"},
+      {"title": "Love Her Like Yourself", "price": "$300.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/7vokduos6tltzpxhbzlihxglb0iux0"},
+      {"title": "Imagine", "price": "$250.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/dkoh5jf51g9eykf0ysmkndmwx448kn"},
+      {"title": "Wholehearted Pasture", "price": "$125.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/xglk8pegygsyvvdt1mc22ddw2of9u3"},
+      {"title": "Prayerful Mother - Psalm 139", "price": "$1,500.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/fao0j8mbzezgczk1kxouyl26rlsn6i"},
+      {"title": "Breaking the Chains", "price": "$100.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/flfaxibs9z0px5xiruchy4rch9abn5"},
+      {"title": "In the Blossom", "price": "$200.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/in-the-blossom"},
+      {"title": "Where She Cried Flower Grew", "price": "$800.00 (sale, was $900)", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/where-she-cried-flower-grew"},
+      {"title": "Red", "price": "$400.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/pjr8j4yjmgpk6u95epnr84bhg2vrz1"},
+      {"title": "In Plain Sight", "price": "$300.00 (sale, was $600)", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/p549qpmp98z9a5wawxe1dmzt4411oi"},
+      {"title": "Held by the Word - Be Still and Know that I am God", "price": "$350.00 (sale, was $650)", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/0e38znyhddoda8nnlvmodbwphmvi7z"},
+      {"title": "United in Prayer", "price": "$500.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/65fi2vrmcgu28gejhaiqf5by29x62s"},
+      {"title": "Silent, I held my Peace", "price": "$175.00 (sale, was $200)", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/qlf2m7olnj82l7b58mgokuvu0ldm4a"},
+      {"title": "Sisters", "price": "$540.00", "product_url": "https://www.wholeheartedarts.com/studio-collection-agata-christian-art/p/uapdofmlq4tb9fv2l33r3b28pc394l", "caution_note": "Agata already posted about this piece herself directly on Instagram/Facebook (organic, not via this pipeline) on 2026-08-09 — avoid reusing the same painting for an automated post too, or if used, take a clearly different angle."}
+    ],
+    "excluded_sold_out_or_unavailable": ["I Trust In You My God - Psalm 25", "Village", "Heart Filled with Sunrise", "Flower of Righteousness", "Peace is Her Power", "Protect My Heart", "Inner Wisdom"]
+  },
+  "origins_collection": {
+    "_note": "No individual product page links exist on the Origins collection page (site directs viewers to Atelier/Studio instead) — full details can't be fetched the same way. Themes here also skew much heavier/rawer (manipulation, gaslighting, depression, abuse, self-harm framing) than the client's confirmed content pillars (faith, healing, marriage, family, prayer, overcoming struggles by staying faithful to God) — CLAUDE.md's collection preference order (Atelier, then Studio, then Origins) already reflects this, but for the automated pipeline specifically, Origins should be treated as needing human selection rather than unattended auto-pick, given the sensitivity of these themes and thin/unverifiable narratives.",
+    "available_titles_and_prices_seen": [
+      "Manipulation - $50", "Pretzels and Donuts for Love - $150", "Gaslighted - $600", "In Plain Sight - $500",
+      "Patience - $400", "Crocodile Tears - $50", "Not One Face - $400", "Fear - $50", "Power of Words - $600",
+      "Breaking Chains - $300", "Single Motherhood - $200", "Calineczka in the Blossom - $300", "Leaving the Matrix - $750",
+      "Thought-Holes - price not listed", "Depression - $350", "Empty Buckets - $125", "Monsters of Overthinking - $200",
+      "Inner Wisdom - $1500", "Abused Madonna - $150", "Heart Gardening - $300", "Dance it Out - $150",
+      "I Heal Butterfly Dream - $50", "Trust Yourself and Fly - $800", "Less Traveled Path to Love - $50", "Wholehearted You #1 - $50"
+    ]
+  }
+}
