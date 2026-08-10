@@ -1,0 +1,25 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "note": "Not pushed to Buffer this run per publishing-handoff's Critical Buffer limitation — LinkedIn rejects schedulingType:\"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ready for Agata to review and post manually (or approve for a future Buffer push once a safe draft path exists for this channel)."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "scheduled_via": "buffer",
+      "buffer_draft_id": "6a7a122165eef13665843e74",
+      "buffer_channel_id": "6a74f44c99afb44349156296",
+      "note": "Pushed to Buffer as a genuine draft (schedulingType:\"notification\", saveToDraft:true, mode:\"addToQueue\"). Verified via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null, error=null. Image asset used the raw catalog image_url (local download/crop was not possible this run, CDN egress blocked in this sandbox) — Buffer's own servers fetched it successfully (2343x2500px, confirmed in get_post response). Nothing will post until Agata acts on it in Buffer."
+    },
+    "facebook": {
+      "status": "review-ready",
+      "note": "Not pushed to Buffer this run per publishing-handoff's Critical Buffer limitation — Facebook rejects schedulingType:\"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ready for Agata to review and post manually (or approve for a future Buffer push once a safe draft path exists for this channel)."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-08-10",
+      "event": "Built by the automated scheduled cloud-pipeline routine. Painting selected: \"The Time of Singing Has Come\" (Studio Collection, $475 per catalog snapshot), chosen to balance the equal Atelier/Studio weighting since posts 002-004 all used Atelier pieces. Data source: painting-catalog.json (2026-08-10 fallback snapshot) — live wholeheartedarts.com egress was re-tested this run and is still blocked (EGRESS_BLOCKED/403), same as the 2026-08-07 and 2026-08-10 prior runs. Scripture citation (Song of Solomon 2:12) independently verified against ESV.org, Bible.com, King James Bible Online, and Bible Study Tools (not wholeheartedarts.com). Image CDN egress (static1.squarespace.com and images.squarespace-cdn.com) was also tested and is blocked in this sandbox — local download/crop was not possible, so all three platforms use the raw catalog image_url as a fallback instead of a pipeline-cropped/letterboxed image (see images/README-source-image.md). Wrote and reviewed all three platform drafts (all PASS on platform review), ran factual-verification (no unsupported claims) and full package review (3 NEEDS HUMAN DECISION items: unresized/unverified image, non-visually-verified alt text, and unverified live price/availability — all stemming from the same sandbox egress block). Pushed Instagram only to Buffer as a verified real draft; left LinkedIn and Facebook at review-ready per the Critical Buffer limitation. Did not approve, schedule, or publish anything."
+    }
+  ]
+}
