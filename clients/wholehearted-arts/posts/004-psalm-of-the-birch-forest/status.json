@@ -1,19 +1,22 @@
 {
   "platforms": {
     "linkedin": {
-      "status": "review-ready",
+      "status": "published",
       "buffer_draft_id": "6a793df4a614dc17d285e061",
-      "note": "Pushed to Buffer as unscheduled draft. Buffer image uses the public source gallery photo (uncropped) since Buffer requires a public URL and the local letterboxed crop (images/linkedin-v1.jpg) isn't publicly hosted."
+      "external_link": "https://www.linkedin.com/feed/update/urn:li:share:7492415238953410561",
+      "note": "CORRECTED: not actually a draft. Buffer auto-published this within ~10 minutes of creation despite saveToDraft:true, because schedulingType:\"automatic\" ignores saveToDraft on this account for LinkedIn/Facebook channels. See publishing-handoff.md's \"Critical Buffer limitation\" section. Live image is the public uncropped source photo, not the local letterboxed crop. Text is as originally drafted (2 hashtags)."
     },
     "instagram": {
-      "status": "review-ready",
+      "status": "published",
       "buffer_draft_id": "6a793e0fa614dc17d285e1c0",
-      "note": "Pushed to Buffer as unscheduled draft. Buffer image uses the public source gallery photo (full painting, uncropped) since Buffer requires a public URL and the local tight text-legible crop (images/instagram-v1.jpg) isn't publicly hosted — swap the image in Buffer's editor before scheduling if the tighter crop is preferred."
+      "external_link": "https://www.instagram.com/p/Db2AOfJDRMZ/",
+      "note": "CORRECTED: not actually a draft when created (same auto-publish bug). Went live with the original 13-hashtag caption and the public uncropped source photo (not the tight text-legible crop Agata approved). Agata manually fixed the hashtags on the live Instagram post herself afterward (down to the 5-tag cap) since Buffer's API can no longer edit a sent post."
     },
     "facebook": {
-      "status": "review-ready",
+      "status": "published",
       "buffer_draft_id": "6a793e14e6cde72bc9056aae",
-      "note": "Pushed to Buffer as unscheduled draft. Buffer image uses the public source gallery photo (uncropped) since Buffer requires a public URL and the local letterboxed crop (images/facebook-v1.jpg) isn't publicly hosted."
+      "external_link": "https://www.facebook.com/1490300196473435/posts/1493145456188909",
+      "note": "CORRECTED: not actually a draft. Same auto-publish bug. Live image is the public uncropped source photo. Text as originally drafted (1 hashtag, already within the platform's 0-2 norm)."
     }
   },
   "history": [
@@ -27,7 +30,15 @@
     },
     {
       "date": "2026-08-10",
-      "event": "Extended to LinkedIn and Facebook once Buffer service was restored, at Agata's request for all three platforms. Wrote and reviewed both new drafts, generated letterboxed images sized per style-guide.json (1200x627 / 1200x630), wrote alt text, updated fact-check.md and package-review.md to cover all three platforms (all PASS). Pushed all three as unscheduled Buffer drafts using saveToDraft:true and schedulingType:\"automatic\" — none scheduled or published. Buffer drafts use the public source gallery photo (not the local custom crops) due to Buffer's public-URL requirement for image assets."
+      "event": "Extended to LinkedIn and Facebook once Buffer service was restored, at Agata's request for all three platforms. Wrote and reviewed both new drafts, generated letterboxed images, wrote alt text, updated fact-check.md and package-review.md to cover all three platforms (all PASS). Pushed all three to Buffer intending unscheduled drafts (saveToDraft:true, schedulingType:\"automatic\")."
+    },
+    {
+      "date": "2026-08-10",
+      "event": "CRITICAL: all three \"drafts\" auto-published within minutes, discovered when an attempt to edit the Instagram hashtags returned a 403 (post already sent). Root-caused: schedulingType:\"automatic\" auto-publishes at the next open queue slot regardless of saveToDraft:true; this is not specific to today, it also affected topic 003 on 2026-08-06 (see that topic's status.json). Instagram does support a genuine draft path (schedulingType:\"notification\"), confirmed via a throwaway test post (created and deleted). LinkedIn and Facebook both explicitly reject \"notification\" scheduling, and the lower-level GraphQL needsApproval field is blocked by this account's plan (no approval-policy configured). Conclusion: no safe Buffer-API draft path currently exists for LinkedIn/Facebook on this account. Documented fully in .claude/skills/publishing-handoff/SKILL.md; cloud pipeline routine prompt updated to only push Instagram via the safe notification-based draft path and leave LinkedIn/Facebook for manual handling going forward. Agata fixed the live Instagram hashtags herself directly (Buffer's API can't edit a sent post)."
+    },
+    {
+      "date": "2026-08-09",
+      "event": "Instagram hashtag rule tightened per Agata's explicit instruction: max 5 hashtags (was 5-15), applied going forward via instagram-writing and instagram-review skill files. This topic's instagram-post.md and instagram-review.md were updated to match; the live post itself was fixed manually by Agata since it could no longer be edited via Buffer's API."
     }
   ]
 }

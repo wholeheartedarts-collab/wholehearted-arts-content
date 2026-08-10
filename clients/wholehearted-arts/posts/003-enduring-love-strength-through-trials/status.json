@@ -1,8 +1,23 @@
 {
   "platforms": {
-    "linkedin": { "status": "review-ready", "buffer_draft_id": "6a74fe0aa1b9fec61336d5dd" },
-    "instagram": { "status": "review-ready", "buffer_draft_id": "6a74fe1b5cec20265cdf542d" },
-    "facebook": { "status": "review-ready", "buffer_draft_id": "6a74fe2e9aa78dffa290c93e" }
+    "linkedin": {
+      "status": "published",
+      "buffer_draft_id": "6a74fe0aa1b9fec61336d5dd",
+      "external_link": "https://www.linkedin.com/feed/update/urn:li:share:7491246153620070400",
+      "note": "CORRECTED 2026-08-10: this was never actually a draft. Buffer auto-published it on 2026-08-06 ~2 minutes after creation despite saveToDraft:true, because schedulingType:\"automatic\" ignores saveToDraft on this account. Discovered 2026-08-10 while investigating the same bug on topic 004. Agata was never asked to approve this before it went live. See publishing-handoff.md's \"Critical Buffer limitation\" section."
+    },
+    "instagram": {
+      "status": "published",
+      "buffer_draft_id": "6a74fe1b5cec20265cdf542d",
+      "external_link": "https://www.instagram.com/p/Dbtsk-GlC_I/",
+      "note": "CORRECTED 2026-08-10: same auto-publish bug as linkedin above. Sent 2026-08-06 ~2 minutes after creation, never approved."
+    },
+    "facebook": {
+      "status": "published",
+      "buffer_draft_id": "6a74fe2e9aa78dffa290c93e",
+      "external_link": "https://www.facebook.com/1490300196473435/posts/1490322183137903",
+      "note": "CORRECTED 2026-08-10: same auto-publish bug as linkedin above. Sent 2026-08-06 ~2 minutes after creation, never approved."
+    }
   },
   "history": [
     {
@@ -39,7 +54,11 @@
     },
     {
       "date": "2026-08-06",
-      "event": "Agata confirmed her preferred workflow: after package review passes, push the finished post as an unscheduled DRAFT directly into Buffer so she reviews and marks it to post from within Buffer itself, rather than (or in addition to) reviewing in chat. Created all three drafts in Buffer (IDs recorded above), using the real photo's original public URL from wholeheartedarts.com (not the per-platform cropped PNGs, which are local files Buffer can't fetch — cropped versions still need a public host before final scheduling)."
+      "event": "Agata confirmed her preferred workflow: after package review passes, push the finished post as an unscheduled DRAFT directly into Buffer so she reviews and marks it to post from within Buffer itself. Created all three drafts in Buffer (IDs recorded above), using the real photo's original public URL. Believed at the time to be genuine unscheduled drafts, per Buffer's saveToDraft:true parameter and prior assumptions about how it behaves."
+    },
+    {
+      "date": "2026-08-10",
+      "event": "CRITICAL CORRECTION, discovered while investigating an identical issue on topic 004: all three of these \"drafts\" were never actually drafts. Buffer auto-published all three within ~2 minutes of creation on 2026-08-06, because schedulingType:\"automatic\" auto-publishes at the next open queue slot regardless of saveToDraft:true — a bug/limitation not caught at the time because the post's live status was never re-verified with get_post after creation. This means the sensitive content decisions in this topic (identifying the couple as Jewish, vaguely gesturing at a real tragedy, the marriage/divorce framing Agata explicitly waived a sensitivity caveat on) went live publicly on 2026-08-06 without her ever giving explicit final approval to publish — she approved the content's wording, not its publication. Flagged to Agata 2026-08-10 as an urgent incident. Root cause and fix documented in .claude/skills/publishing-handoff/SKILL.md's \"Critical Buffer limitation\" section. Buffer's API does not support deleting or editing a post once status is \"sent\" — any correction to these three live posts would need to happen directly on LinkedIn/Instagram/Facebook, not through Buffer."
     }
   ]
 }
