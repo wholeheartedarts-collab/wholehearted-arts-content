@@ -1,35 +1,25 @@
-# Content Package Review: "Psalm of the Birch Forest" (Instagram only)
+# Content Package Review: "Psalm of the Birch Forest" (all 3 platforms)
 
-Scope note: this topic was built as a one-off manual post for a single
-day (Buffer was down, human wanted something ready to post directly),
-covering **Instagram only** — LinkedIn/Facebook variants were not
-requested and were not produced. This deviates from the default
-"mirror across all three platforms" only because it was explicitly
-scoped that way for this run, not because the topic doesn't fit the
-other platforms.
+Scope note: built as a manual (non-cloud-pipeline) topic across two
+sessions on 2026-08-10 — started Instagram-only while Buffer was down
+(per Agata's request for something to post immediately), then extended
+to LinkedIn + Facebook once Buffer came back and she asked for all
+three.
 
 | Check | Verdict | Notes |
 |---|---|---|
-| Topic/audience/takeaway/tone/goal clear and match brief | PASS | Art-collector audience, faith/art content pillar, angle: creation testifies wordlessly (Psalm 19:1-4), mirrored by scripture literally written into the painting. |
-| Every factual claim supported | PASS | See fact-check.md — all claims SOURCED, none UNSUPPORTED. |
-| Balanced treatment where topic has real risks/drawbacks | PASS (N/A) | research.md identifies no sensitivity risks comparable to post 003; none needed in the post. |
-| No fabricated facts, quotes, personal experiences, results | PASS | No personal backstory invented; research.md explicitly notes none exists for this piece and the post doesn't claim one. |
-| Client voice and avoid-list rules followed | PASS | No politics; no AI-slop phrasing; matches brand-voice.md (first-person, sensory, minimal emoji). |
-| Platform-native structure / current requirements met | PASS | See instagram-review.md — full PASS on all checklist items. |
-| Hook strength and readability | PASS | 108-character hook stands alone; short-line formatting throughout. |
-| Image relevant, original, consistent with style-guide.json, correctly sized | PASS | `images/instagram-v1.jpg`, 1080×1350 (matches style-guide.json's `instagram_feed` spec). Real photo sourced directly from the painting's own product gallery on wholeheartedarts.com (a genuine close-up of the actual canvas, not AI-generated). Revised once after Agata flagged the first crop (a room-mockup-derived detail) as too zoomed-out to read the inscribed text — replaced with a tighter crop of a straight-on gallery photo where several trunks' scripture text (Psalm 19:7-10) is clearly legible, matching the caption's claim much more directly. Composition (natural color, organic texture, no text overlay) matches style-guide.json's mood/prohibited rules. |
-| Alt text accurate, matches final image and post | PASS | alt-text/instagram.md describes the actual final crop, including the visible collaged text fragment. |
-| Tags/mentions appropriate, minimal, no unwanted third-party tagging | PASS | No @mentions used; hashtags are topic-relevant only. |
+| Topic/audience/takeaway/tone/goal clear and match brief | PASS | Art-collector audience, faith/art content pillar, angle: creation testifies wordlessly (Psalm 19:1-4), mirrored by scripture literally written into the painting. Consistent across all 3 platform drafts, each adapted to platform voice (LinkedIn: process/professional-personal; Instagram: image-first/caption; Facebook: conversational/community). |
+| Every factual claim supported | PASS | See fact-check.md (all 3 platforms) — all claims SOURCED, none UNSUPPORTED. |
+| Balanced treatment where topic has real risks/drawbacks | PASS (N/A) | research.md identifies no sensitivity risks comparable to post 003; none needed in any draft. |
+| No fabricated facts, quotes, personal experiences, results | PASS | No personal backstory invented on any platform; research.md explicitly notes none exists for this piece. |
+| Client voice and avoid-list rules followed | PASS | No politics; no AI-slop phrasing; each draft matches brand-voice.md in its platform register. |
+| Platform-native structure / current requirements met | PASS | See instagram-review.md, linkedin-review.md, facebook-review.md — full PASS on all three. |
+| Hook strength and readability | PASS | IG: 108-char hook. LinkedIn: ~175-char hook. Facebook: short, clear opening line. All stand alone. |
+| Image relevant, original, consistent with style-guide.json, correctly sized | PASS | `images/instagram-v1.jpg` (1080×1350, tight text-legible crop), `images/linkedin-v1.jpg` (1200×627), `images/facebook-v1.jpg` (1200×630) — LinkedIn/Facebook use letterboxing (wall-color sampled from the source photo itself, matching post 003's approach) so no part of the artwork is cropped off. All three are real photos from the painting's own product gallery on wholeheartedarts.com, not AI-generated. Instagram crop was revised once already (see git history) after Agata flagged the first version as not showing the inscribed text clearly enough. |
+| Alt text accurate, matches final image and post | PASS | alt-text/instagram.md, linkedin.md, facebook.md each describe their actual final image. |
+| Tags/mentions appropriate, minimal, no unwanted third-party tagging | PASS | No @mentions anywhere. IG: 13 hashtags (native range). LinkedIn: 2. Facebook: 1. All topic-relevant. |
 | Compliance constraints respected | PASS | None defined beyond avoid-list; no professional/medical/legal claims present. |
-| No secrets/API keys/private info in output | PASS | Verified — no keys or private data in any file for this topic. |
+| No secrets/API keys/private info in output | PASS | Verified across all files for this topic. |
 
-**Overall verdict: PASS.** No FAIL items. No NEEDS HUMAN DECISION items
-for the content itself.
-
-**One operational note, not a content issue**: this package was built
-because Buffer is currently down (status page: "Buffer Login
-Disruption," ongoing as of 2026-08-10), so it was **not** pushed to
-Buffer as a draft the way posts 001-003 were. It's being handed to Agata
-directly (post text + local JPEG) for manual posting today. Buffer
-scheduling for this same package should be added once Buffer's service
-is restored, per her request to still have it on Buffer going forward.
+**Overall verdict: PASS** on all three platforms. No FAIL items, no NEEDS
+HUMAN DECISION items for the content itself.

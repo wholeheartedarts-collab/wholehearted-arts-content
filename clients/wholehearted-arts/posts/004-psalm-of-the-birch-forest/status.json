@@ -1,15 +1,33 @@
 {
   "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_draft_id": "6a793df4a614dc17d285e061",
+      "note": "Pushed to Buffer as unscheduled draft. Buffer image uses the public source gallery photo (uncropped) since Buffer requires a public URL and the local letterboxed crop (images/linkedin-v1.jpg) isn't publicly hosted."
+    },
     "instagram": {
       "status": "review-ready",
-      "buffer_draft_id": null,
-      "note": "Not pushed to Buffer — Buffer outage in progress as of 2026-08-10 (see package-review.md). Handed to Agata directly for manual posting today; push to Buffer once service is restored, if she still wants it queued there too."
+      "buffer_draft_id": "6a793e0fa614dc17d285e1c0",
+      "note": "Pushed to Buffer as unscheduled draft. Buffer image uses the public source gallery photo (full painting, uncropped) since Buffer requires a public URL and the local tight text-legible crop (images/instagram-v1.jpg) isn't publicly hosted — swap the image in Buffer's editor before scheduling if the tighter crop is preferred."
+    },
+    "facebook": {
+      "status": "review-ready",
+      "buffer_draft_id": "6a793e14e6cde72bc9056aae",
+      "note": "Pushed to Buffer as unscheduled draft. Buffer image uses the public source gallery photo (uncropped) since Buffer requires a public URL and the local letterboxed crop (images/facebook-v1.jpg) isn't publicly hosted."
     }
   },
   "history": [
     {
       "date": "2026-08-10",
-      "event": "Built manually (not via the scheduled cloud pipeline) as a one-off Instagram-only post, at Agata's request, because Buffer was down and she wanted something ready to post today. Painting: \"Psalm of the Birch Forest\" (based on Psalm 19), Atelier Collection. Full research/write/review/fact-check/image/alt-text steps completed per CLAUDE.md workflow, scoped to Instagram only (LinkedIn/Facebook not requested for this run)."
+      "event": "Built manually (not via the scheduled cloud pipeline) as a one-off Instagram-only post, at Agata's request, because Buffer was down and she wanted something ready to post today. Painting: \"Psalm of the Birch Forest\" (based on Psalm 19), Atelier Collection."
+    },
+    {
+      "date": "2026-08-10",
+      "event": "Instagram image crop revised after Agata flagged the first version as too zoomed-out to read the inscribed text; replaced with a tighter crop showing legible Psalm 19:7-10 text."
+    },
+    {
+      "date": "2026-08-10",
+      "event": "Extended to LinkedIn and Facebook once Buffer service was restored, at Agata's request for all three platforms. Wrote and reviewed both new drafts, generated letterboxed images sized per style-guide.json (1200x627 / 1200x630), wrote alt text, updated fact-check.md and package-review.md to cover all three platforms (all PASS). Pushed all three as unscheduled Buffer drafts using saveToDraft:true and schedulingType:\"automatic\" — none scheduled or published. Buffer drafts use the public source gallery photo (not the local custom crops) due to Buffer's public-URL requirement for image assets."
     }
   ]
 }

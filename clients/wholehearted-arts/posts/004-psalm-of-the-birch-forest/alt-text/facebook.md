@@ -1,0 +1,2 @@
+Image: images/facebook-v1.jpg
+Alt text: A framed mixed-media painting of an autumn birch forest hangs on a plain warm-white wall. The canvas shows a dense row of vertical black-and-white birch trunks topped by a canopy of yellow, orange, and green collaged-paper leaves, with faint printed scripture text visible running down several trunks. The painting is centered in the frame with even wall space on either side.
