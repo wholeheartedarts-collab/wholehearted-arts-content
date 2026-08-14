@@ -1,0 +1,33 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "note": "Not pushed to Buffer this run — no confirmed-safe draft path for LinkedIn on this account. Ready for Agata to post manually."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6a7f0ef28166838b8aa48f02",
+      "buffer_channel_id": "6a74f44c99afb44349156296",
+      "note": "Pushed to Buffer as an unscheduled draft (schedulingType: notification, saveToDraft: true, mode: addToQueue). Confirmed via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null — genuinely inert, nothing will post until Agata acts on it in Buffer. Image was passed as the raw catalog CDN URL (no local crop); Buffer's own server successfully fetched it (returned 1500x1318, no error) despite this sandbox being unable to."
+    },
+    "facebook": {
+      "status": "review-ready",
+      "note": "Not pushed to Buffer this run — no confirmed-safe draft path for Facebook on this account. Ready for Agata to post manually."
+    }
+  },
+  "history": [
+    {
+      "run_type": "automated-scheduled",
+      "topic": "007-guided-by-grace",
+      "painting": "Guided by Grace",
+      "collection": "Atelier (equally-weighted selection vs. Studio, per 2026-08-10 direction)",
+      "data_source": "painting-catalog.json (2026-08-10 fallback snapshot) — live wholeheartedarts.com egress re-tested and confirmed still blocked this run (EGRESS_BLOCKED)",
+      "image_source": "Neither wholeheartedarts.com nor its Squarespace image CDN (static1.squarespace.com) were reachable this run — confirmed via curl and WebFetch. Fell back to passing the raw catalog image_url directly (workable for Buffer, which fetches server-side) rather than a locally cropped/letterboxed file. No platform-correct crops were produced for any platform this run.",
+      "scripture_verification": "Psalm 34 and 1 Samuel 21:13 independently verified against ESV.org and BibleHub, not wholeheartedarts.com",
+      "platforms_completed": ["linkedin", "instagram", "facebook"],
+      "package_review_result": "Ready for human review with 3 NEEDS HUMAN DECISION items, all image/link-verification related due to the egress block; no FAIL items",
+      "buffer_action": "Instagram draft creation attempted per publishing-handoff's Critical Buffer limitation section; LinkedIn and Facebook intentionally not pushed to Buffer.",
+      "buffer_result": "SUCCESS — Instagram draft post 6a7f0ef28166838b8aa48f02 created on channel 6a74f44c99afb44349156296 (wholeheartedarts IG business account). Verified via get_post: status=draft, dueAt=null, sentAt=null. Image fetched successfully by Buffer's own servers from the raw CDN URL despite this sandbox's egress block."
+    }
+  ]
+}
