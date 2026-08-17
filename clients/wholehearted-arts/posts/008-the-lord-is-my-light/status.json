@@ -1,0 +1,25 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "note": "Not pushed to Buffer this run per publishing-handoff's Critical Buffer limitation — LinkedIn rejects schedulingType:\"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ready for Agata to review and post manually."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "scheduled_via": "buffer",
+      "buffer_draft_id": "6a83006801a6c9dff41cd487",
+      "buffer_channel_id": "6a74f44c99afb44349156296",
+      "note": "Pushed to Buffer as a genuine draft (schedulingType:\"notification\", saveToDraft:true, mode:\"addToQueue\"). Verified via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null, error=null. Image asset used the raw catalog image_url (local download/crop was not possible this run, CDN egress blocked in this sandbox). Buffer's own servers fetched it successfully (2500x2474px, confirmed in get_post response). Nothing will post until Agata acts on it in Buffer."
+    },
+    "facebook": {
+      "status": "review-ready",
+      "note": "Not pushed to Buffer this run per publishing-handoff's Critical Buffer limitation — Facebook rejects schedulingType:\"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ready for Agata to review and post manually."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-08-17",
+      "event": "Built by the automated scheduled cloud-pipeline routine. Painting selected: \"The Lord is My Light\" (Studio Collection, $80 per catalog snapshot), chosen for its clean, uninvented fit to the faith/overcoming-struggles content pillar and an independently-verifiable scripture anchor (Psalm 27:1). Data source: painting-catalog.json (2026-08-10 fallback snapshot) — live wholeheartedarts.com egress was re-tested this run (WebFetch on one product page) and is still blocked (EGRESS_BLOCKED). Scripture citation and Psalm 27 background independently verified via WebSearch against ESV.org, Bible Hub, and Enduring Word. Image CDN egress (static1.squarespace.com http/https and images.squarespace-cdn.com https) was tested live via curl this run and is also still blocked (403/CONNECT-tunnel-failed) — local download/crop was not possible, so all three platforms use the raw catalog image_url as a fallback (see images/README-source-image.md). Wrote and reviewed all three platform drafts (all PASS on platform review after two small factual-precision fixes made during LinkedIn review: an unverifiable size-comparison claim removed, a Psalm-27-authorship claim hedged to match the source's own framing). Ran factual-verification (fact-check.md, no unsupported claims) and full package review (3 NEEDS HUMAN DECISION items: unresized/unverified image, non-visually-verified alt text, and unverified live price/availability — all stemming from the same sandbox egress block). Did not approve, schedule, or publish anything."
+    }
+  ]
+}
