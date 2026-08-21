@@ -1,0 +1,30 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "staged_via": "buffer_idea",
+      "buffer_idea_id": "6a88aef35b3baf345e9a8127",
+      "note": "Staged in Buffer as an IDEA per publishing-handoff's Critical Buffer limitation — LinkedIn rejects schedulingType \"notification\" (HTTP 400, re-confirmed 2026-08-21) and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ideas live on Buffer's Ideas board, have no queue slot, and cannot publish — inert until Agata converts it in Buffer's composer. Nothing approved, scheduled, or published."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "scheduled_via": "buffer",
+      "buffer_draft_id": "6a88aed63869cf66589646d3",
+      "buffer_channel_id": "6a74f44c99afb44349156296",
+      "note": "Pushed to Buffer as a genuine draft (schedulingType: \"notification\", saveToDraft: true, mode: \"addToQueue\"). Verified via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null, error=null. Image asset used the raw catalog image_url (local download/crop not possible this run, CDN egress blocked in this sandbox). Buffer's own servers fetched it successfully (1500x1501px, confirmed in get_post response — near-square, not the piece's true 12x36 panoramic proportions; likely a square product-listing thumbnail). Nothing will post until Agata acts on it in Buffer."
+    },
+    "facebook": {
+      "status": "review-ready",
+      "staged_via": "buffer_idea",
+      "buffer_idea_id": "6a88aef845f649ccfc81a40d",
+      "note": "Staged in Buffer as an IDEA, same reasoning as LinkedIn — Facebook also rejects schedulingType \"notification\". Inert until Agata converts it in Buffer's composer. Nothing approved, scheduled, or published."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-08-21",
+      "event": "automated-run",
+      "note": "Scheduled pipeline run produced this package end-to-end: research, LinkedIn/Instagram/Facebook writing+review, fact-check, image sourcing, alt text, package review. Painting: 'They Will Call Me Blessed' (Atelier Collection, $1,500 per catalog snapshot) — selected from painting-catalog.json (2026-08-10 fallback snapshot). Live wholeheartedarts.com egress re-tested this run (one WebFetch) and confirmed still blocked (EGRESS_BLOCKED), consistent with every run 2026-08-07 through 2026-08-21 — Agata's 2026-08-21 allowlist request does not appear to have taken effect yet. Image CDN host (static1.squarespace.com) also re-tested this run via curl (both http and https) and confirmed still blocked (HTTP 403 / CONNECT tunnel failed) — no local image download/crop was possible; raw catalog image_url used as fallback wherever a public image URL is needed. Scripture citation (Luke 1:46-48, the Magnificat) independently verified via WebSearch aggregation across BibleHub, Bible.com, Biblia.com, and Christianity.com, after direct WebFetch attempts to biblegateway.com, biblehub.com, and esv.org were all also tested and blocked this run. Three NEEDS HUMAN DECISION items recorded in package-review.md: image not visually verified/not platform-cropped (though Buffer's own fetch reported the source image is 1500x1501px, essentially square, softening but not resolving the aspect-ratio concern), alt text not visually verified (and written from a thinner-than-usual catalog description for this specific piece), and unverified live price/availability. Instagram pushed to Buffer as a verified real draft (6a88aed63869cf66589646d3); LinkedIn and Facebook staged as Buffer Ideas (6a88aef35b3baf345e9a8127 / 6a88aef845f649ccfc81a40d). Did not approve, schedule, or publish anything."
+    }
+  ]
+}
