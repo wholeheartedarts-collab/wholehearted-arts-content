@@ -74,8 +74,39 @@ Instagram, and Facebook within ~2-10 minutes of creation despite
   posting policy on this channel requires approval" — this org's plan
   has no approval-required posting policy configured.
 - **Conclusion: there is currently no way to stage an inert,
-  human-review-before-publish draft for LinkedIn or Facebook through
+  human-review-before-publish *post* for LinkedIn or Facebook through
   Buffer's API on this account.** Only Instagram supports it.
+  Re-confirmed 2026-08-21 by direct test — both channels returned
+  HTTP 400 "Notification scheduling is not supported for
+  linkedin/facebook channels."
+
+### The safe LinkedIn/Facebook staging path: Buffer **Ideas**
+
+Confirmed working 2026-08-21. `create_idea` writes to Buffer's Ideas
+board, not the posting queue. An idea has no `schedulingType`, no queue
+slot, and no publish path of its own — Buffer cannot send it. A human
+converts an idea into a post from Buffer's own composer when they
+decide to.
+
+Use it for LinkedIn and Facebook at `review-ready`:
+
+```
+create_idea(organizationId, content: {
+  title:    "NNN <Platform> — <Painting title>",
+  services: ["linkedin"],          // or ["facebook"] — one idea per platform
+  text:     <full assembled post: hook + body + CTA + hashtags>,
+  media:    [{ type: "image", url: <public image URL>, alt: <alt text> }]
+})
+```
+
+This is strictly safer than `create_post` for these two channels and
+replaces the old "hand the text to the human for copy/paste" fallback —
+the content now lands *inside Buffer*, next to the Instagram drafts,
+where Agata already looks. It does not count against the plan's
+scheduled-post limit.
+
+`create_post` for LinkedIn/Facebook remains forbidden without explicit
+per-platform, publish-now approval, exactly as below.
 
 ### Practical rule this implies
 
@@ -86,11 +117,11 @@ Instagram, and Facebook within ~2-10 minutes of creation despite
 - **LinkedIn and Facebook**: do **not** call Buffer's `create_post` for
   these two channels until a human has *already* given explicit
   approval to publish that exact content *right now* (or at Buffer's
-  next queue slot) — there is no safe staging step for them via this
-  API. Until then, hand the human the finished text + image directly
-  (chat, or a file) for manual copy/paste into Buffer's own web
-  composer (which may have a real "save as draft" the API doesn't
-  expose) or straight into LinkedIn/Facebook. Treat any LinkedIn/
+  next queue slot). Instead, stage them at `review-ready` as Buffer
+  **Ideas** (`create_idea`, see the section above) — inert by
+  construction, and visible in Buffer alongside the Instagram drafts.
+  The human converts an idea to a post in Buffer's own composer when
+  they decide to publish. Treat any LinkedIn/
   Facebook Buffer `create_post` call as equivalent to
   publish-imminently, and get explicit per-platform approval first,
   exactly as the "Never auto-publish" hard rule already requires.
@@ -106,7 +137,9 @@ Instagram, and Facebook within ~2-10 minutes of creation despite
    Buffer is a delivery mechanism for a decision already made, never a
    new approval path of its own. **Exception**: Instagram may be pushed
    at `review-ready` as a real Buffer draft per the limitation note
-   above, since that path is genuinely inert until the human acts.
+   above, since that path is genuinely inert until the human acts, and
+   LinkedIn/Facebook may be staged at `review-ready` as Buffer **Ideas**
+   (never posts), which are inert for the same reason.
 2. Confirm Buffer's MCP tools are connected and that the target
    platform's account is linked in Buffer before attempting this path —
    if not connected, fall back to the manual path for that platform

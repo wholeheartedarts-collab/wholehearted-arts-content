@@ -2,7 +2,9 @@
   "platforms": {
     "linkedin": {
       "status": "review-ready",
-      "note": "Not pushed to Buffer this run per publishing-handoff's Critical Buffer limitation — LinkedIn rejects schedulingType:\"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ready for Agata to review and post manually."
+      "note": "Staged in Buffer as an IDEA (id 6a8849441e42733376d4cf1a) on 2026-08-21 — backfilled by Agata + Claude Code while fixing the pipeline's delivery gap. Ideas live on Buffer's Ideas board, have no queue slot and cannot publish, so this is inert until Agata converts it in Buffer's composer. Still review-ready; nothing approved, scheduled or published.",
+      "buffer_idea_id": "6a8849441e42733376d4cf1a",
+      "staged_via": "buffer_idea"
     },
     "instagram": {
       "status": "review-ready",
@@ -13,13 +15,20 @@
     },
     "facebook": {
       "status": "review-ready",
-      "note": "Not pushed to Buffer this run per publishing-handoff's Critical Buffer limitation — Facebook rejects schedulingType:\"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ready for Agata to review and post manually."
+      "note": "Staged in Buffer as an IDEA (id 6a88494e6750c732d4686415) on 2026-08-21 — backfilled by Agata + Claude Code while fixing the pipeline's delivery gap. Ideas live on Buffer's Ideas board, have no queue slot and cannot publish, so this is inert until Agata converts it in Buffer's composer. Still review-ready; nothing approved, scheduled or published.",
+      "buffer_idea_id": "6a88494e6750c732d4686415",
+      "staged_via": "buffer_idea"
     }
   },
   "history": [
     {
       "date": "2026-08-17",
       "event": "Built by the automated scheduled cloud-pipeline routine. Painting selected: \"The Lord is My Light\" (Studio Collection, $80 per catalog snapshot), chosen for its clean, uninvented fit to the faith/overcoming-struggles content pillar and an independently-verifiable scripture anchor (Psalm 27:1). Data source: painting-catalog.json (2026-08-10 fallback snapshot) — live wholeheartedarts.com egress was re-tested this run (WebFetch on one product page) and is still blocked (EGRESS_BLOCKED). Scripture citation and Psalm 27 background independently verified via WebSearch against ESV.org, Bible Hub, and Enduring Word. Image CDN egress (static1.squarespace.com http/https and images.squarespace-cdn.com https) was tested live via curl this run and is also still blocked (403/CONNECT-tunnel-failed) — local download/crop was not possible, so all three platforms use the raw catalog image_url as a fallback (see images/README-source-image.md). Wrote and reviewed all three platform drafts (all PASS on platform review after two small factual-precision fixes made during LinkedIn review: an unverifiable size-comparison claim removed, a Psalm-27-authorship claim hedged to match the source's own framing). Ran factual-verification (fact-check.md, no unsupported claims) and full package review (3 NEEDS HUMAN DECISION items: unresized/unverified image, non-visually-verified alt text, and unverified live price/availability — all stemming from the same sandbox egress block). Did not approve, schedule, or publish anything."
+    },
+    {
+      "date": "2026-08-21",
+      "event": "LinkedIn and Facebook staged as Buffer Ideas (6a8849441e42733376d4cf1a / 6a88494e6750c732d4686415). Direct test the same day confirmed both channels reject schedulingType \"notification\" (HTTP 400), so create_post stays forbidden for them; Ideas are the safe staging path and the routine was updated to use them.",
+      "by": "human+agent"
     }
   ]
 }

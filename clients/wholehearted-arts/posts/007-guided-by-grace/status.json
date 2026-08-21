@@ -2,7 +2,9 @@
   "platforms": {
     "linkedin": {
       "status": "review-ready",
-      "note": "Not pushed to Buffer this run — no confirmed-safe draft path for LinkedIn on this account. Ready for Agata to post manually."
+      "note": "Staged in Buffer as an IDEA (id 6a88492d05d1b3634b48c852) on 2026-08-21 — backfilled by Agata + Claude Code while fixing the pipeline's delivery gap. Ideas live on Buffer's Ideas board, have no queue slot and cannot publish, so this is inert until Agata converts it in Buffer's composer. Still review-ready; nothing approved, scheduled or published.",
+      "buffer_idea_id": "6a88492d05d1b3634b48c852",
+      "staged_via": "buffer_idea"
     },
     "instagram": {
       "status": "review-ready",
@@ -12,7 +14,9 @@
     },
     "facebook": {
       "status": "review-ready",
-      "note": "Not pushed to Buffer this run — no confirmed-safe draft path for Facebook on this account. Ready for Agata to post manually."
+      "note": "Staged in Buffer as an IDEA (id 6a88493745f649ccfc7e67a5) on 2026-08-21 — backfilled by Agata + Claude Code while fixing the pipeline's delivery gap. Ideas live on Buffer's Ideas board, have no queue slot and cannot publish, so this is inert until Agata converts it in Buffer's composer. Still review-ready; nothing approved, scheduled or published.",
+      "buffer_idea_id": "6a88493745f649ccfc7e67a5",
+      "staged_via": "buffer_idea"
     }
   },
   "history": [
@@ -24,10 +28,19 @@
       "data_source": "painting-catalog.json (2026-08-10 fallback snapshot) — live wholeheartedarts.com egress re-tested and confirmed still blocked this run (EGRESS_BLOCKED)",
       "image_source": "Neither wholeheartedarts.com nor its Squarespace image CDN (static1.squarespace.com) were reachable this run — confirmed via curl and WebFetch. Fell back to passing the raw catalog image_url directly (workable for Buffer, which fetches server-side) rather than a locally cropped/letterboxed file. No platform-correct crops were produced for any platform this run.",
       "scripture_verification": "Psalm 34 and 1 Samuel 21:13 independently verified against ESV.org and BibleHub, not wholeheartedarts.com",
-      "platforms_completed": ["linkedin", "instagram", "facebook"],
+      "platforms_completed": [
+        "linkedin",
+        "instagram",
+        "facebook"
+      ],
       "package_review_result": "Ready for human review with 3 NEEDS HUMAN DECISION items, all image/link-verification related due to the egress block; no FAIL items",
       "buffer_action": "Instagram draft creation attempted per publishing-handoff's Critical Buffer limitation section; LinkedIn and Facebook intentionally not pushed to Buffer.",
       "buffer_result": "SUCCESS — Instagram draft post 6a7f0ef28166838b8aa48f02 created on channel 6a74f44c99afb44349156296 (wholeheartedarts IG business account). Verified via get_post: status=draft, dueAt=null, sentAt=null. Image fetched successfully by Buffer's own servers from the raw CDN URL despite this sandbox's egress block."
+    },
+    {
+      "date": "2026-08-21",
+      "event": "LinkedIn and Facebook staged as Buffer Ideas (6a88492d05d1b3634b48c852 / 6a88493745f649ccfc7e67a5). Direct test the same day confirmed both channels reject schedulingType \"notification\" (HTTP 400), so create_post stays forbidden for them; Ideas are the safe staging path and the routine was updated to use them.",
+      "by": "human+agent"
     }
   ]
 }

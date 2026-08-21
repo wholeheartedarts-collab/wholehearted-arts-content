@@ -2,7 +2,9 @@
   "platforms": {
     "linkedin": {
       "status": "review-ready",
-      "note": "Not pushed to Buffer this run per publishing-handoff's Critical Buffer limitation — LinkedIn rejects schedulingType:\"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ready for Agata to review and post manually (or approve for a future Buffer push once a safe draft path exists for this channel)."
+      "note": "Staged in Buffer as an IDEA (id 6a88491605d1b3634b48c80f) on 2026-08-21 — backfilled by Agata + Claude Code while fixing the pipeline's delivery gap. Ideas live on Buffer's Ideas board, have no queue slot and cannot publish, so this is inert until Agata converts it in Buffer's composer. Still review-ready; nothing approved, scheduled or published.",
+      "buffer_idea_id": "6a88491605d1b3634b48c80f",
+      "staged_via": "buffer_idea"
     },
     "instagram": {
       "status": "review-ready",
@@ -13,13 +15,20 @@
     },
     "facebook": {
       "status": "review-ready",
-      "note": "Not pushed to Buffer this run per publishing-handoff's Critical Buffer limitation — Facebook rejects schedulingType:\"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ready for Agata to review and post manually (or approve for a future Buffer push once a safe draft path exists for this channel)."
+      "note": "Staged in Buffer as an IDEA (id 6a8849201e42733376d4cea2) on 2026-08-21 — backfilled by Agata + Claude Code while fixing the pipeline's delivery gap. Ideas live on Buffer's Ideas board, have no queue slot and cannot publish, so this is inert until Agata converts it in Buffer's composer. Still review-ready; nothing approved, scheduled or published.",
+      "buffer_idea_id": "6a8849201e42733376d4cea2",
+      "staged_via": "buffer_idea"
     }
   },
   "history": [
     {
       "date": "2026-08-12",
       "event": "Built by the automated scheduled cloud-pipeline routine. Painting selected: \"United in Prayer\" (Studio Collection, $500 per catalog snapshot), chosen for its strong, uninvented fit to the faith/family/prayer content pillars and a clean, independently-verifiable scripture anchor (Psalm 127:1). Data source: painting-catalog.json (2026-08-10 fallback snapshot) — live wholeheartedarts.com egress was re-tested this run and is still blocked (EGRESS_BLOCKED/403), same as prior runs. Scripture citation (Psalm 127:1-5) independently verified via WebSearch aggregation across Bible Study Tools, ESV.org, Biblia.com, and Bible Hub, after direct fetches to esv.org, biblehub.com, and biblegateway.com were all also tested and blocked this run. Image CDN egress (static1.squarespace.com http/https and images.squarespace-cdn.com https) was tested live and is blocked in this sandbox — local download/crop was not possible, so all three platforms use the raw catalog image_url as a fallback instead of a pipeline-cropped/letterboxed image (see images/README-source-image.md). Wrote and reviewed all three platform drafts (all PASS on platform review), ran factual-verification (no unsupported claims) and full package review (3 NEEDS HUMAN DECISION items: unresized/unverified image, non-visually-verified alt text, and unverified live price/availability — all stemming from the same sandbox egress block). Pushed Instagram only to Buffer as a verified real draft; left LinkedIn and Facebook at review-ready per the Critical Buffer limitation. Did not approve, schedule, or publish anything."
+    },
+    {
+      "date": "2026-08-21",
+      "event": "LinkedIn and Facebook staged as Buffer Ideas (6a88491605d1b3634b48c80f / 6a8849201e42733376d4cea2). Direct test the same day confirmed both channels reject schedulingType \"notification\" (HTTP 400), so create_post stays forbidden for them; Ideas are the safe staging path and the routine was updated to use them.",
+      "by": "human+agent"
     }
   ]
 }
