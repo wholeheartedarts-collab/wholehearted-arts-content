@@ -1,0 +1,23 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "note": "Not pushed to Buffer this run per runbook — no confirmed-safe draft path exists for LinkedIn on this account. Ready for Agata to handle manually."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6a88426e1b38003a90cb6eea",
+      "note": "Pushed to Buffer as a real draft (schedulingType: notification, saveToDraft: true). Verified via get_post immediately after creation: status=draft, dueAt=null, sentAt=null. Buffer's own servers successfully fetched the source image from the raw catalog URL (returned 1500x1499 dimensions), confirming the egress-fallback path worked for Buffer even though this sandbox's own curl attempt at the same URL failed. Still requires Agata's action in Buffer before anything posts."
+    },
+    "facebook": {
+      "status": "review-ready",
+      "note": "Not pushed to Buffer this run per runbook — no confirmed-safe draft path exists for Facebook on this account. Ready for Agata to handle manually."
+    }
+  },
+  "history": [
+    {
+      "event": "automated-run",
+      "note": "Scheduled pipeline run produced this package end-to-end: research, LinkedIn/Instagram/Facebook writing+review, fact-check, image sourcing, alt text, package review. Painting: 'Prayerful Mother - Psalm 139' (Studio Collection) — selected from painting-catalog.json (2026-08-10 fallback snapshot; live wholeheartedarts.com egress re-tested this run, 2026-08-21, and confirmed still blocked). Image CDN host (static1.squarespace.com) also re-tested this run and confirmed still blocked (HTTP 403) — no local image download/crop was possible; raw catalog image_url used as fallback wherever a public image URL is needed. Two NEEDS HUMAN DECISION items recorded in package-review.md: image not visually verified this run (no per-platform sized crops), and alt text written from catalog text only (not confirmed against the real photo)."
+    }
+  ]
+}
