@@ -1,0 +1,41 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_idea_id": "6a8c380eeeeae7c7919783d3",
+      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6a8c3801649ac09511b4a638",
+      "note": "Staged as a real Buffer draft (schedulingType: notification, saveToDraft: true). Verified via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null. Image attached via its public URL (Buffer fetched it independently, 2500x2500)."
+    },
+    "facebook": {
+      "status": "review-ready",
+      "buffer_idea_id": "6a8c3813a024b25cecc0004d",
+      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-08-24",
+      "event": "Automated scheduled pipeline run created this package and staged all three platforms in Buffer.",
+      "details": {
+        "painting": "In the Cradle of Faith",
+        "collection": "studio",
+        "selection_rule_reason": "Studio had 4 used entries vs. Atelier's 6 at time of selection (see painting-catalog.json _selection_rule) — fewer-used collection wins, so Studio was selected. Not tied, so the tiebreaker (most-recent-post-number check) was not needed.",
+        "egress_status": "www.wholeheartedarts.com and images.squarespace-cdn.com both confirmed blocked this run (single untried-retry test each, per instructions). Painting facts came from painting-catalog.json (live Squarespace API data as of 2026-08-21). Image could not be downloaded/cropped; raw public image_url used as fallback wherever an image URL was needed (Buffer's own servers fetched it independently and it attached successfully to all three Buffer entries).",
+        "buffer_organization_id": "6a74d8f28ea6cd91794407b3",
+        "buffer_channels_used": {
+          "instagram": "6a74f44c99afb44349156296",
+          "linkedin": "6a74f43399afb4434915623a (idea only, no channel ID needed for create_idea)",
+          "facebook": "6a74f4ad99afb4434915640b (idea only, no channel ID needed for create_idea)"
+        },
+        "needs_human_decision_items": [
+          "Buffer-staged images are the raw uncropped source photo (2500x2500), not platform-sized crops (LinkedIn 1200x627 / Instagram 1080x1350 / Facebook 1200x630), due to the image CDN block.",
+          "Alt text for all three platforms was written from the catalog's textual description only and is NOT visually verified against the actual painting — catalog's own image_alt_from_site field is null for this entry."
+        ]
+      }
+    }
+  ]
+}
