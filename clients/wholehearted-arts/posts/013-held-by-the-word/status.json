@@ -1,0 +1,43 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_idea_id": "6a8edca10f4cfe7627dceae0",
+      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6a8edc962976fdf632ec937b",
+      "note": "Staged as a real Buffer draft (schedulingType: notification, saveToDraft: true). Verified via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null. Image attached via its public URL (Buffer fetched it independently, 2000x1334)."
+    },
+    "facebook": {
+      "status": "review-ready",
+      "buffer_idea_id": "6a8edca68744872e4d0a13a7",
+      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-08-26",
+      "event": "Automated scheduled pipeline run created this package and staged all three platforms in Buffer.",
+      "details": {
+        "painting": "Held by the Word- Be Still and Know that I am God",
+        "collection": "studio",
+        "selection_rule_reason": "painting-catalog.json's own 'used' lists show Atelier=6, Studio=4, but post 012 ('In the Cradle of Faith', a Studio painting, run 2026-08-24) postdates the catalog's 2026-08-21 snapshot and isn't reflected there. Verified directly against post 012's own files and excluded it from this run's candidate pool. Real counts: Atelier=6, Studio=5. Studio still has fewer used entries, so the selection rule still points to Studio (not a tie; tiebreaker not needed).",
+        "egress_status": "www.wholeheartedarts.com and images.squarespace-cdn.com both confirmed blocked this run (one untried-retry test each, per instructions: a WebFetch to the site returned EGRESS_BLOCKED, and a curl to the image CDN returned 'CONNECT tunnel failed, response 403'). Painting facts came from painting-catalog.json (live Squarespace API data as of 2026-08-21). Image could not be downloaded/cropped; raw public image_url used as fallback wherever an image URL was needed (Buffer's own servers fetched it independently and it attached successfully to all three Buffer entries, 2000x1334).",
+        "scripture_verification": "Psalm 37:7 and Psalm 46:10 both independently verified via WebSearch (ESV.org, BibleHub, Biblia) since direct fetch to biblegateway.com/biblehub.com/esv.org is also blocked by the egress proxy. Confirms the painting's Psalm 37 attribution is distinct from and not confused with the more famous Psalm 46:10 'be still' verse. See research.md and fact-check.md.",
+        "buffer_organization_id": "6a74d8f28ea6cd91794407b3",
+        "buffer_channels_used": {
+          "instagram": "6a74f44c99afb44349156296",
+          "linkedin": "6a74f43399afb4434915623a (idea only, no channel ID needed for create_idea)",
+          "facebook": "6a74f4ad99afb4434915640b (idea only, no channel ID needed for create_idea)"
+        },
+        "needs_human_decision_items": [
+          "Buffer-staged images are the raw uncropped source photo (2000x1334), not platform-sized crops (LinkedIn 1200x627 / Instagram 1080x1350 / Facebook 1200x630), due to the image CDN block.",
+          "Alt text for all three platforms was written from the catalog's textual description only and is NOT visually verified against the actual painting — catalog's own image_alt_from_site field is null for this entry.",
+          "Price is unresolved: the catalog entry carries an active price_note (ON SALE at snapshot: $650 to $350). No draft states a price, but Agata should confirm the current price before adding one if she edits these posts."
+        ]
+      }
+    }
+  ]
+}
