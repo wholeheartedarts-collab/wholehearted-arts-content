@@ -1,0 +1,47 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_idea_id": "6a917db95ff40085cf35a15e",
+      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6a917dafa49ea0f676c434f4",
+      "note": "Staged as a real Buffer draft (schedulingType: notification, saveToDraft: true). Verified via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null. Image attached via its public URL (Buffer fetched it independently, 2500x2090)."
+    },
+    "facebook": {
+      "status": "review-ready",
+      "buffer_idea_id": "6a917dbf64cc58cc83b9231d",
+      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-08-28",
+      "event": "Automated scheduled pipeline run created this package and staged all three platforms in Buffer.",
+      "details": {
+        "painting": "Cleansing Waters - Divided by Grace",
+        "collection": "atelier",
+        "selection_rule_reason": "painting-catalog.json's own 'used' lists show Atelier=6, Studio=4, but posts 012 ('In the Cradle of Faith') and 013 ('Held by the Word'), both Studio, postdate the catalog's 2026-08-21 snapshot and aren't reflected there. Verified directly against posts 012 and 013's own files and excluded both from the candidate pool. Real counts: Atelier=6, Studio=6 — a tie. Tiebreaker applied: the most recent post (013) drew from Studio, so this run picked the collection NOT used most recently — Atelier.",
+        "egress_status": "www.wholeheartedarts.com and images.squarespace-cdn.com both confirmed blocked this run (one untried-retry test each, per instructions: a WebFetch to the site returned EGRESS_BLOCKED, and a curl to the image CDN returned 'CONNECT tunnel failed, response 403'). Painting facts came from painting-catalog.json (live Squarespace API data as of 2026-08-21). Image could not be downloaded/cropped; raw public image_url used as fallback wherever an image URL was needed (Buffer's own servers fetched it independently and it attached successfully to all three Buffer entries, 2500x2090).",
+        "scripture_verification": "John 4:14 and Isaiah 12:3 both independently verified via WebSearch (Bible.com/YouVersion, Bible Study Tools, ESV.org, Biblia, BibleHub) since direct fetch to biblegateway.com/biblehub.com/esv.org is also blocked by the egress proxy. Both verses used as resonant echoes of the painting's own 'well of living water' description, not as claimed captions of what's literally painted. See research.md and fact-check.md.",
+        "fabrication_caught_and_fixed": "The Facebook draft's original hook stated 'a painting I just finished' — an invented recency detail with no catalog support. Caught during factual-verification and corrected to 'a painting of mine' before this package moved to review-ready. See fact-check.md.",
+        "buffer_organization_id": "6a74d8f28ea6cd91794407b3",
+        "buffer_channels_used": {
+          "instagram": "6a74f44c99afb44349156296",
+          "linkedin": "6a74f43399afb4434915623a (idea only, no channel ID needed for create_idea)",
+          "facebook": "6a74f4ad99afb4434915640b (idea only, no channel ID needed for create_idea)"
+        },
+        "needs_human_decision_items": [
+          "Buffer-staged images are the raw uncropped source photo (2500x2090), not platform-sized crops (LinkedIn 1200x627 / Instagram 1080x1350 / Facebook 1200x630), due to the image CDN block.",
+          "Alt text for all three platforms was written from the catalog's textual description only and is NOT visually verified against the actual painting — catalog's own image_alt_from_site field is null for this entry."
+        ],
+        "other_notes": [
+          "Painting-catalog.json's own used-lists are stale (don't yet reflect posts 012/013) — recommend regenerating the catalog so future runs don't need to manually reconcile against post folders.",
+          "No caution_note or availability/price flags applied to this entry — price ($750) is current, non-sale, 1 in stock."
+        ]
+      }
+    }
+  ]
+}
