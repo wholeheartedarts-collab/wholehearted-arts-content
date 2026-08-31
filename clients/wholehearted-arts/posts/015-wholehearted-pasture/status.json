@@ -1,0 +1,40 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_idea_id": "6a95727f885ecd724b95a206",
+      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6a957275af13fe3d0941dabe",
+      "note": "Staged as a real Buffer draft (schedulingType: notification, saveToDraft: true). Verified via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null. Image attached via its public URL (Buffer fetched it independently, 2500x2499)."
+    },
+    "facebook": {
+      "status": "review-ready",
+      "buffer_idea_id": "6a9572835c89d05d69ba5608",
+      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-08-31",
+      "event": "Automated scheduled pipeline run created this package.",
+      "details": {
+        "painting": "Wholehearted Pasture",
+        "collection": "studio",
+        "selection_rule_reason": "painting-catalog.json's own 'used' lists show Atelier=6, Studio=4 (stale, from the 2026-08-21 snapshot), but posts 012, 013, and 014 postdate that snapshot and aren't reflected there. Reconciled directly against the posts/ folders: real counts are Atelier=7 used, Studio=6 used. Studio has fewer used entries (not a tie), so the rule pointed to Studio.",
+        "egress_status": "www.wholeheartedarts.com and images.squarespace-cdn.com both confirmed blocked this run (one untried-retry WebFetch to the site returned EGRESS_BLOCKED; one curl to the image CDN returned 'CONNECT tunnel failed, response 403'). Painting facts came from painting-catalog.json (live Squarespace API data as of 2026-08-21). Image could not be downloaded/cropped; raw public image_url used as fallback wherever an image URL was needed.",
+        "scripture_verification": "John 13:5 and John 13:14-15 both independently verified via WebSearch (ESV.org, Biblia, Bible.com, BibleHub) since direct fetch to those domains is blocked by the egress proxy. See research.md and sources.md.",
+        "needs_human_decision_items": [
+          "Buffer-staged image is the raw uncropped source photo, not platform-sized crops (LinkedIn 1200x627 / Instagram 1080x1350 / Facebook 1200x630), due to the image CDN block.",
+          "Alt text for all three platforms was written from the catalog's textual description only and is NOT visually verified against the actual painting — catalog's own image_alt_from_site field is null for this entry."
+        ],
+        "other_notes": [
+          "No caution_note, price_note, or availability_note on this catalog entry — price ($125) and availability (1 in stock) are current and clean, no flags needed.",
+          "Painting-catalog.json's own used-lists remain stale (still don't reflect posts 012, 013, or 014) — recommend regenerating the catalog so future runs don't need to manually reconcile against post folders."
+        ]
+      }
+    }
+  ]
+}
