@@ -316,6 +316,71 @@
     outline: 2px solid var(--lapis);
     outline-offset: 3px;
   }
+
+  /* ---------- print: a 5-session paper handout ---------- */
+  @page {
+    size: A4;
+    margin: 18mm 17mm 16mm;
+  }
+
+  @media print {
+    /* force the light palette on paper, whatever the screen theme was */
+    :root, :root[data-theme="dark"], :root:not([data-theme="light"]) {
+      --ground:    #FFFFFF;
+      --surface:   #F2F2EC;
+      --ink:       #000000;
+      --ink-soft:  #333333;
+      --ink-faint: #555555;
+      --rule:      #BBBBBB;
+      --rule-firm: #888888;
+      --lapis:     #1F3A66;
+      --rubric:    #7E1E17;
+      --measure:   100%;
+      --margin-col: 0px;
+    }
+
+    body {
+      background: #FFFFFF;
+      color: #000000;
+      font-size: 10.5pt;
+      line-height: 1.5;
+      padding: 0;
+    }
+    .sheet { max-width: none; }
+
+    .row { grid-template-columns: minmax(0, 1fr); column-gap: 0; row-gap: 0; }
+    .row > .marginalia, .row > .body { grid-column: 1; }
+    .marginalia:empty { display: none; }
+
+    /* each session starts a fresh sheet */
+    header.masthead { padding: 0 0 1.2rem; break-after: avoid; }
+    h1 { font-size: 30pt; }
+    .standfirst { font-size: 13pt; }
+
+    section { padding-top: 1.4rem; }
+    section + section { margin-top: 1.4rem; border-top: none; }
+    #six, #seven, #eight, #nine, #ten, #closing, #summary { break-before: page; }
+
+    .numeral { text-align: left; font-size: 22pt; margin-bottom: 0.2rem; }
+
+    /* nothing splits across a page mid-thought */
+    .scripture, .apparatus, .prayer, ol.questions li, ul.rules li, tr {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    h2, h3, .section-kicker, .numeral { break-after: avoid; page-break-after: avoid; }
+
+    .scripture { font-size: 11.5pt; margin: 0.9rem 0 1rem; }
+    .scripture.law { font-size: 12.5pt; }
+    h3 { margin-top: 1.5rem; }
+
+    .table-wrap { overflow: visible; }
+    table { min-width: 0; font-size: 9pt; }
+    td.cat { white-space: normal; }
+
+    footer.tail { margin-top: 1.6rem; }
+    a { color: #000000; text-decoration: none; }
+  }
 </style>
 
 <div class="sheet">
