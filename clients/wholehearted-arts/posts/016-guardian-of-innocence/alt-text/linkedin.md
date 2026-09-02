@@ -1,0 +1,4 @@
+Image: room mockup (chosen_images.mockup_url, index 1) — https://images.squarespace-cdn.com/content/v1/5b412dba5ffd201a3f9205e4/1777250343862-QNN31M8GPE9BOXFYXKQT/30777084-844A-43EA-B21E-AB7C5C78C3BC.png
+Not visually verified this run (image CDN blocked by egress proxy — confirmed via a direct curl test, HTTP CONNECT tunnel failed 403). Alt text below is based on the catalog entry's textual description and the `chosen_images.note` ("idx 1 is an elegant neutral interior"), not direct visual inspection.
+
+Alt text: "Guardian of Innocence," a square mixed-media painting by Agata May'kowska, shown hung on a wall in an elegantly styled neutral interior. The painting itself depicts a mother resting with a child in an abstract, richly textured style, built up in layered fragments of color, fabric, and paint. No text is rendered in the image.

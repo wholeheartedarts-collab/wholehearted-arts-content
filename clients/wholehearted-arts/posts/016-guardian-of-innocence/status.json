@@ -1,0 +1,41 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_idea_id": "6a9814294f2160b1499bdfe2",
+      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6a981420ccce9c3da1b0ba14",
+      "note": "Staged as a real Buffer draft (schedulingType: notification, saveToDraft: true). Verified via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null. Image attached via its public URL; Buffer fetched it independently (1254x1254), confirming the egress block is local to this sandbox, not the URL itself."
+    },
+    "facebook": {
+      "status": "review-ready",
+      "buffer_idea_id": "6a98142e4f2160b1499be00f",
+      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-09-02",
+      "event": "Automated scheduled pipeline run created this package.",
+      "details": {
+        "painting": "Guardian of Innocence",
+        "collection": "atelier",
+        "selection_rule_reason": "Catalog snapshot showed Atelier=7 used, Studio=7 used (a tie). Post 015 ('Wholehearted Pasture') used Studio, so the tiebreaker ('whichever collection was NOT used for the most recent post number') pointed to Atelier this run.",
+        "image_used": "chosen_images.mockup_url, index 1 ('elegant neutral interior', no seasonal props) — avoided indexes 4/5/6 per the entry's own avoid_indexes (Christmas-styled mockups). Same source URL passed to all three platforms; could not be downloaded/cropped due to egress block on images.squarespace-cdn.com (confirmed via direct curl test, HTTP CONNECT tunnel failed 403).",
+        "egress_status": "www.wholeheartedarts.com and images.squarespace-cdn.com both blocked this run (image CDN re-confirmed via direct curl test; site itself not re-tested per instructions since post 015 already confirmed it blocked). All painting facts came from painting-catalog.json (live Squarespace API data, entry modified_on 2026-08-30).",
+        "scripture_verification": "Isaiah 40:11 and Psalm 91:4 both independently verified via WebSearch (BibleHub, Biblia, Bible.com) since direct fetch to biblegateway.com/biblehub.com/esv.org is blocked. Ultimately NOT used in any final draft, to avoid fabricating a scripture attribution the painting's own description doesn't make. See research.md and sources.md.",
+        "needs_human_decision_items": [
+          "Buffer-staged image is the raw uncropped mockup source, not platform-sized crops (LinkedIn 1200x627 / Instagram 1080x1350 / Facebook 1200x630), due to the image CDN block.",
+          "Alt text for all three platforms was written from the catalog's textual description and chosen_images.note only, NOT visually verified against the actual image file in this run."
+        ],
+        "other_notes": [
+          "No caution_note, price_note, or availability_note on this catalog entry — price ($1,200) and availability (1 in stock) are current and clean, no flags needed.",
+          "This entry had a chosen_images block already set (verified by a human/Claude viewing every photo in an earlier session), so the mockup-vs-flat choice itself did not need to be guessed this run."
+        ]
+      }
+    }
+  ]
+}
