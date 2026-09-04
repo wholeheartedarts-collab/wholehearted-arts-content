@@ -1,0 +1,42 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_idea_id": "6a9ab7870bcc7af80df6daed",
+      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6a9ab77c9e905e8210a37b0b",
+      "note": "Staged as a real Buffer draft (schedulingType: notification, saveToDraft: true). Verified via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null. Image attached via its public URL; Buffer fetched it independently (1660x2500), confirming the egress block is local to this sandbox, not the URL itself."
+    },
+    "facebook": {
+      "status": "review-ready",
+      "buffer_idea_id": "6a9ab78c56b82655fe63408f",
+      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-09-04",
+      "event": "Automated scheduled pipeline run created this package.",
+      "details": {
+        "painting": "What Grace Grows",
+        "collection": "studio",
+        "selection_rule_reason": "Catalog snapshot showed Atelier=7 used, Studio=7 used (a tie). Post 016 ('Guardian of Innocence') used Atelier, so the tiebreaker ('whichever collection was NOT used for the most recent post number') pointed to Studio this run.",
+        "image_used": "primary_image_url (flat product photo) — this catalog entry has NO chosen_images block, so no human/Claude has pre-selected a room mockup for it. Raw source URL passed to all three platforms; could not be downloaded/cropped due to egress block on images.squarespace-cdn.com (confirmed via direct curl test, HTTP CONNECT tunnel failed 403, not retried per run instructions).",
+        "scripture_verification": "Matthew 6:28-29 verified via WebSearch (bible.com, esv.org listing, christianity.com, Wikipedia) since direct fetch to biblegateway.com/biblehub.com/esv.org is blocked. 2 Corinthians 12:9 also verified as a secondary/backup reference but not used in final drafts. See research.md and sources.md.",
+        "factual_verification_note": "Initial drafts across all three platforms included fabricated, unsourced personal-process claims (specific timeline/intent statements presented as real events). Caught and revised during factual-verification per fact-check.md — no source exists yet for this painting's actual creative process, so drafts were rewritten as present-tense reflection on the finished piece instead of asserted past events.",
+        "needs_human_decision_items": [
+          "No chosen_images set for this entry — a human should view its photo set and pick a mockup for future reuse; a flat product photo was used this run.",
+          "Buffer-staged image is the raw uncropped source photo, not platform-sized crops (LinkedIn 1200x627 / Instagram 1080x1350 / Facebook 1200x630), due to the image CDN block.",
+          "Alt text for all three platforms was written from the catalog's textual description and image metadata only, NOT visually verified against the actual image file in this run."
+        ],
+        "other_notes": [
+          "No caution_note, price_note, or availability_note on this catalog entry. Availability was '1 in stock' at snapshot time; no final draft asserts current availability or quotes price, to avoid the live-stock risk noted in research.md.",
+          "Price field consistency checked: catalog's structured price ($1,600) matches the price stated inside the entry's own description text — no discrepancy, unlike some other candidate entries considered and passed over."
+        ]
+      }
+    }
+  ]
+}
