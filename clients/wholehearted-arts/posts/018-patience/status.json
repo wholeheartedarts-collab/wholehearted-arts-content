@@ -1,0 +1,30 @@
+{
+  "platforms": {
+    "linkedin": {"status": "review-ready", "buffer_idea_id": "6a9eabfa1af84e52c45427f7"},
+    "instagram": {"status": "review-ready", "buffer_draft_post_id": "6a9eabed2a4e3909917718e6"},
+    "facebook": {"status": "review-ready", "buffer_idea_id": "6a9eabff1af84e52c4542821"}
+  },
+  "history": [
+    {
+      "date": "2026-09-07",
+      "event": "Automated scheduled pipeline run created this package.",
+      "details": {
+        "painting": "Patience",
+        "collection": "atelier",
+        "selection_rule_reason": "Catalog snapshot showed Atelier=7 used, Studio=7 used (a tie by the file's own count). However the catalog is stale: it still lists 'Guardian of Innocence' (post 016, Atelier) and 'What Grace Grows' (post 017, Studio) as unused when both are actually used. Correcting for this, the true counts are Atelier=8, Studio=8 -- still tied. Post 017 ('What Grace Grows') used Studio, so the tiebreaker ('whichever collection was NOT used for the most recent post number') pointed to Atelier this run, same outcome as the uncorrected file would have given.",
+        "image_used": "chosen_images.mockup_url (catalog index 4, room mockup: navy wall, blue velvet sofa) -- this entry HAS a chosen_images block, human-verified 2026-09-01. Raw uncropped source URL passed to all three platforms; could not be downloaded/cropped due to egress block on images.squarespace-cdn.com (confirmed via one failed curl attempt, HTTP CONNECT tunnel 403, not retried per run instructions).",
+        "scripture_verification": "Psalm 27:14 (primary), plus Galatians 5:22-23, James 1:2-4, and Romans 5:3-4 (background research, not directly quoted) all verified via WebSearch across 2-3 independent listings each (biblehub.com, esv.org, biblia.com, bible.com, blueletterbible.org snippets), since direct fetch to biblegateway.com/biblehub.com/esv.org is blocked. See research.md and sources.md.",
+        "factual_verification_note": "All three drafts (LinkedIn, Instagram, Facebook) passed fact-check.md with no UNSUPPORTED claims. No personal Agata backstory/timeline was invented -- process language stayed general to the mixed-media medium, matching the catalog's own description, consistent with the lesson from post 017's fact-check.",
+        "needs_human_decision_items": [
+          "painting-catalog.json is stale: 'Guardian of Innocence' and 'What Grace Grows' still show as unused in their collections despite being used in posts 016 and 017. Undercounts both collections' used_count by 1. Recommend regenerating the catalog from the live Squarespace MCP server, or manually moving these two entries to 'used', before the next scheduled run.",
+          "Buffer-staged image is the raw uncropped mockup source photo, not platform-sized crops (LinkedIn 1200x627 / Instagram 1080x1350 / Facebook 1200x630), due to the image CDN egress block.",
+          "Alt text for all three platforms was written from the catalog's textual description and chosen_images.note only, NOT visually verified against the actual image file in this run."
+        ],
+        "other_notes": [
+          "No caution_note, price_note, or availability_note on this catalog entry. Availability was 'unlimited' at snapshot time; no final draft asserts current availability or quotes price.",
+          "This entry HAS a chosen_images block (unlike post 017's painting), so no new human decision is needed on image selection itself -- only on the crop/verification gap caused by the egress block."
+        ]
+      }
+    }
+  ]
+}
