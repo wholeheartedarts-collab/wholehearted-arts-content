@@ -1,0 +1,4 @@
+Image: primary_image_url (raw source, uncropped — see note below)
+Alt text: A framed mixed-media sunset/sunrise painting titled "Divine in the Sky," combining fabric, acrylic, alcohol ink, and gold leaf to depict a glowing sky. Text from Romans 1:20 is worked into the horizon line of the composition. Approx. 23"x18" in frame.
+
+Note: this alt text was written from the catalog's product description and title only — the image file itself could not be downloaded and visually verified in this run because the image CDN (images.squarespace-cdn.com) is blocked by this sandbox's egress policy (confirmed via one failed test, not retried per run instructions). This entry has no `chosen_images` block, so no human-verified room-mockup photo exists; do not describe this as a styled room scene. If the actual photo shows different visible details than this description, the alt text should be corrected by a human who can view it directly.

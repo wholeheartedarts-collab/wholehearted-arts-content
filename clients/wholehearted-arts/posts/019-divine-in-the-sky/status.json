@@ -1,0 +1,31 @@
+{
+  "platforms": {
+    "linkedin": {"status": "review-ready", "buffer_idea_id": "6aa14eb892576f6d1597da69"},
+    "instagram": {"status": "review-ready", "buffer_draft_post_id": "6aa14eab420834e1f95fd6cf"},
+    "facebook": {"status": "review-ready", "buffer_idea_id": "6aa14ebc92576f6d1597da95"}
+  },
+  "history": [
+    {
+      "date": "2026-09-09",
+      "event": "Automated scheduled pipeline run created this package.",
+      "details": {
+        "painting": "Divine in the Sky",
+        "collection": "studio",
+        "selection_rule_reason": "Catalog snapshot showed Atelier=7 used, Studio=7 used (tied by the file's own count) -- but the catalog is stale: it still lists 'Guardian of Innocence' (post 016, Atelier), 'What Grace Grows' (post 017, Studio), AND 'Patience' (post 018, Atelier) as unused, though all three are already used. Correcting for this, true counts are Atelier=9, Studio=8 -- Studio has fewer, so Studio was selected. Note this also matches the uncorrected file's own tiebreaker ('whichever collection was NOT used for the most recent post number'): post 018 used Atelier, so the tiebreaker independently points to Studio -- both methods agree.",
+        "image_used": "primary_image_url (catalog index 0) -- this entry has NO chosen_images block (no Studio-collection entry in the current catalog snapshot does), so per run instructions the flat/primary product photo was used and captions were written to avoid asserting a room-mockup scene. Raw uncropped source URL passed to all three platforms; could not be downloaded/cropped due to egress block on images.squarespace-cdn.com (confirmed via one failed curl attempt, HTTP CONNECT tunnel 403, not retried per run instructions).",
+        "scripture_verification": "Romans 1:20 and Psalm 19:1 (ESV) both verified via WebSearch across 4-7 independent listings each (Biblia, BlueLetterBible, BibleStudyTools, Christianity.com, ESV.org, Bible.com, BibleHub), since direct fetch to biblegateway.com/biblehub.com/esv.org is blocked. See research.md and sources.md.",
+        "factual_verification_note": "All three drafts (LinkedIn, Instagram, Facebook) passed fact-check.md with no UNSUPPORTED claims. No personal Agata backstory was invented -- the post leans on the catalog's own stated fact that Romans 1:20 is physically written into the painting, plus verified scripture, per the skip_rules guidance for thin-narrative pieces.",
+        "needs_human_decision_items": [
+          "painting-catalog.json is even more stale than previously flagged (post 018's history entry): 'Guardian of Innocence' (016), 'What Grace Grows' (017), AND now 'Patience' (018) all still show as unused in their collections. Recommend regenerating the catalog from the live Squarespace MCP server, or manually moving these three entries to 'used', before the next scheduled run -- otherwise the selection-rule correction burden keeps growing each run.",
+          "No chosen_images exists for 'Divine in the Sky' (or, as far as this run observed, for any Studio-collection entry) -- a human should review its 5 product photos and decide if one is a suitable room mockup, then add a chosen_images block to the catalog for future runs.",
+          "Buffer-staged image is the raw uncropped primary product photo, not platform-sized crops (LinkedIn 1200x627 / Instagram 1080x1350 / Facebook 1200x630), due to the image CDN egress block.",
+          "Alt text for all three platforms was written from the catalog's textual description only, NOT visually verified against the actual image file in this run."
+        ],
+        "other_notes": [
+          "No caution_note on this catalog entry. price_note: none present, but research.md flags that no draft should quote the $400 price or '1 in stock' availability to avoid manufactured urgency -- confirmed absent from all three drafts.",
+          "No politics; no AI-automation pillar content in this topic (art/faith pillar only)."
+        ]
+      }
+    }
+  ]
+}
