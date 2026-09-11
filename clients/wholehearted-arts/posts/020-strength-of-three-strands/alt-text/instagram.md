@@ -1,0 +1,3 @@
+Image: chosen_images.mockup_url (catalog index 0) — raw source URL, not downloaded/cropped (egress to images.squarespace-cdn.com blocked; confirmed via one failed curl attempt, not retried per run instructions). NOT VISUALLY VERIFIED — description below is based on the catalog's chosen_images note and product description, not direct visual inspection.
+
+Alt text: A tall, narrow mixed-media abstract painting titled "The Strength of Three Strands" hangs on a dark wall above a leather sofa. Interlocking circular and square textured forms fill the canvas, representing feminine and masculine shapes woven together. The unframed canvas shows visible depth along its dark brown edge.

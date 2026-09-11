@@ -1,0 +1,30 @@
+{
+  "platforms": {
+    "linkedin": {"status": "review-ready", "buffer_idea_id": "6aa3f0bcbf4eaa1fd1ebb982"},
+    "instagram": {"status": "review-ready", "buffer_draft_post_id": "6aa3f0b1262bdff0e879ffc4"},
+    "facebook": {"status": "review-ready", "buffer_idea_id": "6aa3f0c1ce13524413affcd2"}
+  },
+  "history": [
+    {
+      "date": "2026-09-11",
+      "event": "Automated scheduled pipeline run created this package.",
+      "details": {
+        "painting": "The Strength of Three Strands",
+        "collection": "atelier",
+        "selection_rule_reason": "Catalog file's raw used_count showed Atelier=7, Studio=7 (tied). Catalog is stale (as flagged in post 019's history): it is still missing four already-used paintings from their collections' used lists (016 Guardian of Innocence/Atelier, 017 What Grace Grows/Studio, 018 Patience/Atelier, 019 Divine in the Sky/Studio). Corrected true counts: Atelier=9, Studio=9 -- still tied. Applying the tiebreaker (whichever collection was NOT used for the most recent post number): post 019 used Studio, so the tiebreaker points to Atelier. Atelier selected.",
+        "image_used": "chosen_images.mockup_url, catalog index 0 (dark wall, leather sofa, tall narrow panel) -- this entry has a chosen_images block, so per run instructions the human/Claude-verified mockup was used, not primary_image_url. Raw uncropped source URL passed to all three platforms; could not download/crop to platform dimensions due to egress block on images.squarespace-cdn.com (confirmed via one failed curl attempt, HTTP CONNECT tunnel 403, not retried per run instructions).",
+        "scripture_verification": "Ecclesiastes 4:12 ('a cord of three strands is not quickly broken') verified via WebSearch across multiple independent listings (Biblia NIV/ESV, KingJamesBibleOnline, BibleHub, BibleRef), since direct fetch to biblegateway.com/biblehub.com/esv.org is blocked. The verse's common Christian application to marriage (God as the third strand) was separately verified as a genuine, widely-attested interpretive tradition, not invented for this post. See research.md and sources.md.",
+        "factual_verification_note": "All three drafts (LinkedIn, Instagram, Facebook) passed fact-check.md with no UNSUPPORTED claims. No personal Agata marriage story was invented -- content draws only on the artist's own catalog product description (circle/square symbolism, covenant-marriage framing) plus verified scripture/interpretation.",
+        "needs_human_decision_items": [
+          "Buffer-staged image is the raw uncropped mockup photo (catalog index 0), not platform-sized crops (LinkedIn 1200x627 / Instagram 1080x1350 / Facebook 1200x630), due to the image CDN egress block. A human should re-crop once local image access is available.",
+          "Alt text for all three platforms was written from the catalog's chosen_images.note and product description only, NOT visually verified against the actual image file in this run.",
+          "painting-catalog.json remains stale (used lists still missing 016, 017, 018, 019 -- now also missing this run's 020/Atelier selection). Recommend regenerating from the live Squarespace MCP server, or manually updating the used/unused lists, before the next scheduled run."
+        ],
+        "other_notes": [
+          "Catalog's availability_note on this entry: shows zero stock, likely already sold. No draft quotes a price or implies current availability -- confirmed absent from all three drafts.",
+          "No caution_note on this catalog entry. No politics; no AI-automation pillar content in this topic (art/faith/marriage pillar only)."
+        ]
+      }
+    }
+  ]
+}
