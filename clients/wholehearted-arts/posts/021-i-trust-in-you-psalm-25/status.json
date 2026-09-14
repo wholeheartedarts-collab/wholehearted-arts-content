@@ -1,0 +1,47 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "staged_via": "buffer_idea",
+      "buffer_idea_id": "6aa7e5c14176e706069427ee",
+      "note": "Staged in Buffer as an IDEA per publishing-handoff's Critical Buffer limitation -- LinkedIn rejects schedulingType \"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ideas have no queue slot and cannot publish -- inert until Agata converts it in Buffer's composer. Nothing approved, scheduled, or published."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "scheduled_via": "buffer",
+      "buffer_draft_id": "6aa7e5b71b896af944627f27",
+      "buffer_channel_id": "6a74f44c99afb44349156296",
+      "note": "Pushed to Buffer as a genuine draft (schedulingType:\"notification\", saveToDraft:true, mode:\"addToQueue\"). Verified via get_post immediately after creation: status=draft, dueAt=null, sentAt=null. Inert until Agata acts on it in Buffer."
+    },
+    "facebook": {
+      "status": "review-ready",
+      "staged_via": "buffer_idea",
+      "buffer_idea_id": "6aa7e5c74176e7060694281e",
+      "note": "Staged in Buffer as an IDEA per publishing-handoff's Critical Buffer limitation -- Facebook rejects schedulingType \"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ideas have no queue slot and cannot publish -- inert until Agata converts it in Buffer's composer. Nothing approved, scheduled, or published."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-09-14",
+      "event": "Automated scheduled pipeline run created this package.",
+      "details": {
+        "painting": "I Trust In You My God - Psalm 25",
+        "collection": "studio",
+        "selection_rule_reason": "Catalog file's raw used_count showed Atelier=7, Studio=7 (tied). Catalog is stale (per posts 019 and 020's history notes): it is still missing five already-used paintings from their collections' used lists (016 Guardian of Innocence/Atelier, 017 What Grace Grows/Studio, 018 Patience/Atelier, 019 Divine in the Sky/Studio, 020 The Strength of Three Strands/Atelier). Corrected true counts: Atelier=10, Studio=9 -- Studio has fewer, so Studio was selected directly on the primary rule (no tiebreaker needed).",
+        "image_used": "primary_image_url (catalog index 0) -- this entry has NO chosen_images block (consistent with every Studio-collection entry observed so far), so per run instructions the flat/primary product photo was used and captions/alt text were written to avoid asserting a room-mockup scene. Raw uncropped source URL passed to all three platforms; could not download/crop to platform dimensions due to egress block on images.squarespace-cdn.com (confirmed via one failed curl attempt, HTTP CONNECT tunnel 403, not retried per run instructions).",
+        "scripture_verification": "Psalm 25:1-2 and Psalm 25:4-5 (NIV) both verified via WebSearch across 4 independent listings each (BibleStudyTools, BibleHub, Bible.com/YouVersion, Biblia, Christianity.com), since direct fetch to biblegateway.com/biblehub.com/esv.org is blocked. Psalm 25's acrostic structure and core themes (trust, guidance, confession) were separately cross-checked across multiple independent commentaries. See research.md and sources.md.",
+        "factual_verification_note": "All three drafts (LinkedIn, Instagram, Facebook) passed fact-check.md with no UNSUPPORTED claims. No personal Agata story was invented -- content draws only on the artist's own catalog product description (words handwritten into the figure's form/clothing) plus verified scripture.",
+        "needs_human_decision_items": [
+          "Buffer-staged image is the raw uncropped primary product photo (catalog index 0), not platform-sized crops (LinkedIn 1200x627 / Instagram 1080x1350 / Facebook 1200x630), due to the image CDN egress block. A human should re-crop once local image access is available.",
+          "Alt text for all three platforms was written from the catalog's product description and title only, NOT visually verified against the actual image file in this run.",
+          "No chosen_images exists for 'I Trust In You My God - Psalm 25' (or, as far as this run observed, for any Studio-collection entry) -- a human should review its 7 product photos and decide if one is a suitable room mockup, then add a chosen_images block to the catalog for future runs.",
+          "painting-catalog.json remains stale (used lists still missing 016, 017, 018, 019, 020 -- now also missing this run's 021/Studio selection). Recommend regenerating the catalog from the live Squarespace MCP server, or manually updating the used/unused lists, before the next scheduled run -- otherwise the selection-rule correction burden keeps growing each run."
+        ],
+        "other_notes": [
+          "Catalog's availability_note on this entry: shows zero stock (SOLD OUT), likely already sold. No draft quotes a price or implies current availability -- confirmed absent from all three drafts.",
+          "No caution_note on this catalog entry. No politics; no AI-automation pillar content in this topic (art/faith/prayer pillar only)."
+        ]
+      }
+    }
+  ]
+}
