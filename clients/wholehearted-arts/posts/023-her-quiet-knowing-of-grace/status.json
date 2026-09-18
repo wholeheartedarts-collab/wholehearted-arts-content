@@ -1,0 +1,46 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "staged_via": "buffer_idea",
+      "buffer_idea_id": "6aadbe5c1d192194ed7df358",
+      "note": "Staged in Buffer as an IDEA per publishing-handoff's Critical Buffer limitation -- LinkedIn rejects schedulingType \"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ideas have no queue slot and cannot publish -- inert until Agata converts it in Buffer's composer. Nothing approved, scheduled, or published. Image attached by raw source URL (no local crop -- see package-review.md)."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "scheduled_via": "buffer",
+      "buffer_draft_id": "6aadbe50560f708e81460413",
+      "buffer_channel_id": "6a74f44c99afb44349156296",
+      "note": "Pushed to Buffer as a genuine draft (schedulingType:\"notification\", saveToDraft:true, mode:\"addToQueue\"). Verified via get_post immediately after creation: status=draft, dueAt=null, sentAt=null. Inert until Agata acts on it in Buffer. Image attached by raw source URL (no local crop -- see package-review.md)."
+    },
+    "facebook": {
+      "status": "review-ready",
+      "staged_via": "buffer_idea",
+      "buffer_idea_id": "6aadbe6162f442f222011b36",
+      "note": "Staged in Buffer as an IDEA per publishing-handoff's Critical Buffer limitation -- Facebook rejects schedulingType \"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ideas have no queue slot and cannot publish -- inert until Agata converts it in Buffer's composer. Nothing approved, scheduled, or published. Image attached by raw source URL (no local crop -- see package-review.md)."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-09-18",
+      "event": "Automated scheduled pipeline run created this package.",
+      "details": {
+        "painting": "Her Quiet Knowing of Grace",
+        "collection": "studio",
+        "selection_rule_reason": "painting-catalog.json's raw used_count (atelier=7, studio=7) is stale -- it is missing posts 016-022. True counts, cross-checked against posts/*/status.json history: atelier=10 (003,004,007,009,011,014,016,018,020,022), studio=10 (005,006,008,010,012,013,015,017,019,021) -- tied. Tiebreaker: most recent post (022) used Atelier, so Studio was selected for this run.",
+        "image_used": "primary_image_url (catalog index 0) -- this entry has NO chosen_images block, so per run instructions the flat/primary product photo was used; captions/alt text avoid asserting a room-mockup scene. Raw uncropped source URL passed to Buffer; could not download/crop to platform dimensions due to egress block on images.squarespace-cdn.com (confirmed via one failed curl attempt, HTTP CONNECT tunnel 403, not retried per run instructions).",
+        "scripture_verification": "1 Peter 3:4 (NIV) verified via WebSearch across 5 independent listings (BibleHub, Biblia, BibleStudyTools, Bible.com/YouVersion, BibleRef), since direct fetch to biblegateway.com/biblehub.com/esv.org is blocked. See research.md and sources.md. Deliberately did not reuse 2 Corinthians 12:9, already used in post 017.",
+        "factual_verification_note": "All three drafts (LinkedIn, Instagram, Facebook) passed fact-check.md with no UNSUPPORTED claims remaining. One LinkedIn line implying Agata reflects on this idea in running her 'creative-business' was caught during factual-verification as unsupported and blurring the single-audience rule -- removed before finalizing. No personal Agata story was invented.",
+        "needs_human_decision_items": [
+          "No chosen_images exists for 'Her Quiet Knowing of Grace' -- a human should review its 4 product photos and decide if one is a suitable room mockup, then add a chosen_images block to the catalog for future runs.",
+          "Image was not downloaded, cropped to platform dimensions, or visually verified this run (egress blocked) -- the raw uncropped primary product photo URL was passed to Buffer as-is. A human should confirm it reads correctly in Buffer's composer, or fetch/crop it locally before scheduling.",
+          "Minor listing inconsistency, not used in any draft: catalog's top-level price field says $150.00 but the product description text says 'Price: $159' -- worth correcting in the Squarespace listing."
+        ],
+        "other_notes": [
+          "Catalog shows '1 in stock', no availability_note or caution_note on this entry.",
+          "No politics; content draws only on 1 Peter 3:4's general, widely-shared reading (inner character over outward display), not its specific wives/marriage framing, to stay clearly inside the client's no-politics avoid-list and avoid unnecessary doctrinal specificity."
+        ]
+      }
+    }
+  ]
+}
