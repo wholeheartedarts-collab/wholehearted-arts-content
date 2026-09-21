@@ -1,0 +1,45 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "staged_via": "buffer_idea",
+      "buffer_idea_id": "6ab11fea7e292f1bd8697644",
+      "note": "Staged in Buffer as an IDEA per publishing-handoff's Critical Buffer limitation -- LinkedIn rejects schedulingType \"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ideas have no queue slot and cannot publish -- inert until Agata converts it in Buffer's composer. Nothing approved, scheduled, or published. Image attached by raw source URL (chosen_images.mockup_url, catalog index 1) -- could not download/crop locally, egress blocked (see images/README-source-image.md)."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "scheduled_via": "buffer",
+      "buffer_draft_id": "6ab11fe0250035d8f9269e20",
+      "buffer_channel_id": "6a74f44c99afb44349156296",
+      "note": "Pushed to Buffer as a genuine draft (schedulingType:\"notification\", saveToDraft:true, mode:\"addToQueue\"). Verified via get_post immediately after creation: status=draft, dueAt=null, sentAt=null. Inert until Agata acts on it in Buffer. Image attached by raw source URL (chosen_images.mockup_url, catalog index 1) -- could not download/crop locally, egress blocked (see images/README-source-image.md)."
+    },
+    "facebook": {
+      "status": "review-ready",
+      "staged_via": "buffer_idea",
+      "buffer_idea_id": "6ab11ff033551494d2749933",
+      "note": "Staged in Buffer as an IDEA per publishing-handoff's Critical Buffer limitation -- Facebook rejects schedulingType \"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ideas have no queue slot and cannot publish -- inert until Agata converts it in Buffer's composer. Nothing approved, scheduled, or published. Image attached by raw source URL (chosen_images.mockup_url, catalog index 1) -- could not download/crop locally, egress blocked (see images/README-source-image.md)."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-09-21",
+      "event": "Automated scheduled pipeline run created this package.",
+      "details": {
+        "painting": "Gathered Light",
+        "collection": "atelier",
+        "selection_rule_reason": "painting-catalog.json's raw used_count (atelier=7, studio=7) is stale -- cross-checked against every posts/*/status.json history entry (as done on the 023 run): true counts through post 023 were Atelier 10 (003,004,007,009,011,014,016,018,020,022) / Studio 11 (005,006,008,010,012,013,015,017,019,021,023). Atelier has fewer, so Atelier was selected for this run (no tiebreaker needed, not tied). Catalog's own 'unused' list for Atelier was also found stale -- it still listed 'Guardian of Innocence' (016), 'Patience' (018), 'The Strength of Three Strands' (020), and 'Love Eternal Rhapsody' (022) as unused even though all four already have post folders. Those were excluded from consideration; 'Gathered Light' was confirmed to have no matching post folder and no caution_note.",
+        "image_used": "chosen_images.mockup_url (catalog index 1) -- verified-by-viewing living room mockup ('a warm living room with the gold frame reading clearly'). avoid_indexes:[0] respected (a bad two-room composite crop). Raw uncropped URL passed to Buffer for all three platforms; could not download/crop to platform dimensions locally -- one Python urllib download attempt to images.squarespace-cdn.com returned 'Tunnel connection failed: 403 Forbidden', not retried per run instructions. See images/README-source-image.md.",
+        "scripture_verification": "John 1:5 (ESV) verified via WebSearch across 5 independent listings (BibleStudyTools, BibleHub, Bible.com/YouVersion, Biblia, BibleRef), since direct fetch to biblegateway.com/biblehub.com/esv.org is blocked. This is an editorial pairing (painting theme <-> verse), not a claim that Agata named this verse as the piece's stated inspiration -- drafts phrase it as the writer's own association, and research.md/fact-check.md flag this distinction explicitly.",
+        "factual_verification_note": "All three drafts (LinkedIn, Instagram, Facebook) passed fact-check.md with no UNSUPPORTED claims. No sitter identity, personal story, price, or availability details were invented or referenced beyond what the catalog description states.",
+        "needs_human_decision_items": [
+          "Image was not downloaded, cropped to platform dimensions, or visually verified this run (egress blocked to images.squarespace-cdn.com) -- the raw uncropped mockup URL was passed to Buffer/Ideas as-is for all three platforms. A human should confirm it reads correctly in Buffer's composer per platform, or fetch/crop it locally before scheduling.",
+          "Alt text was written from the catalog's product description and chosen_images.note, not from direct visual inspection of the image (same egress block). A human should confirm it actually matches the image."
+        ],
+        "other_notes": [
+          "Catalog entry for 'Gathered Light' carries no price_note or availability_note -- $950, 1 in stock, no flags.",
+          "No politics; content stays inside the client's faith/emotion/healing content pillar per profile.md, with no doctrinal specificity beyond the single verse quoted and verified."
+        ]
+      }
+    }
+  ]
+}
