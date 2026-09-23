@@ -1,0 +1,33 @@
+{
+  "platforms": {
+    "linkedin": {"status": "review-ready", "buffer_idea_id": "6ab3c29412d717faba510359"},
+    "instagram": {"status": "review-ready", "buffer_draft_post_id": "6ab3c28a4fc065cee67ae4f9"},
+    "facebook": {"status": "review-ready", "buffer_idea_id": "6ab3c29bc5c556d40198ad7c"}
+  },
+  "history": [
+    {
+      "date": "2026-09-23",
+      "event": "Automated scheduled pipeline run created this package.",
+      "details": {
+        "painting": "Carrying Burden, Seeking Light",
+        "collection": "studio",
+        "selection_rule_reason": "painting-catalog.json's raw used_count (atelier=7, studio=7) is stale, as prior runs (023, 024) also found. True counts, cross-checked against every posts/*/status.json history entry plus matching legacy post folder titles (003-011) against the catalog's used-title lists: through post 024, Atelier = 11 (003,004,007,009,011,014,016,018,020,022,024), Studio = 11 (005,006,008,010,012,013,015,017,019,021,023) -- tied. Tiebreaker: the most recent post (024) used Atelier, so Studio was selected for this run (025), matching the rule 'if tied, pick from whichever collection was NOT used for the most recent post number.'",
+        "image_used": "primary_image_url (catalog index 0, square 2500x2500) -- this entry has NO chosen_images block, so per run instructions the flat/primary product photo was used; captions/alt text avoid asserting a room-mockup scene. Raw uncropped source URL passed to Buffer for all three platforms; one Python urllib download attempt to images.squarespace-cdn.com failed ('Tunnel connection failed: 403 Forbidden'), not retried per run instructions. See images/README-source-image.md.",
+        "scripture_verification": "Galatians 6:2 (NIV) verified via WebSearch across 5 independent listings (BibleStudyTools, BibleHub, Biblia, Bible.com/YouVersion, BibleRef), since direct fetch to biblegateway.com/biblehub.com/esv.org is blocked. This is an editorial pairing (painting theme <-> verse) chosen because the verse's 'carry each other's burdens' language matches the painting's own title/description almost verbatim -- not a claim that Agata named this verse as the piece's stated inspiration. All three drafts phrase it explicitly as the writer's own association.",
+        "factual_verification_note": "All three drafts (LinkedIn, Instagram, Facebook) passed fact-check.md with no UNSUPPORTED claims. No specific relationship (marriage/parent-child/friendship) was asserted for the painting's two figures, since the source description doesn't specify one. No personal Agata story, quote, or studio anecdote was invented.",
+        "needs_human_decision_items": [
+          "Image was not downloaded, cropped to platform dimensions, or visually verified this run (egress blocked to images.squarespace-cdn.com) -- the raw uncropped primary product photo URL was passed to Buffer/Ideas as-is for all three platforms. A human should confirm it reads correctly in Buffer's composer per platform, or fetch/crop it locally before scheduling.",
+          "No chosen_images exists for 'Carrying Burden, Seeking Light' -- a human should review its 5 product photos and decide if one is a suitable room mockup, then add a chosen_images block to the catalog for future runs (same open request raised by posts 023 and 024, still unaddressed).",
+          "Alt text was written from the catalog's product description and image metadata, not from direct visual inspection of the image (same egress block). A human should confirm it actually matches the image."
+        ],
+        "buffer_staging": "Instagram: create_post with saveToDraft:true, schedulingType:'notification' -> post 6ab3c28a4fc065cee67ae4f9, confirmed via get_post immediately after creation: status='draft', dueAt=null, sentAt=null. LinkedIn: create_idea -> idea 6ab3c29412d717faba510359. Facebook: create_idea -> idea 6ab3c29bc5c556d40198ad7c. create_post was never called for LinkedIn or Facebook. Nothing was approved, scheduled, or published -- all three remain at review-ready awaiting Agata's explicit decision.",
+        "other_notes": [
+          "Catalog entry for 'Carrying Burden, Seeking Light' carries no price_note, availability_note, or caution_note -- $675.00, unlimited availability, no flags.",
+          "No politics; content stays inside the client's faith/emotion/healing content pillar per profile.md, with no doctrinal specificity or asserted relationship beyond the single verse quoted and verified.",
+          "Deliberately excluded 'Disassembled Grace' from candidate consideration despite carrying no caution_note in the catalog: its own description explicitly critiques 'contemporary feminism' and workforce/societal-expectations framing, which reads as political/social commentary and conflicts with the client's explicit no-politics avoid-list. Flagging this catalog gap for a human to consider adding a caution_note to that entry.",
+          "Also excluded 'President Trump Portrait - customized!' (overtly political) and 'Where the Walls Remember' (carries its own explicit NEEDS HUMAN DECISION caution_note re: Holocaust/Auschwitz subject matter, per skip_rules)."
+        ]
+      }
+    }
+  ]
+}
