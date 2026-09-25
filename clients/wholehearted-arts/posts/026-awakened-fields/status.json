@@ -1,0 +1,31 @@
+{
+  "platforms": {
+    "linkedin": {"status": "review-ready", "buffer_idea_id": "6ab6661f207130686726e7f4"},
+    "instagram": {"status": "review-ready", "buffer_draft_post_id": "6ab66612db73444101ed0c48"},
+    "facebook": {"status": "review-ready", "buffer_idea_id": "6ab66625986c088c9ab5122c"}
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "event": "Automated scheduled pipeline run created this package.",
+      "details": {
+        "painting": "Awakened Fields",
+        "collection": "atelier",
+        "selection_rule_reason": "painting-catalog.json's raw used_count (atelier=7, studio=7) is stale, as prior runs (023-025) also found. True counts, cross-checked against every posts/*/status.json history entry and matching post folder titles against the catalog's used-title lists: through post 025, Atelier = 11 (003,004,007,009,011,014,016,018,020,022,024), Studio = 12 (005,006,008,010,012,013,015,017,019,021,023,025). Atelier has fewer true uses (11 < 12), so this run drew from Atelier -- no tiebreak needed. Within Atelier's truly-unused entries (excluding catalog-listed 'unused' titles already used in posts 016/018/020/022/024, which the catalog itself hadn't updated), 'Awakened Fields' was the first clean, unflagged entry: no caution_note, no price_note/availability_note, and a human-verified chosen_images block. Two riskier Atelier candidates were deliberately passed over: 'Heaven Declares' (catalog caution_note flags Psalm 19 overlap with post 004) and 'Let Our Light Continue to Shine' (SOLD OUT / 0 stock plus sensitive Hanukkah/Jewish liturgical content -- neither is a hard skip_rules trigger, but both carry more risk for an unattended automated run than a clean alternative that was available).",
+        "image_used": "chosen_images.mockup_url (catalog index 0, warm living-room mockup, human-verified 2026-09-01) for all three platforms, per run instructions. Raw uncropped source URL passed to Buffer -- one Python urllib download attempt to images.squarespace-cdn.com failed ('Tunnel connection failed: 403 Forbidden'), not retried per run instructions. See images/README-source-image.md.",
+        "scripture_verification": "Psalm 65:12-13 (NIV) verified via WebSearch across 5 independent listings (Christianity.com, YouVersion, BibleStudyTools x2, BibleHub), since direct fetch to biblegateway.com/biblehub.com/esv.org is blocked. Editorial pairing (painting's own 'wild, full of life, fields' language <-> psalm's wilderness/fields imagery), not a claim Agata named this verse as the piece's inspiration. All three drafts phrase it as the writer's own association, using the same disclosed-pairing pattern established and passed in post 025.",
+        "factual_verification_note": "All three drafts (LinkedIn, Instagram, Facebook) passed fact-check.md with no UNSUPPORTED claims. One phrasing issue was caught and fixed during fact-check: initial drafts used more elaborate personal-reaction language around the scripture pairing ('it startled me', 'while I was living with this one in the studio') that would have asserted an unconfirmed specific personal experience for Agata; revised to match post 025's established minimal, disclosed-association phrasing before this package was finalized.",
+        "needs_human_decision_items": [
+          "Image was not downloaded, cropped to platform dimensions, or visually verified this run (egress blocked to images.squarespace-cdn.com) -- the raw uncropped mockup photo URL was passed to Buffer/Ideas as-is for all three platforms. A human should confirm it reads correctly in Buffer's composer per platform, or fetch/crop it locally before scheduling.",
+          "Alt text was written from the catalog's product description and chosen_images.note, not from direct visual inspection of the image (same egress block). A human should confirm it actually matches the image."
+        ],
+        "buffer_staging": "Instagram: create_post with saveToDraft:true, schedulingType:'notification' -> post 6ab66612db73444101ed0c48, confirmed via get_post immediately after creation: status='draft', dueAt=null, sentAt=null. LinkedIn: create_idea -> idea 6ab6661f207130686726e7f4. Facebook: create_idea -> idea 6ab66625986c088c9ab5122c. create_post was never called for LinkedIn or Facebook. Nothing was approved, scheduled, or published -- all three remain at review-ready awaiting Agata's explicit decision.",
+        "other_notes": [
+          "Catalog entry for 'Awakened Fields' carries no price_note, availability_note, or caution_note -- $1,250.00, 1 in stock, no flags.",
+          "No politics; content stays inside the client's faith/emotion content pillar per profile.md (framed as art/beauty/attention, with an editorial scripture pairing), no doctrinal specificity or asserted relationship beyond the single verse quoted and verified.",
+          "Excluded 'Heaven Declares' (Psalm 19 overlap caution_note with post 004) and 'Let Our Light Continue to Shine' (sold out + sensitive Hanukkah content) from final consideration despite neither carrying a hard skip_rules trigger -- flagging for a human to consider whether the latter warrants its own caution_note given its zero-stock status."
+        ]
+      }
+    }
+  ]
+}
