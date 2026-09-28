@@ -1,0 +1,33 @@
+{
+  "platforms": {
+    "linkedin": {"status": "review-ready", "buffer_idea_id": "6aba5ad586070f89cc413313"},
+    "instagram": {"status": "review-ready", "buffer_draft_post_id": "6aba5ac9c89b4e66c43b089b"},
+    "facebook": {"status": "review-ready", "buffer_idea_id": "6aba5adce4e89996c1a9ac9f"}
+  },
+  "history": [
+    {
+      "date": "2026-09-28",
+      "event": "Automated scheduled pipeline run created this package.",
+      "details": {
+        "painting": "His Steadfast Love Embraces",
+        "collection": "studio",
+        "selection_rule_reason": "painting-catalog.json's raw used_count (atelier=7, studio=7) is stale, as every prior run since at least post 023 has also found. True counts, cross-checked against every posts/*/status.json history entry and matching post folder titles against the catalog's used-title lists, excluding legacy posts 001/001-AI and treating 002 (Fear Not, Atelier) as pre-catalog-convention per CLAUDE.md's legacy note and consistent with post 026's own precedent of counting only from post 003 onward: through post 026, Atelier = 12 (003,004,007,009,011,014,016,018,020,022,024,026), Studio = 12 (005,006,008,010,012,013,015,017,019,021,023,025). Tied at 12-12, so the tiebreak rule applied: pick whichever collection was NOT used for the most recent post (026, Atelier). This run therefore drew from Studio. Within Studio's truly-unused entries (excluding catalog-listed 'unused' titles already used in posts 017/019/021/023/025, which the catalog itself hadn't updated), 'His Steadfast Love Embraces' was selected: no caution_note, no price_note, no availability_note, 1 in stock, and — unusually cleanly — the scripture (Psalm 119:41-48) is stated as literally worked into the physical piece per the client's own listing, removing the need for an editorial scripture pairing.",
+        "image_used": "No chosen_images block exists for this entry (never previously reviewed by a human/Claude). Per run instructions, used primary_image_url (catalog image index 0, portrait, flat product photo — not a confirmed room mockup) for all three platforms, and flagged this plainly as a NEEDS HUMAN DECISION item in package-review.md, the images/README-source-image.md note, and the Step 13 email. One Python urllib download attempt to images.squarespace-cdn.com failed ('Tunnel connection failed: 403 Forbidden'), not retried per run instructions — raw uncropped source URL passed to Buffer/Ideas for all three platforms.",
+        "scripture_verification": "Psalm 119:41-48 (ESV) verified via WebSearch across 5 independent listings (Bible Study Tools, ESV.org, Bible.com/YouVersion, Biblia, Christianity.com), since direct fetch to biblegateway.com/biblehub.com/esv.org/wholeheartedarts.com is blocked (one WebFetch attempt this run to the live product page also failed, EGRESS_BLOCKED). Drafts quote the ESV text as the passage's content, not as a verbatim claim about which exact translation is physically stitched/painted into the canvas, since the catalog listing doesn't specify a translation.",
+        "factual_verification_note": "All three drafts (LinkedIn, Instagram, Facebook) passed fact-check.md with no UNSUPPORTED claims. No personal story or specific reaction was attributed to Agata beyond her own catalog listing text; per the skip_rules' thin-narrative guidance, all three drafts were kept shorter and image-led rather than inventing backstory.",
+        "needs_human_decision_items": [
+          "No chosen_images block for this entry — a human should view its 3 product photos and confirm/set chosen_images (mockup_url, flat_url, avoid_indexes, note) if a room mockup exists, per Agata's stated preference for mockups over flat shots.",
+          "Image was not downloaded, cropped to platform dimensions, or visually verified this run (egress blocked to images.squarespace-cdn.com) — the raw uncropped flat-product-photo URL was passed to Buffer/Ideas as-is for all three platforms. A human should confirm it reads correctly in Buffer's composer per platform, or fetch/crop it locally before scheduling.",
+          "Alt text was written from the catalog's product description and image metadata only, not from direct visual inspection of the image (same egress block). A human should confirm it actually matches the image.",
+          "Live price ($150.00) and stock (1 in stock) are from the catalog snapshot, not a live re-check (egress blocked) — not included in any post text, but Agata should be aware the listing may have changed."
+        ],
+        "buffer_staging": "Instagram: create_post with saveToDraft:true, schedulingType:'notification' -> post 6aba5ac9c89b4e66c43b089b, confirmed via get_post immediately after creation: status='draft', dueAt=null, sentAt=null. LinkedIn: create_idea -> idea 6aba5ad586070f89cc413313. Facebook: create_idea -> idea 6aba5adce4e89996c1a9ac9f. create_post was never called for LinkedIn or Facebook. Nothing was approved, scheduled, or published -- all three remain at review-ready awaiting Agata's explicit decision.",
+        "other_notes": [
+          "Catalog entry for 'His Steadfast Love Embraces' carries no price_note, availability_note, or caution_note -- $150.00, 1 in stock, no flags.",
+          "No politics; content stays inside the client's faith/emotion content pillar per profile.md, with the scripture pairing being the artist's own stated inclusion (per the listing) rather than an editorial pairing invented for this post.",
+          "This run's used-count reconciliation methodology (excluding legacy posts 001/002 from the catalog-driven selection count) follows the precedent set by post 026's history entry; a human may want to have the catalog itself regenerated/corrected so future runs don't need to redo this reconciliation by hand each time."
+        ]
+      }
+    }
+  ]
+}
