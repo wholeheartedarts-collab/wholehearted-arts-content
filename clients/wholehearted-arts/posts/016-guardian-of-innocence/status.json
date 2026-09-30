@@ -3,17 +3,21 @@
     "linkedin": {
       "status": "review-ready",
       "buffer_idea_id": "6a9814294f2160b1499bdfe2",
-      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready.",
+      "buffer_draft_post_id": "6abd4d7616681d5db322d3c9",
+      "buffer_scheduling_type": "automatic",
+      "buffer_idea_note": "Idea converted to a real Buffer draft on 2026-09-30; the idea card remains on the Ideas board but is superseded."
     },
     "instagram": {
       "status": "review-ready",
       "buffer_draft_post_id": "6a981420ccce9c3da1b0ba14",
-      "note": "Staged as a real Buffer draft (schedulingType: notification, saveToDraft: true). Verified via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null. Image attached via its public URL; Buffer fetched it independently (1254x1254), confirming the egress block is local to this sandbox, not the URL itself."
+      "note": "Staged as a real Buffer draft (schedulingType: notification, saveToDraft: true). Verified via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null. Image attached via its public URL; Buffer fetched it independently (1254x1254), confirming the egress block is local to this sandbox, not the URL itself.",
+      "buffer_scheduling_type": "automatic"
     },
     "facebook": {
-      "status": "review-ready",
+      "status": "not-needed",
       "buffer_idea_id": "6a98142e4f2160b1499be00f",
-      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+      "note": "Not staged separately: the Instagram post cross-posts to the Facebook Page (Agata, 2026-09-30)."
     }
   },
   "history": [
@@ -36,6 +40,10 @@
           "This entry had a chosen_images block already set (verified by a human/Claude viewing every photo in an earlier session), so the mockup-vs-flat choice itself did not need to be guessed this run."
         ]
       }
+    },
+    {
+      "date": "2026-09-30",
+      "event": "2026-09-30: Buffer staging corrected. Root cause of the 'Instagram-only drafts' problem: Instagram drafts were created with schedulingType 'notification' (Buffer Reminders), which can only be published from the Buffer mobile app; LinkedIn/Facebook were parked on the Ideas board, not in Drafts. Direct test proved schedulingType 'automatic' + saveToDraft true yields a genuinely inert draft on all three channels. Instagram draft switched to automatic; LinkedIn idea converted to a real Buffer draft. Facebook is no longer staged separately: Agata's Instagram account cross-posts to the Facebook Page."
     }
   ]
 }

@@ -4,20 +4,24 @@
       "status": "review-ready",
       "staged_via": "buffer_idea",
       "buffer_idea_id": "6aaa883cdc8fe30e47b1e0b7",
-      "note": "Staged in Buffer as an IDEA per publishing-handoff's Critical Buffer limitation -- LinkedIn rejects schedulingType \"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ideas have no queue slot and cannot publish -- inert until Agata converts it in Buffer's composer. Nothing approved, scheduled, or published."
+      "note": "Staged in Buffer as an IDEA per publishing-handoff's Critical Buffer limitation -- LinkedIn rejects schedulingType \"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ideas have no queue slot and cannot publish -- inert until Agata converts it in Buffer's composer. Nothing approved, scheduled, or published.",
+      "buffer_draft_post_id": "6abd4d2caecb985cec9c302f",
+      "buffer_scheduling_type": "automatic",
+      "buffer_idea_note": "Idea converted to a real Buffer draft on 2026-09-30; the idea card remains on the Ideas board but is superseded."
     },
     "instagram": {
       "status": "review-ready",
       "scheduled_via": "buffer",
       "buffer_draft_id": "6aaa883223fe21f44ed921ab",
       "buffer_channel_id": "6a74f44c99afb44349156296",
-      "note": "Pushed to Buffer as a genuine draft (schedulingType:\"notification\", saveToDraft:true, mode:\"addToQueue\"). Verified via get_post immediately after creation: status=draft, dueAt=null, sentAt=null. Inert until Agata acts on it in Buffer."
+      "note": "Pushed to Buffer as a genuine draft (schedulingType:\"notification\", saveToDraft:true, mode:\"addToQueue\"). Verified via get_post immediately after creation: status=draft, dueAt=null, sentAt=null. Inert until Agata acts on it in Buffer.",
+      "buffer_scheduling_type": "automatic"
     },
     "facebook": {
-      "status": "review-ready",
+      "status": "not-needed",
       "staged_via": "buffer_idea",
       "buffer_idea_id": "6aaa8844d190819f28ce850d",
-      "note": "Staged in Buffer as an IDEA per publishing-handoff's Critical Buffer limitation -- Facebook rejects schedulingType \"notification\" and \"automatic\" auto-publishes within minutes regardless of saveToDraft. Ideas have no queue slot and cannot publish -- inert until Agata converts it in Buffer's composer. Nothing approved, scheduled, or published."
+      "note": "Not staged separately: the Instagram post cross-posts to the Facebook Page (Agata, 2026-09-30)."
     }
   },
   "history": [
@@ -42,6 +46,10 @@
           "No caution_note on this catalog entry. No politics; content draws only on Colossians 3:12/3:14 (general virtues + love), not the household-roles verses later in the chapter, to stay clearly inside the client's no-politics avoid-list."
         ]
       }
+    },
+    {
+      "date": "2026-09-30",
+      "event": "2026-09-30: Buffer staging corrected. Root cause of the 'Instagram-only drafts' problem: Instagram drafts were created with schedulingType 'notification' (Buffer Reminders), which can only be published from the Buffer mobile app; LinkedIn/Facebook were parked on the Ideas board, not in Drafts. Direct test proved schedulingType 'automatic' + saveToDraft true yields a genuinely inert draft on all three channels. Instagram draft switched to automatic; LinkedIn idea converted to a real Buffer draft. Facebook is no longer staged separately: Agata's Instagram account cross-posts to the Facebook Page."
     }
   ]
 }

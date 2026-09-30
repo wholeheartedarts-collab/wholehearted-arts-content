@@ -41,105 +41,77 @@ states, tracked as distinct and never skipped:
   **Buffer**, connected via its official hosted MCP server
   (`mcp.buffer.com/mcp`) with Agata's own OAuth login, covering her
   LinkedIn, Instagram Business, and Facebook Page accounts (all
-  confirmed in `profile.md`). No other automation is authorized.
+  confirmed in `profile.md`). No other automation is authorized. Since
+  2026-09-30 only LinkedIn and Instagram are staged — Instagram
+  cross-posts to the Facebook Page.
 
-## ⚠ Critical Buffer limitation — confirmed 2026-08-10 (read before using Buffer at all)
+## Buffer staging rules — corrected 2026-09-30 (read before using Buffer at all)
 
-`saveToDraft: true` does **not** reliably keep a post inert on this
-account. Root-caused after two real incidents (post 003 on 2026-08-06,
-and post 004 on 2026-08-09/10 — both auto-published to LinkedIn,
-Instagram, and Facebook within ~2-10 minutes of creation despite
-`saveToDraft: true`, without any human approval):
+**Verified by direct test on 2026-09-30, on all three channels:**
+`create_post` with `schedulingType: "automatic"`, `saveToDraft: true`,
+`mode: "addToQueue"` and no `dueAt` produces a genuinely inert Buffer
+**draft** — `status: "draft"`, `dueAt: null`, `sentAt: null`,
+`sharedNow: false`. It sits in the channel's **Drafts** tab until a human
+opens it and chooses "Add to Queue" or "Share Now". LinkedIn and Facebook
+test drafts were created, re-read, and deleted without ever entering the
+queue.
 
-- Buffer's `schedulingType` only has two values: `automatic` and
-  `notification`. `notification` is the one that produces a genuinely
-  inert `draft` status (confirmed via direct test). `automatic` means
-  "publish for real the moment a queue slot opens" — and with
-  `mode: addToQueue` (the default), that's usually within minutes,
-  since channels have posting-schedule slots throughout the day.
-  `saveToDraft: true` does **not** override this for `automatic`
-  scheduling — that combination is not a safe "draft," it's a
-  near-immediate publish.
-- **Instagram** channel accepts `schedulingType: "notification"` — use
-  this (with `saveToDraft: true`) for a real Instagram draft. Confirmed
-  working: status stays `draft`, `dueAt`/`sentAt` stay `null`, nothing
-  goes out until a human acts on it in Buffer.
-- **LinkedIn and Facebook channels reject `"notification"` outright**
-  ("Notification scheduling is not supported for linkedin/facebook
-  channels. Use automatic scheduling instead.") — so the one
-  schedulingType they accept is exactly the one that auto-publishes.
-- The lower-level GraphQL `needsApproval` field (not exposed by the
-  simplified `create_post` tool) looked like a possible fix but is
-  blocked on this account: "needsApproval is only valid when your
-  posting policy on this channel requires approval" — this org's plan
-  has no approval-required posting policy configured.
-- **Conclusion: there is currently no way to stage an inert,
-  human-review-before-publish *post* for LinkedIn or Facebook through
-  Buffer's API on this account.** Only Instagram supports it.
-  Re-confirmed 2026-08-21 by direct test — both channels returned
-  HTTP 400 "Notification scheduling is not supported for
-  linkedin/facebook channels."
+### What actually went wrong before (root cause, corrected)
 
-### The safe LinkedIn/Facebook staging path: Buffer **Ideas**
+- **The August 2026 "auto-publish bug" was a misdiagnosis.** Posts 003 and
+  004 show `sharedNow: true` in Buffer — they were published by a
+  **Share Now** action taken on the drafts in Buffer's UI minutes after
+  creation, not by `saveToDraft` being ignored. The drafts themselves were
+  real drafts.
+- **The fix built on that misdiagnosis broke the pipeline for two months.**
+  Instagram drafts were created with `schedulingType: "notification"`,
+  which is Buffer's **Reminder** mode: Buffer never publishes the post
+  itself, it only sends a push notification to the Buffer *mobile app*,
+  and the human finishes the post on their phone. Agata does not use the
+  mobile app, so every attempt to publish from the web either errored
+  ("trouble sending notifications to your mobile device") or silently
+  consumed the draft. Meanwhile LinkedIn/Facebook were parked on Buffer's
+  **Ideas** board, which is not the Drafts tab and which Agata never saw.
+  Net effect: "I only get Instagram drafts, and they won't post."
+- On 2026-09-30 every existing Instagram draft was switched to
+  `automatic`, every LinkedIn idea was converted to a real draft, and the
+  cloud routine prompt was rewritten to match this section.
 
-Confirmed working 2026-08-21. `create_idea` writes to Buffer's Ideas
-board, not the posting queue. An idea has no `schedulingType`, no queue
-slot, and no publish path of its own — Buffer cannot send it. A human
-converts an idea into a post from Buffer's own composer when they
-decide to.
+### The rules
 
-Use it for LinkedIn and Facebook at `review-ready`:
-
-```
-create_idea(organizationId, content: {
-  title:    "NNN <Platform> — <Painting title>",
-  services: ["linkedin"],          // or ["facebook"] — one idea per platform
-  text:     <full assembled post: hook + body + CTA + hashtags>,
-  media:    [{ type: "image", url: <public image URL>, alt: <alt text> }]
-})
-```
-
-This is strictly safer than `create_post` for these two channels and
-replaces the old "hand the text to the human for copy/paste" fallback —
-the content now lands *inside Buffer*, next to the Instagram drafts,
-where Agata already looks. It does not count against the plan's
-scheduled-post limit.
-
-`create_post` for LinkedIn/Facebook remains forbidden without explicit
-per-platform, publish-now approval, exactly as below.
-
-### Practical rule this implies
-
-- **Instagram**: safe to push to Buffer as a real draft
-  (`schedulingType: "notification"`, `saveToDraft: true`) at
-  `review-ready`, same as before — a human still has to act on it in
-  Buffer before it posts.
-- **LinkedIn and Facebook**: do **not** call Buffer's `create_post` for
-  these two channels until a human has *already* given explicit
-  approval to publish that exact content *right now* (or at Buffer's
-  next queue slot). Instead, stage them at `review-ready` as Buffer
-  **Ideas** (`create_idea`, see the section above) — inert by
-  construction, and visible in Buffer alongside the Instagram drafts.
-  The human converts an idea to a post in Buffer's own composer when
-  they decide to publish. Treat any LinkedIn/
-  Facebook Buffer `create_post` call as equivalent to
-  publish-imminently, and get explicit per-platform approval first,
-  exactly as the "Never auto-publish" hard rule already requires.
-- If Buffer ever adds real approval-policy support to this account, or
-  a `saveToDraft` fix ships, re-test with one throwaway post per
-  channel (check `status`/`dueAt`/`sentAt` immediately after creation)
-  before trusting this path again.
+- **Every Buffer `create_post` is:** `schedulingType: "automatic"`,
+  `saveToDraft: true`, `mode: "addToQueue"`, no `dueAt`. Instagram also
+  needs `metadata.instagram: { type: "post", shouldShareToFeed: true }`.
+- **Never `schedulingType: "notification"`** — that is Reminder mode and
+  requires the phone app.
+- **Never `mode: "shareNow" | "shareNext" | "customScheduled"` and never
+  pass `dueAt`** unless a human has explicitly approved that exact
+  package and named the time. Those actions publish or schedule for real.
+- **Never `create_idea`** for staging. Ideas are not drafts and are not
+  where Agata looks.
+- **After every `create_post`, immediately `get_post` the returned ID**
+  and confirm `status: "draft"`, `dueAt: null`, `sentAt: null`,
+  `sharedNow: false`, `schedulingType: "automatic"`. If it is anything
+  else, `delete_post` it at once and report loudly.
+- **Platforms:** LinkedIn and Instagram only. Agata's Instagram account
+  cross-posts to her Facebook Page, so no separate Facebook post is
+  written or staged (her decision, 2026-09-30). Do not create anything on
+  the Facebook channel.
+- **Publishing is Agata's action, in Buffer's own UI**: open the draft in
+  the Drafts tab and choose "Add to Queue" (next slot on the channel's
+  posting schedule) or "Share Now". No phone app is involved. Remember
+  that "Share Now" really does post immediately — that is what published
+  003 and 004.
 
 ## Buffer-connected path (per platform, per package)
 
 1. Applies only after a specific package/platform has reached `approved`
    with a date/time (i.e. `scheduled`) via explicit human instruction —
    Buffer is a delivery mechanism for a decision already made, never a
-   new approval path of its own. **Exception**: Instagram may be pushed
-   at `review-ready` as a real Buffer draft per the limitation note
-   above, since that path is genuinely inert until the human acts, and
-   LinkedIn/Facebook may be staged at `review-ready` as Buffer **Ideas**
-   (never posts), which are inert for the same reason.
+   new approval path of its own. **Exception**: LinkedIn and Instagram
+   are pushed at `review-ready` as real, unscheduled Buffer **drafts**
+   per the staging rules above — genuinely inert until Agata acts on them
+   in Buffer's Drafts tab.
 2. Confirm Buffer's MCP tools are connected and that the target
    platform's account is linked in Buffer before attempting this path —
    if not connected, fall back to the manual path for that platform

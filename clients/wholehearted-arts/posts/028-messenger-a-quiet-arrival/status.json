@@ -1,8 +1,24 @@
 {
   "platforms": {
-    "linkedin": {"status": "review-ready", "buffer_idea_id": "6abcfbd7ce7e18335bfcecdc"},
-    "instagram": {"status": "review-ready", "buffer_draft_post_id": "6abcfbc699552c0333e27448"},
-    "facebook": {"status": "review-ready", "buffer_idea_id": "6abcfbdd34105e2bf5bc13bf"}
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_idea_id": "6abcfbd7ce7e18335bfcecdc",
+      "buffer_draft_post_id": "6abd4d27faa6f29f2dfbbb6c",
+      "buffer_scheduling_type": "automatic",
+      "buffer_idea_note": "Idea converted to a real Buffer draft on 2026-09-30; the idea card remains on the Ideas board but is superseded."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6abd4bd7aecb985cec9bfcb0",
+      "buffer_scheduling_type": "automatic",
+      "buffer_draft_post_id_superseded": "6abcfbc699552c0333e27448",
+      "note": "the original Reminder-type draft was consumed on 2026-09-30 when Agata pressed Share Now (Buffer only sent a phone notification; nothing reached Instagram). Re-created as a normal draft."
+    },
+    "facebook": {
+      "status": "not-needed",
+      "buffer_idea_id": "6abcfbdd34105e2bf5bc13bf",
+      "note": "Not staged separately: the Instagram post cross-posts to the Facebook Page (Agata, 2026-09-30)."
+    }
   },
   "history": [
     {
@@ -28,6 +44,10 @@
           "This run's used-count reconciliation methodology follows the precedent set by posts 026 and 027's history entries; a human may want the catalog itself regenerated/corrected (used arrays updated through post 027) so future runs don't need to redo this reconciliation by hand each time."
         ]
       }
+    },
+    {
+      "date": "2026-09-30",
+      "event": "2026-09-30: Buffer staging corrected. Root cause of the 'Instagram-only drafts' problem: Instagram drafts were created with schedulingType 'notification' (Buffer Reminders), which can only be published from the Buffer mobile app; LinkedIn/Facebook were parked on the Ideas board, not in Drafts. Direct test proved schedulingType 'automatic' + saveToDraft true yields a genuinely inert draft on all three channels. Instagram draft switched to automatic; LinkedIn idea converted to a real Buffer draft. Facebook is no longer staged separately: Agata's Instagram account cross-posts to the Facebook Page."
     }
   ]
 }

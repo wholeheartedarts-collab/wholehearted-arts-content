@@ -3,17 +3,21 @@
     "linkedin": {
       "status": "review-ready",
       "buffer_idea_id": "6a9ab7870bcc7af80df6daed",
-      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready.",
+      "buffer_draft_post_id": "6abd4d7516681d5db322d3a2",
+      "buffer_scheduling_type": "automatic",
+      "buffer_idea_note": "Idea converted to a real Buffer draft on 2026-09-30; the idea card remains on the Ideas board but is superseded."
     },
     "instagram": {
       "status": "review-ready",
       "buffer_draft_post_id": "6a9ab77c9e905e8210a37b0b",
-      "note": "Staged as a real Buffer draft (schedulingType: notification, saveToDraft: true). Verified via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null. Image attached via its public URL; Buffer fetched it independently (1660x2500), confirming the egress block is local to this sandbox, not the URL itself."
+      "note": "Staged as a real Buffer draft (schedulingType: notification, saveToDraft: true). Verified via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null. Image attached via its public URL; Buffer fetched it independently (1660x2500), confirming the egress block is local to this sandbox, not the URL itself.",
+      "buffer_scheduling_type": "automatic"
     },
     "facebook": {
-      "status": "review-ready",
+      "status": "not-needed",
       "buffer_idea_id": "6a9ab78c56b82655fe63408f",
-      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+      "note": "Not staged separately: the Instagram post cross-posts to the Facebook Page (Agata, 2026-09-30)."
     }
   },
   "history": [
@@ -37,6 +41,10 @@
           "Price field consistency checked: catalog's structured price ($1,600) matches the price stated inside the entry's own description text — no discrepancy, unlike some other candidate entries considered and passed over."
         ]
       }
+    },
+    {
+      "date": "2026-09-30",
+      "event": "2026-09-30: Buffer staging corrected. Root cause of the 'Instagram-only drafts' problem: Instagram drafts were created with schedulingType 'notification' (Buffer Reminders), which can only be published from the Buffer mobile app; LinkedIn/Facebook were parked on the Ideas board, not in Drafts. Direct test proved schedulingType 'automatic' + saveToDraft true yields a genuinely inert draft on all three channels. Instagram draft switched to automatic; LinkedIn idea converted to a real Buffer draft. Facebook is no longer staged separately: Agata's Instagram account cross-posts to the Facebook Page."
     }
   ]
 }

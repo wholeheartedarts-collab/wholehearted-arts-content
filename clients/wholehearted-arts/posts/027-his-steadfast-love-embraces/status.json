@@ -1,8 +1,22 @@
 {
   "platforms": {
-    "linkedin": {"status": "review-ready", "buffer_idea_id": "6aba5ad586070f89cc413313"},
-    "instagram": {"status": "review-ready", "buffer_draft_post_id": "6aba5ac9c89b4e66c43b089b"},
-    "facebook": {"status": "review-ready", "buffer_idea_id": "6aba5adce4e89996c1a9ac9f"}
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_idea_id": "6aba5ad586070f89cc413313",
+      "buffer_draft_post_id": "6abd4d28bfe0bf16c36d194f",
+      "buffer_scheduling_type": "automatic",
+      "buffer_idea_note": "Idea converted to a real Buffer draft on 2026-09-30; the idea card remains on the Ideas board but is superseded."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6aba5ac9c89b4e66c43b089b",
+      "buffer_scheduling_type": "automatic"
+    },
+    "facebook": {
+      "status": "not-needed",
+      "buffer_idea_id": "6aba5adce4e89996c1a9ac9f",
+      "note": "Not staged separately: the Instagram post cross-posts to the Facebook Page (Agata, 2026-09-30)."
+    }
   },
   "history": [
     {
@@ -28,6 +42,10 @@
           "This run's used-count reconciliation methodology (excluding legacy posts 001/002 from the catalog-driven selection count) follows the precedent set by post 026's history entry; a human may want to have the catalog itself regenerated/corrected so future runs don't need to redo this reconciliation by hand each time."
         ]
       }
+    },
+    {
+      "date": "2026-09-30",
+      "event": "2026-09-30: Buffer staging corrected. Root cause of the 'Instagram-only drafts' problem: Instagram drafts were created with schedulingType 'notification' (Buffer Reminders), which can only be published from the Buffer mobile app; LinkedIn/Facebook were parked on the Ideas board, not in Drafts. Direct test proved schedulingType 'automatic' + saveToDraft true yields a genuinely inert draft on all three channels. Instagram draft switched to automatic; LinkedIn idea converted to a real Buffer draft. Facebook is no longer staged separately: Agata's Instagram account cross-posts to the Facebook Page."
     }
   ]
 }

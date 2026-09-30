@@ -11,15 +11,17 @@ where the last one left off.
 
 ## Current scope
 
-**LinkedIn, Instagram, and Facebook**, as of 2026-08-06. Each platform
+**LinkedIn and Instagram**, as of 2026-09-30 (Facebook skills remain in
+the repo but are not run: Agata's Instagram account cross-posts to her
+Facebook Page, so a separate Facebook post is not produced or staged). Each platform
 has its own writing and review skills with platform-correct rules (hook
 length, hashtag density, link handling, tone) — LinkedIn's rules are
 never silently reused for Instagram or Facebook, and vice versa. If
 another platform is added later, it gets the same treatment: its own
 platform-specific skills, not a generalization of an existing one.
 
-Not every topic has to target all three platforms — default to mirroring
-a topic across all three unless a topic is genuinely platform-exclusive
+Not every topic has to target both platforms — default to mirroring
+a topic across both unless a topic is genuinely platform-exclusive
 (e.g. an Instagram-only Reel idea with no LinkedIn equivalent), in which
 case say so explicitly rather than forcing a weak version onto a platform
 it doesn't fit.
@@ -149,7 +151,10 @@ each platform can be at a different stage:
   via its official MCP server with Agata's own OAuth login, covering
   LinkedIn, Instagram Business, and the Facebook Page. Even through
   Buffer, nothing is scheduled without an explicit human instruction
-  naming the exact package and platform. See [[publishing-handoff]].
+  naming the exact package and platform. Buffer drafts are always
+  `schedulingType: "automatic"` + `saveToDraft: true` — never
+  "notification" (Reminder mode needs the phone app). See
+  [[publishing-handoff]].
 - **No status skipping.** draft → review-ready → approved → scheduled →
   published are distinct; only a human moves a package past
   review-ready.

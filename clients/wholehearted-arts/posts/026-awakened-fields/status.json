@@ -1,8 +1,24 @@
 {
   "platforms": {
-    "linkedin": {"status": "review-ready", "buffer_idea_id": "6ab6661f207130686726e7f4"},
-    "instagram": {"status": "review-ready", "buffer_draft_post_id": "6ab66612db73444101ed0c48"},
-    "facebook": {"status": "review-ready", "buffer_idea_id": "6ab66625986c088c9ab5122c"}
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_idea_id": "6ab6661f207130686726e7f4",
+      "buffer_draft_post_id": "6abd4d296e104b76ed7dcd95",
+      "buffer_scheduling_type": "automatic",
+      "buffer_idea_note": "Idea converted to a real Buffer draft on 2026-09-30; the idea card remains on the Ideas board but is superseded."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6abd4cd5bfe0bf16c36d0ec7",
+      "buffer_scheduling_type": "automatic",
+      "buffer_draft_post_id_superseded": "6ab66612db73444101ed0c48",
+      "note": "the original Reminder-type draft errored on 2026-09-25 ('trouble sending notifications to your mobile device'). Deleted and re-created as a normal draft."
+    },
+    "facebook": {
+      "status": "not-needed",
+      "buffer_idea_id": "6ab66625986c088c9ab5122c",
+      "note": "Not staged separately: the Instagram post cross-posts to the Facebook Page (Agata, 2026-09-30)."
+    }
   },
   "history": [
     {
@@ -26,6 +42,10 @@
           "Excluded 'Heaven Declares' (Psalm 19 overlap caution_note with post 004) and 'Let Our Light Continue to Shine' (sold out + sensitive Hanukkah content) from final consideration despite neither carrying a hard skip_rules trigger -- flagging for a human to consider whether the latter warrants its own caution_note given its zero-stock status."
         ]
       }
+    },
+    {
+      "date": "2026-09-30",
+      "event": "2026-09-30: Buffer staging corrected. Root cause of the 'Instagram-only drafts' problem: Instagram drafts were created with schedulingType 'notification' (Buffer Reminders), which can only be published from the Buffer mobile app; LinkedIn/Facebook were parked on the Ideas board, not in Drafts. Direct test proved schedulingType 'automatic' + saveToDraft true yields a genuinely inert draft on all three channels. Instagram draft switched to automatic; LinkedIn idea converted to a real Buffer draft. Facebook is no longer staged separately: Agata's Instagram account cross-posts to the Facebook Page."
     }
   ]
 }

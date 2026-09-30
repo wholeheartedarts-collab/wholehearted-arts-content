@@ -1,8 +1,22 @@
 {
   "platforms": {
-    "linkedin": {"status": "review-ready", "buffer_idea_id": "6ab3c29412d717faba510359"},
-    "instagram": {"status": "review-ready", "buffer_draft_post_id": "6ab3c28a4fc065cee67ae4f9"},
-    "facebook": {"status": "review-ready", "buffer_idea_id": "6ab3c29bc5c556d40198ad7c"}
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_idea_id": "6ab3c29412d717faba510359",
+      "buffer_draft_post_id": "6abd4d29aecb985cec9c2f7d",
+      "buffer_scheduling_type": "automatic",
+      "buffer_idea_note": "Idea converted to a real Buffer draft on 2026-09-30; the idea card remains on the Ideas board but is superseded."
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6ab3c28a4fc065cee67ae4f9",
+      "buffer_scheduling_type": "automatic"
+    },
+    "facebook": {
+      "status": "not-needed",
+      "buffer_idea_id": "6ab3c29bc5c556d40198ad7c",
+      "note": "Not staged separately: the Instagram post cross-posts to the Facebook Page (Agata, 2026-09-30)."
+    }
   },
   "history": [
     {
@@ -28,6 +42,10 @@
           "Also excluded 'President Trump Portrait - customized!' (overtly political) and 'Where the Walls Remember' (carries its own explicit NEEDS HUMAN DECISION caution_note re: Holocaust/Auschwitz subject matter, per skip_rules)."
         ]
       }
+    },
+    {
+      "date": "2026-09-30",
+      "event": "2026-09-30: Buffer staging corrected. Root cause of the 'Instagram-only drafts' problem: Instagram drafts were created with schedulingType 'notification' (Buffer Reminders), which can only be published from the Buffer mobile app; LinkedIn/Facebook were parked on the Ideas board, not in Drafts. Direct test proved schedulingType 'automatic' + saveToDraft true yields a genuinely inert draft on all three channels. Instagram draft switched to automatic; LinkedIn idea converted to a real Buffer draft. Facebook is no longer staged separately: Agata's Instagram account cross-posts to the Facebook Page."
     }
   ]
 }

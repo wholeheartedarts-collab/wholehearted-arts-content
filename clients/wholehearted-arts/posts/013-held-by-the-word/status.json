@@ -3,17 +3,21 @@
     "linkedin": {
       "status": "review-ready",
       "buffer_idea_id": "6a8edca10f4cfe7627dceae0",
-      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready.",
+      "buffer_draft_post_id": "6abd4d7916681d5db322d41b",
+      "buffer_scheduling_type": "automatic",
+      "buffer_idea_note": "Idea converted to a real Buffer draft on 2026-09-30; the idea card remains on the Ideas board but is superseded."
     },
     "instagram": {
       "status": "review-ready",
       "buffer_draft_post_id": "6a8edc962976fdf632ec937b",
-      "note": "Staged as a real Buffer draft (schedulingType: notification, saveToDraft: true). Verified via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null. Image attached via its public URL (Buffer fetched it independently, 2000x1334)."
+      "note": "Staged as a real Buffer draft (schedulingType: notification, saveToDraft: true). Verified via get_post immediately after creation: status=\"draft\", dueAt=null, sentAt=null. Image attached via its public URL (Buffer fetched it independently, 2000x1334).",
+      "buffer_scheduling_type": "automatic"
     },
     "facebook": {
-      "status": "review-ready",
+      "status": "not-needed",
       "buffer_idea_id": "6a8edca68744872e4d0a13a7",
-      "note": "Staged as a Buffer Idea (not a post) per publishing-handoff's Critical Buffer limitation. Agata converts it to a post herself in Buffer's composer when ready."
+      "note": "Not staged separately: the Instagram post cross-posts to the Facebook Page (Agata, 2026-09-30)."
     }
   },
   "history": [
@@ -38,6 +42,10 @@
           "Price is unresolved: the catalog entry carries an active price_note (ON SALE at snapshot: $650 to $350). No draft states a price, but Agata should confirm the current price before adding one if she edits these posts."
         ]
       }
+    },
+    {
+      "date": "2026-09-30",
+      "event": "2026-09-30: Buffer staging corrected. Root cause of the 'Instagram-only drafts' problem: Instagram drafts were created with schedulingType 'notification' (Buffer Reminders), which can only be published from the Buffer mobile app; LinkedIn/Facebook were parked on the Ideas board, not in Drafts. Direct test proved schedulingType 'automatic' + saveToDraft true yields a genuinely inert draft on all three channels. Instagram draft switched to automatic; LinkedIn idea converted to a real Buffer draft. Facebook is no longer staged separately: Agata's Instagram account cross-posts to the Facebook Page."
     }
   ]
 }

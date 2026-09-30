@@ -84,10 +84,12 @@ A scheduled Claude Code cloud routine, **"WholeheartedArts Content
 Pipeline"** (Mon/Wed/Fri, 8:00 AM America/New_York — manage it at
 https://claude.ai/code/routines), runs the same pipeline unattended: picks
 an unused real painting from wholeheartedarts.com, researches its theme,
-writes and reviews all three platforms, sources the real photo, fact-checks
-everything, and lands three **unscheduled draft posts in Buffer** — never
-auto-approves or schedules. Review and approve/schedule from inside Buffer
-itself, or come back to chat with change requests.
+writes and reviews LinkedIn and Instagram (Facebook is covered by
+Instagram cross-posting), sources the real photo, fact-checks everything,
+and lands two **unscheduled draft posts in Buffer** — never auto-approves
+or schedules. Review them in Buffer under each channel's **Drafts** tab and
+publish with "Add to Queue" or "Share Now" (no phone app needed), or come
+back to chat with change requests.
 
 This routine runs against a **public** GitHub mirror of this repo
 (`github.com/wholeheartedarts-collab/wholehearted-arts-content` — public
