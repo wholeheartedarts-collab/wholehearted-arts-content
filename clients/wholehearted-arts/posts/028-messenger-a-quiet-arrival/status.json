@@ -1,0 +1,33 @@
+{
+  "platforms": {
+    "linkedin": {"status": "review-ready", "buffer_idea_id": "6abcfbd7ce7e18335bfcecdc"},
+    "instagram": {"status": "review-ready", "buffer_draft_post_id": "6abcfbc699552c0333e27448"},
+    "facebook": {"status": "review-ready", "buffer_idea_id": "6abcfbdd34105e2bf5bc13bf"}
+  },
+  "history": [
+    {
+      "date": "2026-09-30",
+      "event": "Automated scheduled pipeline run created this package.",
+      "details": {
+        "painting": "Messenger",
+        "collection": "atelier",
+        "selection_rule_reason": "painting-catalog.json's raw used_count (atelier=7, studio=7) is stale (confirmed again this run, same as posts 026/027's own findings) -- its 'used' arrays stop around post 015-017 and never got updated since. Reconciled by cross-checking every posts/*/status.json / research.md title against the catalog, counting from post 003 onward (excluding legacy 001/002 per CLAUDE.md's legacy note, consistent with posts 026 and 027's own precedent): through post 027, Atelier = 12 (003,004,007,009,011,014,016,018,020,022,024,026), Studio = 13 (005,006,008,010,012,013,015,017,019,021,023,025,027). Not tied -- selection rule picks the collection with FEWER used entries, so Atelier (12 < 13) was selected for this run.",
+        "candidate_selection": "Within Atelier's catalog-listed 'unused' entries, cross-checked against the true used-title list above to exclude stale-listed-as-unused titles already used (Awakened Fields=026, Gathered Light=024, Guardian of Innocence=016, Love Eternal Rhapsody=022, Patience=018, The Strength of Three Strands=020). Also excluded 'Heaven Declares' (caution_note flags a Psalm-19 overlap with post 004 -- usable per the note but avoided for a cleaner pick) and 'Let Our Light Continue to Shine' (no formal caution_note, but its description centers on 'a heartfelt prayer for peace in Israel and for all Jewish people' plus Hanukkah blessings -- judged too close to the client's explicit no-politics avoid-list for an automated pipeline run without human sign-off, despite not being tagged NEEDS HUMAN DECISION; flagged in the Step 13 email for a human to reconsider/re-tag in the catalog). Of the remaining clean candidates (Messenger, Never Stop Wonder, Whimsical Gdansk), 'Messenger' was selected: no caution_note, no price_note, no availability_note, 1 in stock, $725, and its own listing language ('noticing what arrives softly') gave a clean, non-invented editorial angle into verified scripture (dove/whisper imagery) without needing any backstory beyond the listing.",
+        "image_used": "chosen_images.mockup_url (catalog index 1, square, 'teal wall, plant, warm light' per the entry's own verified_by note from 2026-09-01) used for all three platforms -- this entry DOES have a human/Claude-verified chosen_images block, so the mockup was used per the run's preference, not primary_image_url. One Python urllib download attempt to images.squarespace-cdn.com failed ('Tunnel connection failed: 403 Forbidden'), not retried per run instructions -- raw mockup URL passed directly to Buffer for all three platforms; no local crop to platform dimensions was produced this run.",
+        "scripture_verification": "Genesis 8:11, Matthew 3:16, and 1 Kings 19:12 all verified via WebSearch across multiple independent, reputable sites per verse (Bible Study Tools, BibleHub, Biblia, Crosswalk, King James Bible Online, Wikipedia), since direct fetch to biblegateway.com/biblehub.com/esv.org/wholeheartedarts.com is blocked. No verse text taken from memory alone.",
+        "factual_verification_note": "All three drafts (LinkedIn, Instagram, Facebook) passed fact-check.md with no UNSUPPORTED claims. The scripture-to-painting connection is explicitly framed in all three drafts as the writer's own reflection/inference, not a claim about the artist's documented intent -- research.md flags this distinction. No personal story or reaction attributed to Agata beyond the listing's own text.",
+        "needs_human_decision_items": [
+          "Image was not downloaded, cropped to platform dimensions, or freshly visually verified this run (egress blocked to images.squarespace-cdn.com) -- the raw mockup URL was passed to Buffer as-is for all three platforms, at its native square aspect ratio rather than LinkedIn 1200x627 / Instagram 1080x1350 / Facebook 1200x630. A human should confirm it displays correctly in Buffer's composer per platform, or crop it locally before scheduling.",
+          "Alt text was written from the catalog's product description and a prior (2026-09-01) human/Claude image-viewing note, not a fresh visual check this run (same egress block). Reasonably reliable but not re-verified -- a human should confirm it still matches the image.",
+          "'Let Our Light Continue to Shine' (Atelier, unused) was passed over for this run specifically because its description touches Israel/Jewish-peace and Hanukkah content -- not formally caution-flagged in the catalog, but judged too close to the client's no-politics rule for an unsupervised run. A human should decide whether to add a caution_note to that catalog entry, or whether it's fine to use in a future human-supervised run.",
+          "Live price ($725.00) and stock (1 in stock) are from the catalog snapshot, not a live re-check this run (egress blocked) -- not included in any post text, but Agata should be aware the listing may have changed."
+        ],
+        "buffer_staging": "Instagram: create_post with saveToDraft:true, schedulingType:'notification' -> post 6abcfbc699552c0333e27448, confirmed via get_post immediately after creation: status='draft', dueAt=null, sentAt=null. LinkedIn: create_idea -> idea 6abcfbd7ce7e18335bfcecdc. Facebook: create_idea -> idea 6abcfbdd34105e2bf5bc13bf. create_post was never called for LinkedIn or Facebook. Nothing was approved, scheduled, or published -- all three remain at review-ready awaiting Agata's explicit decision.",
+        "other_notes": [
+          "No politics: content stays inside the client's faith/emotion content pillar per profile.md; the one politically-adjacent candidate in this run's shortlist (see needs_human_decision_items) was deliberately passed over rather than used.",
+          "This run's used-count reconciliation methodology follows the precedent set by posts 026 and 027's history entries; a human may want the catalog itself regenerated/corrected (used arrays updated through post 027) so future runs don't need to redo this reconciliation by hand each time."
+        ]
+      }
+    }
+  ]
+}
