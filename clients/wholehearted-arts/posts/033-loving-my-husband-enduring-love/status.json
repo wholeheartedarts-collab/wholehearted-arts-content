@@ -3,12 +3,16 @@
     "linkedin": {
       "status": "review-ready",
       "image": "images/linkedin.jpg",
-      "image_url": "https://raw.githubusercontent.com/wholeheartedarts-collab/wholehearted-arts-content/main/clients/wholehearted-arts/posts/033-loving-my-husband-enduring-love/images/linkedin.jpg"
+      "image_url": "https://raw.githubusercontent.com/wholeheartedarts-collab/wholehearted-arts-content/main/clients/wholehearted-arts/posts/033-loving-my-husband-enduring-love/images/linkedin.jpg",
+      "buffer_draft_post_id": "6abef6ab8bccc8e64162bc00",
+      "buffer_scheduling_type": "automatic"
     },
     "instagram": {
       "status": "review-ready",
       "image": "images/instagram.jpg",
-      "image_url": "https://raw.githubusercontent.com/wholeheartedarts-collab/wholehearted-arts-content/main/clients/wholehearted-arts/posts/033-loving-my-husband-enduring-love/images/instagram.jpg"
+      "image_url": "https://raw.githubusercontent.com/wholeheartedarts-collab/wholehearted-arts-content/main/clients/wholehearted-arts/posts/033-loving-my-husband-enduring-love/images/instagram.jpg",
+      "buffer_draft_post_id": "6abef6aa63de9e09a285216b",
+      "buffer_scheduling_type": "automatic"
     },
     "facebook": {
       "status": "not-needed",
@@ -19,6 +23,10 @@
     {
       "date": "2026-10-01",
       "event": "Package written by Claude in-session at Agata's request: theme 'Loving my husband', painting 'Enduring Love; Strength through Trials', image mode 'photo' from her Dropbox 'Art Show Submission' photos."
+    },
+    {
+      "date": "2026-10-01",
+      "event": "Staged in Buffer as real drafts (automatic + saveToDraft, verified status draft / dueAt null): Instagram 6abef6aa63de9e09a285216b, LinkedIn 6abef6ab8bccc8e64162bc00. Nothing scheduled or published."
     }
   ]
 }

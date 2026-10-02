@@ -3,12 +3,16 @@
     "linkedin": {
       "status": "review-ready",
       "image": "images/linkedin.jpg",
-      "image_url": "https://raw.githubusercontent.com/wholeheartedarts-collab/wholehearted-arts-content/main/clients/wholehearted-arts/posts/031-not-stressing-silent-i-held-my-peace/images/linkedin.jpg"
+      "image_url": "https://raw.githubusercontent.com/wholeheartedarts-collab/wholehearted-arts-content/main/clients/wholehearted-arts/posts/031-not-stressing-silent-i-held-my-peace/images/linkedin.jpg",
+      "buffer_draft_post_id": "6abef6a763de9e09a2852061",
+      "buffer_scheduling_type": "automatic"
     },
     "instagram": {
       "status": "review-ready",
       "image": "images/instagram.jpg",
-      "image_url": "https://raw.githubusercontent.com/wholeheartedarts-collab/wholehearted-arts-content/main/clients/wholehearted-arts/posts/031-not-stressing-silent-i-held-my-peace/images/instagram.jpg"
+      "image_url": "https://raw.githubusercontent.com/wholeheartedarts-collab/wholehearted-arts-content/main/clients/wholehearted-arts/posts/031-not-stressing-silent-i-held-my-peace/images/instagram.jpg",
+      "buffer_draft_post_id": "6abef6a622215530c70ce54a",
+      "buffer_scheduling_type": "automatic"
     },
     "facebook": {
       "status": "not-needed",
@@ -19,6 +23,10 @@
     {
       "date": "2026-10-01",
       "event": "Package written by Claude in-session at Agata's request: theme 'Trying not to stress / peace', painting 'Silent, I Held My Peace', image mode 'graphic' from her Dropbox 'Art Show Submission' photos."
+    },
+    {
+      "date": "2026-10-01",
+      "event": "Staged in Buffer as real drafts (automatic + saveToDraft, verified status draft / dueAt null): Instagram 6abef6a622215530c70ce54a, LinkedIn 6abef6a763de9e09a2852061. Nothing scheduled or published."
     }
   ]
 }

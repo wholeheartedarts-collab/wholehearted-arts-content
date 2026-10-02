@@ -3,12 +3,16 @@
     "linkedin": {
       "status": "review-ready",
       "image": "images/linkedin.jpg",
-      "image_url": "https://raw.githubusercontent.com/wholeheartedarts-collab/wholehearted-arts-content/main/clients/wholehearted-arts/posts/030-thankfulness-sunshine-filled-hearts/images/linkedin.jpg"
+      "image_url": "https://raw.githubusercontent.com/wholeheartedarts-collab/wholehearted-arts-content/main/clients/wholehearted-arts/posts/030-thankfulness-sunshine-filled-hearts/images/linkedin.jpg",
+      "buffer_draft_post_id": "6abef6a522215530c70ce522",
+      "buffer_scheduling_type": "automatic"
     },
     "instagram": {
       "status": "review-ready",
       "image": "images/instagram.jpg",
-      "image_url": "https://raw.githubusercontent.com/wholeheartedarts-collab/wholehearted-arts-content/main/clients/wholehearted-arts/posts/030-thankfulness-sunshine-filled-hearts/images/instagram.jpg"
+      "image_url": "https://raw.githubusercontent.com/wholeheartedarts-collab/wholehearted-arts-content/main/clients/wholehearted-arts/posts/030-thankfulness-sunshine-filled-hearts/images/instagram.jpg",
+      "buffer_draft_post_id": "6abef6a445400a0e3002bdd0",
+      "buffer_scheduling_type": "automatic"
     },
     "facebook": {
       "status": "not-needed",
@@ -19,6 +23,10 @@
     {
       "date": "2026-10-01",
       "event": "Package written by Claude in-session at Agata's request: theme 'Thankfulness', painting 'Sunshine Filled Hearts - Set of 2', image mode 'graphic' from her Dropbox 'Art Show Submission' photos."
+    },
+    {
+      "date": "2026-10-01",
+      "event": "Staged in Buffer as real drafts (automatic + saveToDraft, verified status draft / dueAt null): Instagram 6abef6a445400a0e3002bdd0, LinkedIn 6abef6a522215530c70ce522. Nothing scheduled or published."
     }
   ]
 }
