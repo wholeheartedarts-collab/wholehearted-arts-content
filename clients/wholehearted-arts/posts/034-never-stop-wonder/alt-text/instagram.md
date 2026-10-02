@@ -1,0 +1,4 @@
+Image: chosen_images.mockup_url (passed through to Buffer directly — not downloaded/cropped this run, egress to images.squarespace-cdn.com blocked; see package-review.md)
+Alt text: A colorful mixed-media abstract painting titled "Never Stop Wonder" hangs on a wall in a bright, airy room with soft mint-green walls, next to a woven rattan chair. The painting itself is a dense, joyful composition of layered florals, loose scribbles, and bursts of light in reds, turquoise, yellows, pinks, and greens, rising out of a dark background. The square canvas reads as energetic and freeform rather than symmetrical or planned.
+
+Note: this description is based on the painting-catalog.json entry's own description and the prior human/Claude verification note for mockup index 0 ("idx 0 is airy mint-green with a rattan chair"), not a fresh visual check by this session — image content could not be viewed directly in this sandbox.

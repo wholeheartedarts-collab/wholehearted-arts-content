@@ -1,0 +1,12 @@
+{
+  "platforms": {
+    "linkedin": {"status": "review-ready", "buffer_draft_post_id": "6abfa18ed2e71b2f33a45cb3", "buffer_scheduling_type": "automatic"},
+    "instagram": {"status": "review-ready", "buffer_draft_post_id": "6abfa1931b2a6a8e155df0d2", "buffer_scheduling_type": "automatic"},
+    "facebook": {"status": "not-needed", "note": "Instagram cross-posts to the Facebook Page as of 2026-09-30 — no separate Facebook post produced or staged."}
+  },
+  "history": [
+    {
+      "event": "Automated content-pipeline run, 2026-10-02. Painting: 'Never Stop Wonder' (Atelier Collection, 36x36, $3,200, 1 in stock at snapshot time). Selection rule: reconciled actual usage across all post folders (catalog's own used/unused lists are stale) -- Atelier=15 used, Studio=16 used through post 033, not tied, so selection rule picked the collection with fewer used entries (Atelier). Within Atelier's genuinely-unused, non-flagged candidates (Heaven Declares, Let Our Light Continue to Shine, Never Stop Wonder), chose 'Never Stop Wonder' as the cleanest pick: no caution_note, in stock, no price/availability notes, verified chosen_images. Set aside 'Let Our Light Continue to Shine' (Hanukkah/Israel-themed content, borders the client's no-politics rule though not flagged in the catalog) and 'Heaven Declares' (Psalm 19 overlap with post 004) for human awareness. Image: used chosen_images.mockup_url (index 0, verified_by a prior human/Claude session 2026-09-01) for both platforms -- egress to images.squarespace-cdn.com was blocked in this sandbox (tested once, not retried per instructions), so the image was NOT downloaded/cropped; the uncropped source URL was passed through to Buffer directly for both platforms. Both LinkedIn and Instagram drafts passed their own platform reviews and the full package review with two NEEDS HUMAN DECISION items (uncropped image; alt text not freshly visually verified this session). Staged as Buffer drafts (schedulingType automatic, saveToDraft true) -- see buffer_draft_post_id fields below once created. Nothing approved, scheduled, or published."
+    }
+  ]
+}
