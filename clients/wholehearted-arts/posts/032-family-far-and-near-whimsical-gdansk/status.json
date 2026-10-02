@@ -1,0 +1,24 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "image": "images/linkedin.jpg",
+      "image_url": "https://raw.githubusercontent.com/wholeheartedarts-collab/wholehearted-arts-content/main/clients/wholehearted-arts/posts/032-family-far-and-near-whimsical-gdansk/images/linkedin.jpg"
+    },
+    "instagram": {
+      "status": "review-ready",
+      "image": "images/instagram.jpg",
+      "image_url": "https://raw.githubusercontent.com/wholeheartedarts-collab/wholehearted-arts-content/main/clients/wholehearted-arts/posts/032-family-far-and-near-whimsical-gdansk/images/instagram.jpg"
+    },
+    "facebook": {
+      "status": "not-needed",
+      "note": "Instagram cross-posts to the Facebook Page."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-10-01",
+      "event": "Package written by Claude in-session at Agata's request: theme 'Loving family far away and family here in America', painting 'Whimsical Gdańsk', image mode 'photo' from her Dropbox 'Art Show Submission' photos."
+    }
+  ]
+}
