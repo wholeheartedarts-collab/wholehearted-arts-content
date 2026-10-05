@@ -1,0 +1,14 @@
+{
+  "platforms": {
+    "linkedin": {"status": "review-ready", "buffer_draft_post_id": "6ac3953bece98e64bc14d283", "buffer_scheduling_type": "automatic"},
+    "instagram": {"status": "review-ready", "buffer_draft_post_id": "6ac395376cf62815b7da18f7", "buffer_scheduling_type": "automatic"},
+    "facebook": {"status": "not-needed", "note": "Instagram cross-posts to the Facebook Page as of 2026-09-30 — no separate Facebook post produced or staged."}
+  },
+  "history": [
+    {
+      "date": "2026-10-05",
+      "event": "Automated content-pipeline run. Painting: 'Where Grace Settles' (Studio Collection, 16x20, 1 in stock at snapshot time). Selection rule: reconciled actual usage across all post folders (catalog's own used/unused counts are stale) -- Atelier=17 used, Studio=16 used through post 034, not tied, so the selection rule picked the collection with fewer used entries (Studio). Within Studio's genuinely-unused, non-flagged candidates, chose 'Where Grace Settles' as the cleanest pick: no caution_note, 1 in stock, no chosen_images set. Excluded for politics/sensitivity reasons (consistent with prior runs): 'President Trump Portrait' (political), 'Eyes of Fear - War' and 'Gaslighted' (sensitive subjects), 'Happy Hanukkah' (non-Christian holiday), 'Where the Walls Remember' (explicit NEEDS HUMAN DECISION caution_note, Holocaust remembrance). Set aside for human awareness but not required to exclude: 'Sisters' (already posted organically by Agata) and 'The Key Within' (sensitive thematic pairing). Image: this entry has NO chosen_images field -- used primary_image_url (index 0) for both platforms since no human/Claude has visually confirmed a mockup photo for this painting; flagged explicitly in package-review.md and the Step 13 email that no mockup was selected. Egress to images.squarespace-cdn.com was blocked in this sandbox (tested once, not retried per instructions) -- image was not downloaded or cropped; the uncropped source URL was passed through to Buffer directly for both platforms. One fabricated personal-anecdote line was caught during factual-verification and rewritten before this gate closed (see fact-check.md). Both LinkedIn and Instagram drafts passed their own platform reviews and the full package review, with two NEEDS HUMAN DECISION items (no confirmed mockup image; image not cropped to platform dimensions) and one data-quality note (catalog price $475 vs. description's stated $675 -- neither price appears in either post). Staged as Buffer drafts (schedulingType automatic, saveToDraft true) -- see buffer_draft_post_id fields once added. Nothing approved, scheduled, or published.",
+      "by": "agent"
+    }
+  ]
+}
