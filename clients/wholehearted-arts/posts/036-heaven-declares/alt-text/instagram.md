@@ -1,0 +1,5 @@
+Image: chosen_images.mockup_url (Atelier Collection catalog entry "Heaven Declares," image index 2) — passed through to Buffer as a direct URL; NOT downloaded or visually verified in this sandbox (egress to images.squarespace-cdn.com failed, tested once, not retried per run instructions).
+
+Alt text: A room-mockup photo of the mixed-media painting "Heaven Declares" by Agata May'kowska, framed in silver and hung on a white brick wall in bright daylight. The composition centers on a lifted human figure built from fragments of torn paper inscribed with Scripture, surrounded by layered fabric, paper, and acrylic in tones suggesting both surrender and joy. The paper and fabric edges are intentionally left rough and textured rather than smooth.
+
+Note: based on the catalog entry's product description and the chosen_images note confirming this is a room-scene mockup (white brick wall, bright daylight, selected because it "carries the blues best") — not confirmed by direct visual inspection this session, since the image could not be downloaded. A human should visually confirm this alt text matches the actual photo before or shortly after publishing.
