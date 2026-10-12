@@ -1,0 +1,26 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6acccfabfcd88e54a9474520",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f43399afb4434915623a",
+      "verified": "get_post confirmed status=draft, dueAt=null, sentAt=null, sharedNow=false, schedulingType=automatic"
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6acccfbbbc52bd4504db4442",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f44c99afb44349156296",
+      "verified": "get_post confirmed status=draft, dueAt=null, sentAt=null, sharedNow=false, schedulingType=automatic",
+      "caution_note": "NEEDS HUMAN DECISION: the Instagram channel itself shows isDisconnected=true in Buffer (list_channels/get_channel, checked 2026-10-12). The draft was created and verified clean, but Agata will not be able to Add to Queue or Share Now from it until she reconnects the Instagram account in Buffer settings."
+    },
+    "facebook": {"status": "not-needed", "reason": "Instagram cross-posts to the Facebook Page as of 2026-09-30 client scope change; no separate Facebook post produced or staged."}
+  },
+  "history": [
+    {
+      "date": "2026-10-12",
+      "event": "Automated content-pipeline run. Painting selected: 'Finding Light in the Darkness # 2', Studio Collection. Selection rule: catalog's own used-list counts were stale (atelier 7 / studio 7, tied, last updated ~post 015); reconciled directly against all post folders' actual painting/collection history, giving Atelier 16 uses vs Studio 15 — Studio had fewer, so Studio was selected per the fewer-used rule. No caution_note on the chosen entry; 1 in stock, $80. No chosen_images mockup curation exists for this entry, so primary_image_url (flat product photo) was used for both platforms, not a room mockup; flagged as NEEDS HUMAN DECISION for future chosen_images curation. Image CDN egress was blocked in this sandbox (single untried-again attempt, per run rule) so no local per-platform crop was produced; the same image URL was passed directly to Buffer for both LinkedIn and Instagram, Buffer fetching it independently. Alt text for both platforms based on the catalog's written description only, not a visual check, flagged accordingly. Both platforms staged as real inert Buffer drafts (schedulingType automatic, saveToDraft true, mode addToQueue, no dueAt), each individually verified via get_post. NEW FINDING: the Instagram channel itself is disconnected in Buffer (isDisconnected=true) — the draft was still created and verifies clean, but is unusable until Agata reconnects the account. Flagged prominently in package-review.md and the Step 13 email. Nothing approved, scheduled, or published by this run."
+    }
+  ]
+}
