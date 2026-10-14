@@ -1,0 +1,29 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6acf72a286e76751486e0db7",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f43399afb4434915623a",
+      "verified": "get_post confirmed status=draft, dueAt=null, sentAt=null, sharedNow=false, schedulingType=automatic"
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6acf72afc97e71f0107c9fe5",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f44c99afb44349156296",
+      "verified": "get_post confirmed status=draft, dueAt=null, sentAt=null, sharedNow=false, schedulingType=automatic",
+      "caution_note": "NEEDS HUMAN DECISION (recurring from post 038, still unresolved as of 2026-10-14): the Instagram channel itself shows isDisconnected=true in Buffer (list_channels, checked 2026-10-14). The draft was created and verified clean, but Agata will not be able to Add to Queue or Share Now from it until she reconnects the Instagram account in Buffer settings."
+    },
+    "facebook": {
+      "status": "not-needed",
+      "reason": "Instagram cross-posts to the Facebook Page as of 2026-09-30 client scope change; no separate Facebook post produced or staged."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-10-14",
+      "event": "Automated content-pipeline run. Painting selected: 'Joyous Embrace', Studio Collection. Selection rule: reconciled actual post-folder history (catalog's own used/unused counts are stale) gave Atelier 18 uses vs Studio 19 going into this run, so the fewer-used rule pointed to Atelier. However, Atelier's catalog 'unused' list was almost entirely stale (10 of 11 entries already match existing post titles), and the one genuinely unused Atelier entry ('Let Our Light Continue to Shine') explicitly describes itself as 'a heartfelt prayer for peace in Israel and for all Jewish people worldwide' -- real-world geopolitical content flagged as a NEEDS HUMAN DECISION concern under the client's no-politics rule, even though the catalog carries no caution_note on it. Rather than deciding that unilaterally, this run treated Atelier as having no safely selectable entry this cycle and drew from Studio instead. No chosen_images mockup curation exists for 'Joyous Embrace', so primary_image_url (flat product photo) was used for both platforms, not a room mockup -- flagged as NEEDS HUMAN DECISION. Image CDN egress was blocked in this sandbox (single untried-again attempt, per run rule), so no local per-platform crop was produced; the same image URL was passed directly to Buffer for both LinkedIn and Instagram, Buffer fetching it independently. Alt text for both platforms based on the catalog's written description only, not a visual check, flagged accordingly. Both platforms staged as real inert Buffer drafts (schedulingType automatic, saveToDraft true, mode addToQueue, no dueAt), each individually verified via get_post. RECURRING FINDING (also flagged on post 038, still unresolved): the Instagram channel itself remains disconnected in Buffer (isDisconnected=true) -- the draft was created and verifies clean, but is unusable until Agata reconnects the account. Flagged prominently in package-review.md and the Step 13 email. Nothing approved, scheduled, or published by this run."
+    }
+  ]
+}
