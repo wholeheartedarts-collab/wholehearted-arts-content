@@ -1,0 +1,25 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6ad217871ffe4709802cd324",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f43399afb4434915623a",
+      "buffer_verified": "status draft, dueAt null, sentAt null, sharedNow false, schedulingType automatic (get_post confirmed 2026-10-16)"
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6ad21792b948bf9e9d945243",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f44c99afb44349156296",
+      "buffer_verified": "status draft, dueAt null, sentAt null, sharedNow false, schedulingType automatic (get_post confirmed 2026-10-16)",
+      "note": "Instagram channel shows isDisconnected:true in list_channels (recurring finding, also seen on posts 036-039) -- the draft was still created and verifies clean, but Agata cannot Add to Queue / Share Now from it until she reconnects the account in Buffer's channel settings."
+    },
+    "facebook": {"status": "not-needed", "note": "Instagram cross-posts to the Facebook Page as of 2026-09-30; no separate Facebook post produced or staged."}
+  },
+  "history": [
+    {
+      "event": "Automated content-pipeline run. Painting selected: 'Children-Reward from the LORD - Framed', Studio Collection ($375, 1 in stock, 20x20 mixed media fabric/twine/acrylic, framed). Selection rule: reconciled actual usage across all post folders (catalog's own used/unused counts are stale) -- Atelier=18 used, Studio=20 used through post 039, so the fewer-used rule pointed to Atelier. However Atelier's catalog 'unused' list is now fully stale: all 10 non-flagged entries already match existing post titles, and the one genuinely unused entry ('Let Our Light Continue to Shine') was already flagged on post 039's run as a borderline-politics/zero-stock concern (explicit prayer for peace in Israel/for Jewish people worldwide, Hanukkah-themed). Consistent with that precedent, this run again treated Atelier as having no safely selectable entry and drew from Studio instead -- recurring finding, flagged in package-review.md and the Step 13 email for a human to re-curate the Atelier unused list. Within Studio's genuinely-unused, non-flagged candidates, chose this entry for its clean fit to both the faith/prayer and family content pillars at once, its real on-canvas scripture (Psalm 127:1-3 ESV, independently verified via WebSearch against ESV.org/Blue Letter Bible/bibleserver.com), its in-stock status, and because no backstory needed to be invented (the catalog's own 'Father and Mother praying for their Unborn Child' subject line was sufficient). No chosen_images mockup curation exists for this entry, so primary_image_url (index 0, flat/square product photo) was used for both platforms, not a room mockup -- flagged as NEEDS HUMAN DECISION. Image CDN egress was blocked in this sandbox (single untried-again curl attempt: CONNECT tunnel failed, 403), so no local per-platform crop was produced; the same image URL was passed directly to Buffer for both LinkedIn and Instagram, Buffer fetching it independently. Alt text for both platforms based on the catalog's written description and scripture text only, not a visual check -- flagged accordingly in both alt-text files. Both LinkedIn and Instagram drafts passed their own platform reviews and the full package review on first draft, with three NEEDS HUMAN DECISION items (mockup curation, image sizing, alt-text visual verification) -- see package-review.md. Buffer staging: list_channels confirmed LinkedIn (6a74f43399afb4434915623a) connected and Instagram (6a74f44c99afb44349156296) disconnected (isDisconnected:true, recurring finding also seen on posts 036-039) -- following the precedent set on posts 038/039, a create_post was still attempted for Instagram despite the disconnected flag, and it succeeded as a genuine draft. Both LinkedIn (draft id 6ad217871ffe4709802cd324) and Instagram (draft id 6ad21792b948bf9e9d945243) drafts were created with schedulingType automatic, saveToDraft true, mode addToQueue, no dueAt, each individually verified via get_post: status draft, dueAt null, sentAt null, sharedNow false, schedulingType automatic. No Facebook channel touched, no Buffer Ideas created. Nothing approved, scheduled, or published by this run."
+    }
+  ]
+}
