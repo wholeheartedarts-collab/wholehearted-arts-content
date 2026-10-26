@@ -1,0 +1,28 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6adf435a12840f969dc48435",
+      "buffer_scheduling_type": "automatic"
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6adf4366bed8e022f16e550e",
+      "buffer_scheduling_type": "automatic"
+    },
+    "facebook": {
+      "status": "not-needed",
+      "note": "Instagram cross-posts to the Facebook Page as of 2026-09-30; no separate Facebook post is written or staged."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-10-26",
+      "event": "Automated content-pipeline run. Painting selected: 'In the Blossom' (Studio Collection, acrylic on canvas, 20x16, $200, 1 in stock). Selection-rule note: reconciling the catalog against actual post history (catalog's own used/unused counts are stale), Atelier Collection is now fully exhausted of automatically-selectable entries -- 17 of its 18 total paintings have been used across posts 001-043, and the 18th ('Let Our Light Continue to Shine') was judged unsuitable for unattended selection under the client's no-politics avoid-list (its own description is an explicit personal prayer for peace in Israel and the Jewish people) -- the same call made by posts 041, 042, and 043. This is the fourth consecutive run falling back to Studio Collection for that reason; flagged again, more urgently, as NEEDS HUMAN DECISION in package-review.md since Atelier has no further viable entries left at all. Image: no 'chosen_images' mockup exists yet for this entry (Studio mockup selection wasn't completed as of the catalog's last generation), so the catalog's primary_image_url (flat product photo) was used for both platforms. Sandbox egress to the Squarespace CDN is blocked (confirmed via direct curl test, 403 at the proxy), so the image could not be downloaded/cropped with Pillow; the raw URL was passed straight through to Buffer uncropped, per the routine's documented fallback. Alt text was written from catalog description data only, not visual verification, and is flagged as such."
+    },
+    {
+      "date": "2026-10-26",
+      "event": "Staged in Buffer as real, inert drafts (schedulingType automatic, saveToDraft true, mode addToQueue, no dueAt). LinkedIn draft 6adf435a12840f969dc48435 and Instagram draft 6adf4366bed8e022f16e550e both created and immediately verified via get_post: status draft, dueAt null, sentAt null, sharedNow false, schedulingType automatic for both. Nothing scheduled or published. Buffer continues to show the Instagram channel as isDisconnected: true (consistent with posts 041-043) -- the draft itself still came back clean, but the channel likely needs OAuth reconnection before Agata can queue/share it from Buffer's UI. No Facebook post or Buffer Idea was created for any platform, per current routine scope."
+    }
+  ]
+}
