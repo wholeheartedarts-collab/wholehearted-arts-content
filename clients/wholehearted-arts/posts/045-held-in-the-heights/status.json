@@ -1,0 +1,30 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "image": "primary_image_url (uncropped, egress blocked)",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/5b412dba5ffd201a3f9205e4/1782167890018-W0OLCDY7Q9BDOQNZXDH9/CAF6E02E-D3B4-4DC0-9476-785FD2727955.jpeg",
+      "buffer_draft_post_id": "6ae1e7aed47ee8ef2fb79d4f",
+      "buffer_scheduling_type": "automatic"
+    },
+    "instagram": {
+      "status": "review-ready",
+      "image": "primary_image_url (uncropped, egress blocked)",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/5b412dba5ffd201a3f9205e4/1782167890018-W0OLCDY7Q9BDOQNZXDH9/CAF6E02E-D3B4-4DC0-9476-785FD2727955.jpeg",
+      "buffer_draft_post_id": "6ae1e7b3d47ee8ef2fb79e3e",
+      "buffer_scheduling_type": "automatic",
+      "note": "Instagram channel showed isDisconnected:true in list_channels both before and after this draft was created (recurring since post 036) -- the draft itself still verified clean via get_post."
+    },
+    "facebook": {
+      "status": "not-needed",
+      "note": "Instagram cross-posts to the Facebook Page."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-10-28",
+      "event": "Automated content-pipeline run. Painting selected: 'Held in the Hights' (Studio Collection, 20x20, $850, 1 in stock, no caution_note/price_note/availability_note). Selection rule: reconciled actual post-folder usage (catalog's own used/unused counts are stale) -- Atelier's unused list is in practice exhausted (10 of 11 listed entries already match existing posts; the one genuine remainder, 'Let Our Light Continue to Shine', has been treated as a NEEDS HUMAN DECISION politics/sensitivity concern on every run since post 039 and was skipped again here, consistent with that precedent). Drew from Studio instead -- 8th consecutive run to do so, flagged prominently as a recurring, unresolved NEEDS HUMAN DECISION item (see package-review.md item 1). Within Studio's genuinely-unused, non-flagged candidates, excluded 'Disassembled Grace' for containing an explicit critique of 'contemporary feminism' (political/culture-war content, out of scope). Chose 'Held in the Hights' for real, usable narrative straight from Agata's own catalog copy, no flags, in stock, clean fit to the faith/overcoming-struggles pillar. Paired with Habakkuk 3:19 (verified via WebSearch against ESV text, since biblegateway/biblehub/esv.org are blocked by this sandbox). Image: no chosen_images curated for this entry -- used primary_image_url (flat product photo, portrait) for both platforms; flagged in package-review.md. Egress to images.squarespace-cdn.com failed (CONNECT tunnel 403, tested once, not retried) -- image not downloaded or cropped; uncropped source URL passed directly to Buffer for both platforms. Alt text written from catalog description only, not visually verified, flagged accordingly. Both LinkedIn and Instagram drafts passed their own platform reviews and the full package review on first draft, with five NEEDS HUMAN DECISION items recorded in package-review.md. Staged in Buffer as real, inert drafts (schedulingType automatic, saveToDraft true, mode addToQueue, no dueAt): LinkedIn draft 6ae1e7aed47ee8ef2fb79d4f and Instagram draft 6ae1e7b3d47ee8ef2fb79e3e, both created and immediately verified via get_post: status draft, dueAt null, sentAt null, sharedNow false, schedulingType automatic for both. list_channels showed the Instagram channel (6a74f44c99afb44349156296) as isDisconnected:true (recurring since post 036, now 10 runs unresolved) -- the draft itself still came back clean. No Facebook post or Buffer Idea was created for any platform, per current routine scope. Nothing approved, scheduled, or published by this run.",
+      "by": "agent"
+    }
+  ]
+}
