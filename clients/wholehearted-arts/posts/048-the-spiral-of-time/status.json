@@ -1,0 +1,25 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6aeb20e1cc7e36243ef83f68",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f43399afb4434915623a",
+      "buffer_verified": {"status": "draft", "dueAt": null, "sentAt": null, "sharedNow": false}
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6aeb20eacc7e36243ef84230",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f44c99afb44349156296",
+      "buffer_verified": {"status": "draft", "dueAt": null, "sentAt": null, "sharedNow": false}
+    },
+    "facebook": {"status": "not-needed", "note": "Instagram cross-posts to the Facebook Page as of 2026-09-30 scope change."}
+  },
+  "history": [
+    {
+      "date": "2026-11-04",
+      "event": "Automated content-pipeline run. Painting selected: 'The Spiral of Time' (Studio Collection, richly textured acrylic on canvas framed in black, 20x20, $650, 1 in stock, is_visible true, no caution_note/price_note/availability_note). Selection rule: catalog's raw used-counts are tied at 7/7, so reconciled against all 47 existing post folders -- Atelier Collection's unused list has had zero genuinely free, non-flagged candidates for 10 consecutive runs now (posts 039-048); its only remainder, 'Let Our Light Continue to Shine,' is an explicit prayer for peace in Israel/the Jewish people, treated as NEEDS HUMAN DECISION since post 039. Selected from Studio instead. Within Studio's reconciled-unused, non-flagged, in-stock, visible candidates, 'The Language Beneath the Noise' was considered and rejected (is_visible: false -- not live on the site). 'The Color of Waiting' was considered and rejected (its catalog copy describes a specific personal health narrative -- facing a prognosis of blindness and eye surgery -- that only Agata could confirm as her own; selecting it for an unattended run risked implying an unconfirmed personal medical story). 'The Spiral of Time' was chosen: in stock, visible, no caution flag, and its catalog description (circular movement, past/presence/future gathering toward a center) gave enough real material to write from without inventing backstory, pairing naturally with Ecclesiastes 3:1 and Psalm 31:15 (both verified via WebSearch against ESV wording, since biblegateway.com/biblehub.com/esv.org are blocked by sandbox egress). No chosen_images curated for this entry -- used primary_image_url (flat/square product photo, not confirmed as a room scene) for both platforms, flagged as NEEDS HUMAN DECISION in package-review.md. Egress to images.squarespace-cdn.com failed (CONNECT tunnel 403, tested once, not retried) -- image not downloaded or cropped; raw URL passed to Buffer for both platforms. Both LinkedIn and Instagram drafts passed their own platform reviews on first draft; fact-check found no unsupported claims (one hook line tightened during drafting to avoid an unverifiable personal generalization). Two NEEDS HUMAN DECISION items recorded in package-review.md: (1) no chosen_images / image not visually verified or cropped to platform dimensions; (2) the 10-consecutive-run Atelier exhaustion, which needs Agata's decision rather than another silent Studio fallback. Nothing approved, scheduled, or published by this run."
+    }
+  ]
+}
