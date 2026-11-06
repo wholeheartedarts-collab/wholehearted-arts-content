@@ -1,0 +1,24 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6aedc492f6d00f3472adf096",
+      "buffer_scheduling_type": "automatic",
+      "buffer_verified": "status: draft, dueAt: null, sentAt: null, sharedNow: false — confirmed via get_post 2026-11-06"
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6aedc49c6e5a31ce6b920100",
+      "buffer_scheduling_type": "automatic",
+      "buffer_verified": "status: draft, dueAt: null, sentAt: null, sharedNow: false — confirmed via get_post 2026-11-06"
+    },
+    "facebook": {"status": "not-needed", "note": "Instagram cross-posts to the Facebook Page as of 2026-09-30; no separate Facebook post is written or staged."}
+  },
+  "history": [
+    {
+      "date": "2026-11-06",
+      "event": "Automated run (scheduled routine 'WholeheartedArts Content Pipeline'). Painting selection: catalog's own used_count (Atelier 7 / Studio 7) was stale; reconciled against actual post folders 002-048 (~17 unique Atelier paintings used, ~28 unique Studio paintings used), so the selection rule's 'fewer used' tiebreak pointed to Atelier. Atelier's unused pool, reconciled, had only one non-duplicate candidate ('Let Our Light Continue to Shine'), which was set aside for politics-adjacent content (explicit 'prayer for peace in #Israel') despite no catalog caution_note — flagged as NEEDS HUMAN DECISION. Fell back to Studio Collection; excluded several other candidates for political content (President Trump portraits, a feminism-critique piece), a Holocaust-remembrance piece already catalog-flagged NEEDS HUMAN DECISION, personal-health-narrative pieces ('The Color of Waiting', 'Flower of Righteousness' — vision/eye-surgery references only Agata could confirm as hers, same reasoning topic 048 already documented), and a second religious-holiday-of-another-faith piece ('Happy Hanukkah'). Selected 'The Center Holds' (Studio Collection, SKU SQ2809949) — no caution_note, no price/availability flags, not previously used. No chosen_images set for this entry, so primary_image_url (flat product photo) was used instead of guessing a mockup; flagged as NEEDS HUMAN DECISION so a human can review the listing's other photos and add a chosen_images entry. Image download blocked by sandbox egress (CDN); image URL passed straight to Buffer uncropped for both platforms. Staged both LinkedIn and Instagram as real Buffer drafts (schedulingType automatic, saveToDraft true, mode addToQueue, no dueAt); see buffer_draft_post_id below once created. Nothing approved, scheduled, or published. Email sent to wholeheartedarts@gmail.com with full summary and open decisions.",
+      "by": "agent"
+    }
+  ]
+}
