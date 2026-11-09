@@ -1,0 +1,24 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6af1b8ab2c4acc7aad292b7c",
+      "buffer_scheduling_type": "automatic",
+      "buffer_verified": "status: draft, dueAt: null, sentAt: null, sharedNow: false — confirmed via get_post 2026-11-09"
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6af1b89e2c4acc7aad292749",
+      "buffer_scheduling_type": "automatic",
+      "buffer_verified": "status: draft, dueAt: null, sentAt: null, sharedNow: false — confirmed via get_post 2026-11-09"
+    },
+    "facebook": {"status": "not-needed", "note": "Instagram cross-posts to the Facebook Page as of 2026-09-30; no separate Facebook post is written or staged."}
+  },
+  "history": [
+    {
+      "date": "2026-11-09",
+      "event": "Automated run (scheduled routine 'WholeheartedArts Content Pipeline'). Painting selection: catalog's raw used_count (Atelier 7 / Studio 7) was tied; tiebreak ('whichever collection NOT used for the most recent post') pointed to Atelier since post 049 used Studio. Reconciled Atelier's unused list against actual post folders 002-049 and found it exhausted of non-duplicate, non-flagged candidates for the 12th consecutive run (039-050) -- its only remaining unused entry, 'Let Our Light Continue to Shine,' is an explicit prayer for peace in Israel, treated as politically-adjacent and excluded again. Fell back to Studio Collection. Excluded 'I Am Still Standing' (catalog description reveals it depicts 'President Trump Likenesses' -- explicitly political despite no caution_note), 'Where the Walls Remember' (catalog-flagged NEEDS HUMAN DECISION, Holocaust remembrance), 'The Color of Waiting' and 'Flower of Righteousness' (personal health/vision-surgery narratives only Agata could confirm, consistent with post 048's reasoning), 'Happy Hanukkah' and 'Christmas Cards' (is_visible false), 'Roses Blooms - Tissue Box Holder' and 'International Shipping Deposit' (not actual artworks), and 'Mother' (too close a thematic duplicate of post 010's Psalm 139 motherhood piece). Selected 'Prayerful Rose or Jeremiah' (Studio Collection, SKU SQ8832402, $125/sale $75, 1 in stock) -- built around Jeremiah 31:33-34, verified via WebSearch against ESV wording. No chosen_images set for this entry; used primary_image_url (flat product photo) for both platforms, flagged as NEEDS HUMAN DECISION. Caught and corrected one fact-check error during drafting: an earlier draft borrowed an 'old restored frame with wear' detail from a different catalog entry ('Seeking His Will') by mistake; removed before finalizing, documented in research.md and fact-check.md. Both LinkedIn and Instagram drafts passed their own platform reviews on first draft. Image download blocked by sandbox egress (CDN CONNECT tunnel 403, tested once, not retried); raw image URL passed straight to Buffer for both platforms, uncropped. Two NEEDS HUMAN DECISION items recorded in package-review.md: (1) no chosen_images / image not visually verified or cropped; (2) the now-12-consecutive-run Atelier exhaustion, which needs Agata's decision rather than another silent Studio fallback. Nothing approved, scheduled, or published by this run.",
+      "by": "agent"
+    }
+  ]
+}
