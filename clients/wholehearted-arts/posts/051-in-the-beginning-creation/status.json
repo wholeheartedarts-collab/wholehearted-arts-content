@@ -1,0 +1,27 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6af45b6ee0bb54c4a7ee1533",
+      "buffer_scheduling_type": "automatic",
+      "buffer_verified": "status: draft, dueAt: null, sentAt: null, sharedNow: false — confirmed via get_post 2026-11-11"
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6af45b715bbfd45b33b00443",
+      "buffer_scheduling_type": "automatic",
+      "buffer_verified": "status: draft, dueAt: null, sentAt: null, sharedNow: false — confirmed via get_post 2026-11-11"
+    },
+    "facebook": {
+      "status": "not-needed",
+      "note": "Instagram cross-posts to the Facebook Page as of 2026-09-30; no separate Facebook post is written or staged."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-11-11",
+      "event": "Automated run (scheduled routine 'WholeheartedArts Content Pipeline'). Painting selection: reconciled actual post-folder usage (catalog's own used/unused counts are stale) -- Atelier 17 unique paintings used vs. Studio 31 through post 050. Fewer-used rule points to Atelier, but Atelier's reconciled unused list remains exhausted of non-flagged candidates (its only nominal 'unused' entry, 'Let Our Light Continue to Shine', is an explicit Israel-peace prayer, excluded as politically-adjacent). This is the 13th consecutive run (039-051) falling back to Studio -- escalated again as NEEDS HUMAN DECISION in package-review.md since post 050 already flagged this exact pattern and nothing has changed. Selected 'Creation Genesis 1:1-2' (Studio Collection, SKU SQ6536061, $180 list, SOLD OUT / 0 in stock per live snapshot -- flagged, no sale language used in either draft). No chosen_images set for this entry; used primary_image_url (flat product photo) for both platforms -- flagged as NEEDS HUMAN DECISION (no mockup selected/verified). Both LinkedIn and Instagram drafts passed their own platform reviews on first draft; fact-check found no unsupported claims (verbatim Genesis 1:1 quote checked for cross-translation consistency before quoting; Genesis 1:2 paraphrased only, not quoted, since its wording varies more by translation). Image download blocked by sandbox egress (Squarespace CDN tunnel 403, tested once per the run's egress note, not retried); raw image URL passed straight to Buffer for both platforms, uncropped; alt text written from the catalog's text description only and flagged as not visually verified. Nothing approved, scheduled, or published by this run.",
+      "by": "agent"
+    }
+  ]
+}
