@@ -1,0 +1,41 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6af6fe9d9a21933ffad38035",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f43399afb4434915623a",
+      "buffer_verified": "status draft, dueAt null, sentAt null, sharedNow false -- confirmed via get_post 2026-11-13"
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6af6fea77828e7ae1b0a96ca",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f44c99afb44349156296",
+      "buffer_verified": "status draft, dueAt null, sentAt null, sharedNow false -- confirmed via get_post 2026-11-13"
+    },
+    "facebook": {"status": "not-needed", "note": "Instagram cross-posts to the Facebook Page as of 2026-09-30 scope change; no separate Facebook post produced or staged."}
+  },
+  "history": [
+    {
+      "date": "2026-11-13",
+      "event": "Automated scheduled pipeline run (topic 052). Painting selected: 'After the Rain, the Windows Kept Glowing' (Studio Collection, SKU SQ9719353, $125, 1 in stock). Selection rule pointed to Atelier (reconciled use counts: Atelier 18 vs Studio 32), but Atelier's only unused candidate ('Let Our Light Continue to Shine') remains excluded as political-adjacent (prayer for peace in Israel/Jewish people) and sold out -- 14th consecutive run with zero viable Atelier candidates, carried forward as NEEDS HUMAN DECISION. Fell back to Studio per post-050 precedent. Also newly excluded 'Disassembled Grace' (unflagged political/culture-war content, feminism critique) as a fresh finding this run.",
+      "by": "agent"
+    },
+    {
+      "date": "2026-11-13",
+      "event": "Research, LinkedIn + Instagram drafts, platform reviews, and fact-check completed. Both passed platform review with no revisions needed.",
+      "by": "agent"
+    },
+    {
+      "date": "2026-11-13",
+      "event": "Image: real photo of the actual painting used (primary_image_url; no chosen_images mockup exists for this entry yet). Egress to the Squarespace CDN failed in this sandbox (test attempted once, not retried per CLAUDE.md) -- no local platform crop produced; original image URL passed directly to Buffer. Alt text written per platform from the catalog description only, flagged as not visually verified.",
+      "by": "agent"
+    },
+    {
+      "date": "2026-11-13",
+      "event": "Content-package-review passed with no FAIL items and 3 NEEDS HUMAN DECISION items (Atelier exhaustion/political-adjacent painting carried forward, new unflagged-political catalog entry found, image not locally cropped/alt text not visually verified). Both platforms staged as real, inert Buffer drafts (not approved/scheduled/published).",
+      "by": "agent"
+    }
+  ]
+}
