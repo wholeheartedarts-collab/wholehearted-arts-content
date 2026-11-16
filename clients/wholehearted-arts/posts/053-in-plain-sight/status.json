@@ -1,0 +1,27 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6afaf2d30c2af02527ddd9c8",
+      "buffer_scheduling_type": "automatic",
+      "buffer_verified": "status: draft, dueAt: null, sentAt: null, sharedNow: false — confirmed via get_post 2026-11-16"
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6afaf2e00b49b20d0d113de4",
+      "buffer_scheduling_type": "automatic",
+      "buffer_verified": "status: draft, dueAt: null, sentAt: null, sharedNow: false — confirmed via get_post 2026-11-16"
+    },
+    "facebook": {
+      "status": "not-needed",
+      "note": "Instagram cross-posts to the Facebook Page as of 2026-09-30; no separate Facebook post is written or staged."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-11-16",
+      "event": "Automated run (scheduled routine 'WholeheartedArts Content Pipeline'). Catalog's raw used_count (Atelier 7 / Studio 7) is stale; reconciled against actual post folders 002-052 gives Atelier 18 used / Studio 34 used, pointing the selection rule to Atelier. Reconciled Atelier's unused list against actual post folders and found it exhausted of non-duplicate, non-flagged candidates for the 15th consecutive run (039-053) -- its only remaining unused entry, 'Let Our Light Continue to Shine,' is an explicit prayer for peace in Israel, treated as politically-adjacent and excluded again (NEEDS HUMAN DECISION, carried forward unchanged). Fell back to Studio Collection, reconciling its 69-entry unused list against all 52 existing posts (most are already used under their own post numbers due to stale catalog data). New finding this run: excluded 'Eyes of Fear - War' (catalog description frames it around a violent/war backdrop -- judged too politically-adjacent for an automated run to decide alone, flagged for human review) and the already-established exclusions (political figures, Holocaust-remembrance pieces, personal-health narratives, organic-post duplicates, is_visible:false entries, non-artwork listings). Selected 'In Plain Sight' (Studio Collection, SKU SQ2632555, acrylic on canvas, 24x24, list $600/sale $300 at snapshot, 1 in stock) -- explicitly tagged in the catalog as part of Agata's 'Heart of Healing' series, paired with Psalm 147:3 and Psalm 34:18 (both verified via WebSearch against ESV wording) rather than any invented backstory, since the catalog gives no artist statement for this piece. No chosen_images set for this entry; used primary_image_url (flat product photo) for both platforms, flagged as NEEDS HUMAN DECISION. Both LinkedIn and Instagram drafts passed their own platform reviews on first draft; fact-check found no unsupported claims. Image download blocked by sandbox egress (CDN tunnel 403, tested once, not retried); raw image URL passed straight to Buffer for both platforms, uncropped. Price deliberately omitted from both posts given the unverified mid-sale snapshot. Nothing approved, scheduled, or published by this run.",
+      "by": "agent"
+    }
+  ]
+}

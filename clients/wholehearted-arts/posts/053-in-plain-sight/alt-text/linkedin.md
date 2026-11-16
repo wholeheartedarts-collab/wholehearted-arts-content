@@ -1,0 +1,3 @@
+Image: primary_image_url (flat product photo, not a room mockup — no `chosen_images` set for this catalog entry; not visually verified by a human/Claude, and image download failed in this sandbox due to blocked egress to the Squarespace CDN — see package-review.md)
+
+Alt text: An unframed, 24 by 24 inch acrylic-on-canvas painting titled "In Plain Sight," from Agata May'kowska's "Heart of Healing" series, shown with a coarse-finish surface texture. Based on the catalog listing description only (not visually confirmed): the piece is a square-format acrylic painting with a textured, coarse finish. The specific subject, composition, and color palette could not be confirmed without viewing the image directly.
