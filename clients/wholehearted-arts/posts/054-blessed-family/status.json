@@ -1,0 +1,26 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6afd959667b44b742a52c8df",
+      "buffer_scheduling_type": "automatic",
+      "buffer_verified": "status draft, dueAt null, sentAt null, sharedNow false (confirmed via get_post 2026-11-18)"
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6afd9599f712d4c5a23d2c26",
+      "buffer_scheduling_type": "automatic",
+      "buffer_verified": "status draft, dueAt null, sentAt null, sharedNow false (confirmed via get_post 2026-11-18)"
+    },
+    "facebook": {
+      "status": "not-needed",
+      "note": "Instagram cross-posts to the Facebook Page as of 2026-09-30; no separate Facebook post is produced or staged."
+    }
+  },
+  "history": [
+    {
+      "date": "2026-11-18",
+      "event": "Automated run (scheduled routine 'WholeheartedArts Content Pipeline'). Selection rule pointed to Atelier Collection (reconciled used counts: Atelier 18 vs Studio 34+), but Atelier's only unused, non-flagged candidate ('Let Our Light Continue to Shine') remains excluded as politically-adjacent (explicit prayer for peace in Israel/the Jewish people) -- 17th consecutive run (039-054) with this carried-forward exclusion, escalated in package-review.md as a standing decision Agata needs to make rather than another silent fallback. Fell back to Studio Collection. Selected 'Blessed Family' (Studio Collection, SKU SQ9938269, $80, unlimited stock, no caution_note) -- a very small (7x10in) unframed acrylic/mica-powder piece with no artist statement in the catalog beyond medium/size, paired with Psalm 128:1,3 (ESV, verified via WebSearch against ESV-text sources since esv.org/biblegateway.com/biblehub.com are blocked by sandbox egress) rather than any invented backstory, per skip_rules' guidance for thin-narrative pieces. No chosen_images set for this entry; used primary_image_url (flat product photo, not confirmed as a room scene) for both platforms, flagged as NEEDS HUMAN DECISION. Both LinkedIn and Instagram drafts passed their own platform reviews on first draft; fact-check found no unsupported claims. Image download blocked by sandbox egress (images.squarespace-cdn.com CONNECT tunnel 403, tested once, not retried); raw image URL passed straight to Buffer for both platforms, uncropped; alt text written from the catalog's text description only and flagged as not visually verified. Nothing approved, scheduled, or published by this run."
+    }
+  ]
+}
