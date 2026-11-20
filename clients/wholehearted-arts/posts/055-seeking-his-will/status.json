@@ -1,0 +1,13 @@
+{
+  "platforms": {
+    "linkedin": {"status": "review-ready", "buffer_draft_post_id": "6b003815fc5b97f0f8026a15", "buffer_scheduling_type": "automatic"},
+    "instagram": {"status": "review-ready", "buffer_draft_post_id": "6b00381efc5b97f0f8026d11", "buffer_scheduling_type": "automatic"},
+    "facebook": {"status": "not-needed", "note": "Instagram cross-posts to the Facebook Page as of 2026-09-30; no separate Facebook post is produced or staged."}
+  },
+  "history": [
+    {
+      "timestamp": "2026-11-20T00:00:00Z",
+      "event": "Automated run (scheduled routine 'WholeheartedArts Content Pipeline'). Painting selection: catalog's raw used_count (Atelier 7 / Studio 7) stale; reconciled against actual post folders 002-054 gives Atelier 18 used / Studio 35+ used, pointing selection rule to Atelier. Atelier's only remaining non-flagged unused entry, 'Let Our Light Continue to Shine', continues to be excluded as politically-adjacent (18th consecutive run, 039-055, carrying this forward as NEEDS HUMAN DECISION rather than re-deciding it silently). Fell back to Studio Collection. Reconciled Studio's unused list against all 54 existing posts; selected 'Seeking His Will' (SKU SQ1250121, $150/sale $100, SOLD OUT/0 in stock at snapshot) -- explicitly faith-themed ('Psalm 31 written into it'), no caution_note, thin catalog narrative so kept the post shorter and image-led per skip_rules rather than inventing backstory. Paired with Psalm 31:14-15 (ESV), verified via WebSearch snippets against esv.org/bible.com since esv.org/biblegateway.com/biblehub.com are blocked by sandbox egress. No chosen_images set for this entry; used primary_image_url (flat product photo, not confirmed as a room scene) for both platforms, flagged NEEDS HUMAN DECISION. Both LinkedIn and Instagram drafts passed their own platform reviews on first draft; fact-check found no unsupported claims. Image download blocked by sandbox egress (images.squarespace-cdn.com CONNECT tunnel 403, tested once, not retried); raw image URL passed straight to Buffer for both platforms, uncropped; alt text written from the catalog's text description only and flagged as not visually verified. No price or purchase claim made in either draft given the sold-out snapshot. Nothing approved, scheduled, or published by this run."
+    }
+  ]
+}
