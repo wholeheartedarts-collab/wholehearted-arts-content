@@ -1,0 +1,25 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6b042d0e7e433fe9cac71287",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f43399afb4434915623a",
+      "buffer_verified": {"status": "draft", "dueAt": null, "sentAt": null, "sharedNow": false}
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6b042d110d00264c1a35ca09",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f44c99afb44349156296",
+      "buffer_verified": {"status": "draft", "dueAt": null, "sentAt": null, "sharedNow": false}
+    },
+    "facebook": {"status": "not-needed", "note": "Instagram cross-posts automatically to the Facebook Page as of 2026-09-30; no separate Facebook post produced or staged."}
+  },
+  "history": [
+    {
+      "timestamp": "2026-11-23",
+      "event": "Automated run (scheduled routine 'WholeheartedArts Content Pipeline'). Painting selection: reconciled catalog's stale used/unused counts directly against post folders 002-055 -- Atelier ~18 used vs Studio ~37 used, pointing the selection rule to Atelier (fewer used). Reconciled Atelier's 10-title 'unused' list and found every title except 'Let Our Light Continue to Shine' already has a post folder; that one remaining title is an explicit Israel-peace prayer, excluded again as politically-adjacent -- the 19th consecutive run (039-056) reaching this identical conclusion, escalated as a standing NEEDS HUMAN DECISION rather than re-decided silently. Fell back to Studio Collection. Selected 'Unexpected Happiness' (Studio Collection, SKU SQ7602897, $450 list, SOLD OUT/0 in stock) -- chosen over several other genuinely-unused Studio candidates (Quiet Abundance, Snowy Bond, Heart Filled with Sunrise, Peace is Her Power, Woman, etc.) because its own catalog description already carries a specific, non-thin narrative arc (refusal to accept a 'grey reality of failure' met with unexpected joy) fitting the confirmed 'overcoming struggles by staying faithful to God' content pillar without inventing backstory. Paired with Psalm 30:5 (ESV), verified via WebSearch snippets quoting esv.org directly (esv.org/biblegateway.com/biblehub.com blocked by sandbox egress, not fetched directly). No chosen_images field exists at all for this catalog entry (not merely unset) -- used primary_image_url for both platforms, flagged NEEDS HUMAN DECISION. Image download blocked by sandbox egress (images.squarespace-cdn.com CONNECT tunnel 403, tested once, not retried); raw image URL passed straight to Buffer for both platforms, uncropped. LinkedIn draft required one revision before its own platform review passed: an initial draft invented first-person process details ('a painting on my wall that I almost didn't finish', bracing for failure 'while I worked') not supported by the catalog description -- rewritten to stay strictly within the catalog's own wording before finalizing, documented in linkedin-post.md's edit history. Instagram draft required one correction: an initial hashtag (#MixedMediaArt) misstated the medium versus the catalog's 'acrylic creation on paper' -- corrected to #AcrylicArt, documented in fact-check.md and instagram-review.md. Both platforms passed their own platform review after those fixes. Fact-check found no other unsupported claims. No price or availability claim made given SOLD OUT status. Three NEEDS HUMAN DECISION items recorded in package-review.md: (1) the 19-run Atelier-exhaustion pattern, (2) no chosen_images set, (3) image not visually verified or cropped due to egress failure. Nothing approved, scheduled, or published by this run."
+    }
+  ]
+}
