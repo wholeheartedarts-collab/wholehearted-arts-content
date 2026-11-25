@@ -1,0 +1,28 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6b06d00ce90f5f39baaf3a11",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f43399afb4434915623a",
+      "buffer_verified": {"status": "draft", "dueAt": null, "sentAt": null, "sharedNow": false}
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6b06d0171deee71c1236b3a8",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f44c99afb44349156296",
+      "buffer_verified": {"status": "draft", "dueAt": null, "sentAt": null, "sharedNow": false}
+    },
+    "facebook": {
+      "status": "not-needed",
+      "note": "Instagram cross-posts automatically to the Facebook Page as of 2026-09-30; no separate Facebook post produced or staged."
+    }
+  },
+  "history": [
+    {
+      "timestamp": "2026-11-25",
+      "event": "Automated run (scheduled routine 'WholeheartedArts Content Pipeline'). Painting selection: tied used_count (Atelier 7 / Studio 7) in catalog, so applied tie-break (collection not used for most recent post, 056=Studio, pointing to Atelier). Reconciled Atelier's unused list against post folders 002-056 and found it genuinely exhausted of non-flagged candidates for the 20th consecutive run (039-057) -- only remaining title is an explicit Israel-peace prayer piece, judged politically-adjacent as in all prior runs. Fell back to Studio Collection. Reconciled Studio's stale unused list directly against post folders and selected 'Flower of Righteousness' (SKU SQ0507999, $125 list, SOLD OUT/0 in stock) over other genuinely-unused candidates (Mother, Quiet Abundance, Snowy Bond, Heart Filled with Sunrise, Deep Blue Love, etc.) because its catalog description carries a real first-person artist note from Agata (how she perceives the world -- moving particles that hold together) tied to Philippians 1:9-11, giving a non-thin, non-invented angle. Verse wording verified via WebSearch snippets quoting esv.org/Bible.com (esv.org/biblegateway.com/biblehub.com blocked by sandbox egress, not fetched directly). No chosen_images field exists for this entry -- used primary_image_url for both platforms, flagged NEEDS HUMAN DECISION. Image download blocked by sandbox egress (images.squarespace-cdn.com CONNECT tunnel 403, tested once, not retried); raw image URL passed straight to Buffer for both platforms, uncropped. LinkedIn draft was revised once during its own platform review: removed two phrases that overstated sourced facts (an invented creation-time moment, and an unverified 'found its person' buyer narrative), replaced with language that stays strictly within the catalog's wording. Instagram draft passed its own review with no revision needed. Fact-check found no unsupported claims on either platform. Three NEEDS HUMAN DECISION items recorded in package-review.md: (1) the 20-run Atelier-exhaustion pattern (recommend closing Atelier in the catalog's selection rule until new art is added, or an explicit human call on the excluded piece), (2) no chosen_images set for this painting, (3) image not visually verified or cropped due to egress failure. Nothing approved, scheduled, or published by this run."
+    }
+  ]
+}
