@@ -1,0 +1,28 @@
+{
+  "platforms": {
+    "linkedin": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6b097342049983dcfbb8f7ce",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f43399afb4434915623a",
+      "buffer_verified": {"status": "draft", "dueAt": null, "sentAt": null, "sharedNow": false}
+    },
+    "instagram": {
+      "status": "review-ready",
+      "buffer_draft_post_id": "6b09734b062ed764a8121647",
+      "buffer_scheduling_type": "automatic",
+      "buffer_channel_id": "6a74f44c99afb44349156296",
+      "buffer_verified": {"status": "draft", "dueAt": null, "sentAt": null, "sharedNow": false}
+    },
+    "facebook": {
+      "status": "not-needed",
+      "note": "Instagram cross-posts automatically to the Facebook Page as of 2026-09-30; no separate Facebook post produced or staged."
+    }
+  },
+  "history": [
+    {
+      "timestamp": "2026-11-27",
+      "event": "Automated run (scheduled routine 'WholeheartedArts Content Pipeline'). Painting selection: catalog used_count tied (Atelier 7 / Studio 7); tiebreak (collection not used for most recent post, 057=Studio) pointed to Atelier. Reconciled Atelier's unused list against actual post folders and found it exhausted of non-flagged candidates for the 21st consecutive run (039-058) -- the sole remaining title, 'Let Our Light Continue to Shine', is an explicit prayer for peace in Israel/Jewish people, judged politically-adjacent as in every prior run. Fell back to Studio Collection. Reconciled Studio's stale unused list against post folders and selected 'Quiet Abundance' (SKU SQ3175739, $165 list, SOLD OUT/0 in stock) -- a substantive, non-thin description (hydrangeas in a terracotta vessel) over other thin one-line candidates, and over two candidates excluded on no-politics grounds despite no catalog caution_note ('I Am Still Standing' -- Trump-likeness subject; 'Disassembled Grace' -- feminism-critique framing). Avoided a second Psalm 139 post (already anchoring post 010) by not selecting 'Mother'. No chosen_images field exists for this entry -- used primary_image_url for both platforms, flagged NEEDS HUMAN DECISION. Image download blocked by sandbox egress (images.squarespace-cdn.com CONNECT tunnel 403, tested once, not retried); raw image URL passed straight to Buffer for both platforms, uncropped. Both LinkedIn and Instagram drafts passed their own platform review with no revision needed. Fact-check found no unsupported claims on either platform -- hydrangea symbolism and stillness-research claims were kept hedged/qualitative per research.md. Three NEEDS HUMAN DECISION items recorded in package-review.md: (1) the 21-run Atelier-exhaustion pattern, now escalating, never put to Agata as an explicit choice, (2) no chosen_images set for this painting, (3) image not visually verified or cropped due to egress failure, plus a fourth lower-priority item: two Studio candidates excluded on no-politics grounds this run without a catalog caution_note backing the exclusion, worth confirming and codifying. Nothing approved, scheduled, or published by this run."
+    }
+  ]
+}
